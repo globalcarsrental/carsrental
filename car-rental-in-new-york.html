@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>New York Car Rental Guide | Compare Rental Cars</title>
+
+  <meta name="description" content="Find and compare car rental options in New York City and across New York State. Explore rental cars for airports, business trips, vacations and road trips.">
+
+  <meta name="keywords" content="car rental New York, New York car rental, car rental NYC, New York City car hire, JFK car rental, LaGuardia car rental, Newark car rental, Buffalo car rental">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #171717;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      background: #0b0b0b;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.25);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #d4af37;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .nav-btn {
+      background: #d4af37;
+      color: #111 !important;
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 80px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
+        url("https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 19px;
+      color: #eee;
+    }
+
+    .hero-buttons {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #111;
+    }
+
+    .btn-gold:hover {
+      background: #f0cf58;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #111;
+    }
+
+    .disclosure {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* SEARCH */
+    .search-section {
+      background: white;
+      margin-top: -45px;
+      position: relative;
+      z-index: 5;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+      padding: 35px;
+    }
+
+    .search-section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .field label {
+      display: block;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .search-button {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .search-button a {
+      display: inline-block;
+      background: #111;
+      color: #d4af37;
+      padding: 14px 35px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* LOCATIONS */
+    .locations {
+      background: #f3f3f3;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .small-btn {
+      display: inline-block;
+      background: #111;
+      color: #d4af37;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* BENEFITS */
+    .benefits {
+      background: white;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 25px 15px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+
+    .benefit-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* ROAD TRIPS */
+    .roadtrips {
+      background: #111;
+      color: white;
+    }
+
+    .roadtrips .section-title p {
+      color: #bbb;
+    }
+
+    .road-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .road-item {
+      padding: 25px 15px;
+      border: 1px solid #333;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .road-item h3 {
+      color: #d4af37;
+      font-size: 18px;
+    }
+
+    /* TIPS */
+    .tips {
+      background: #f7f7f7;
+    }
+
+    .tips-list {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .tip {
+      background: white;
+      padding: 18px;
+      border-left: 4px solid #d4af37;
+      border-radius: 4px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    }
+
+    /* FAQ */
+    .faq {
+      background: white;
+    }
+
+    .faq-container {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: #f7f7f7;
+      margin-bottom: 12px;
+      padding: 18px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    summary {
+      font-weight: bold;
+    }
+
+    details p {
+      padding-top: 12px;
+      color: #666;
+    }
+
+    /* CTA */
+    .cta {
+      background:
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #ddd;
+      margin-bottom: 25px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #080808;
+      color: white;
+      padding: 50px 20px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    .copyright {
+      max-width: 1150px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #292929;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .road-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero {
+        min-height: 570px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .search-section {
+        margin: -30px 15px 0;
+        padding: 25px 18px;
+      }
+
+      .search-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-button {
+        grid-column: auto;
+      }
+
+      .cards,
+      .benefit-grid,
+      .road-grid,
+      .tips-list,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .cta h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+
+      <div class="logo">
+        NY Car Rental Guide
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#locations">Locations</a>
+        <a href="#airports">Airports</a>
+        <a href="#roadtrips">Road Trips</a>
+        <a href="#tips">Rental Tips</a>
+        <a href="#faq">FAQ</a>
+
+        <a
+          class="nav-btn"
+          href="https://www.discovercars.com/?a_aid=zadocktravel"
+          target="_blank"
+          rel="nofollow sponsored noopener">
+          Search Cars
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Rent a Car in <span>New York</span> with Confidence
+      </h1>
+
+      <p>
+        Compare rental car options for New York City, airports,
+        business trips, vacations and road trips across New York State.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-gold"
+          href="https://www.discovercars.com/?a_aid=zadocktravel"
+          target="_blank"
+          rel="nofollow sponsored noopener">
+          Search Rental Cars
+        </a>
+
+        <a class="btn btn-outline" href="#locations">
+          Explore Locations
+        </a>
+
+      </div>
+
+      <div class="disclosure">
+        Affiliate disclosure: We may earn a commission when you book
+        through our partner links, at no additional cost to you.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SEARCH -->
+  <div class="search-section">
+
+    <h2>Find Your New York Rental Car</h2>
+
+    <div class="search-grid">
+
+      <div class="field">
+        <label>Pick-up Location</label>
+        <input type="text" placeholder="e.g. JFK Airport">
+      </div>
+
+      <div class="field">
+        <label>Drop-off Location</label>
+        <input type="text" placeholder="e.g. Manhattan">
+      </div>
+
+      <div class="field">
+        <label>Pick-up Date</label>
+        <input type="date">
+      </div>
+
+      <div class="field">
+        <label>Drop-off Date</label>
+        <input type="date">
+      </div>
+
+      <div class="field">
+        <label>Driver Age</label>
+        <select>
+          <option>Select age</option>
+          <option>18–20</option>
+          <option>21–24</option>
+          <option>25–29</option>
+          <option>30+</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Vehicle Preference</label>
+        <select>
+          <option>Any vehicle</option>
+          <option>Economy</option>
+          <option>Compact</option>
+          <option>SUV</option>
+          <option>Luxury</option>
+          <option>Van</option>
+        </select>
+      </div>
+
+      <div class="search-button">
+
+        <a
+          href="https://www.discovercars.com/?a_aid=zadocktravel"
+          target="_blank"
+          rel="nofollow sponsored noopener">
+          Compare Rental Cars
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- LOCATIONS -->
+  <section class="

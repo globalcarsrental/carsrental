@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rome Car Rental Guide | Compare Rental Cars in Rome</title>
+  <meta name="description" content="Compare rental cars in Rome, Italy. Find car rental options for Rome Airport, city centre and Italian road trips.">
+  <meta name="keywords" content="Rome car rental, car rental Rome, rent a car Rome, Rome airport car rental, Italy car hire">
+
+  <meta property="og:title" content="Rome Car Rental Guide">
+  <meta property="og:description" content="Compare rental cars in Rome and find options for your Italian journey.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #eee;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #111;
+      padding: 13px 22px;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: #f0d46a;
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: #111;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #333;
+    }
+
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
+        url("https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      padding: 70px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #eee;
+    }
+
+    .disclosure {
+      font-size: 12px;
+      color: #ddd;
+      margin-top: 15px;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .section-title p {
+      color: #666;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .booking {
+      background: white;
+      margin-top: -50px;
+      position: relative;
+      z-index: 10;
+      border-radius: 10px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.15);
+      padding: 30px;
+    }
+
+    .booking h2 {
+      margin-bottom: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .booking .btn {
+      margin-top: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 9px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,.14);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 23px;
+    }
+
+    .card h3 {
+      margin-bottom: 9px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .dark-section {
+      background: #111;
+      color: white;
+    }
+
+    .dark-section .section-title h2 {
+      color: white;
+    }
+
+    .dark-section .section-title p {
+      color: #ccc;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      border: 1px solid #333;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .benefit .icon {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    .locations .card img {
+      height: 190px;
+    }
+
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .tip {
+      background: white;
+      padding: 25px;
+      border-left: 4px solid #d4af37;
+      box-shadow: 0 5px 15px rgba(0,0,0,.06);
+    }
+
+    .tip h3 {
+      margin-bottom: 8px;
+    }
+
+    .tip p {
+      color: #666;
+    }
+
+    .roadtrip {
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .roadtrip-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .roadtrip h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .roadtrip p {
+      color: #eee;
+      margin-bottom: 25px;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      margin-bottom: 12px;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.06);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: #666;
+    }
+
+    .final-cta {
+      background: #d4af37;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .final-cta h2 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .final-cta p {
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #0b0b0b;
+      color: #aaa;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    footer h3,
+    footer h4 {
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    .copyright {
+      border-top: 1px solid #292929;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 55px 0;
+      }
+
+      .hero {
+        min-height: 560px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .booking {
+        padding: 20px;
+        margin-top: -30px;
+      }
+
+      .form-grid,
+      .cards,
+      .benefits,
+      .tips,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .roadtrip h2,
+      .final-cta h2 {
+        font-size: 32px;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">ROME <span>CAR RENTAL GUIDE</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#locations">Locations</a>
+      <a href="#cars">Cars</a>
+      <a href="#tips">Driving Tips</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a
+      class="btn"
+      href="https://www.discovercars.com/?a_aid=zadocktravel"
+      target="_blank"
+      rel="nofollow sponsored noopener">
+      Compare Cars
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <h1>Rent a Car in <span>Rome</span> with Confidence</h1>
+
+      <p>
+        Compare rental car options and find a vehicle that fits your
+        Italian journey, budget and travel plans.
+      </p>
+
+      <a
+        class="btn"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener">
+        Compare Rental Cars in Rome
+      </a>
+
+      <div class="disclosure">
+        Affiliate disclosure: We may earn a commission when you book
+        through our links, at no additional cost to you.
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <div class="container">
+    <div class="booking">
+      <h2>Find Your Rental Car in Rome</h2>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Pick-up Location</label>
+          <input type="text" placeholder="Rome, Italy">
+        </div>
+
+        <div class="form-group">
+          <label>Drop-off Location</label>
+          <input type="text" placeholder="Rome, Italy">
+        </div>
+
+        <div class="form-group">
+          <label>Pick-up Date</label>
+          <input type="date">
+        </div>
+
+        <div class="form-group">
+          <label>Drop-off Date</label>
+          <input type="date">
+        </div>
+
+        <div class="form-group">
+          <label>Pick-up Time</label>
+          <input type="time">
+        </div>
+
+        <div class="form-group">
+          <label>Drop-off Time</label>
+          <input type="time">
+        </div>
+
+      </div>
+
+      <a
+        class="btn"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener">
+        Search Rental Cars
+      </a>
+
+      <p class="disclosure" style="color:#777;">
+        Search and booking are completed through our rental-car partner.
+      </p>
+    </div>
+  </div>
+
+  <!-- WHY RENT -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Rent a Car in Rome?</h2>
+        <p>
+          A rental car can give you more flexibility when exploring
+          Rome and destinations throughout Italy.
+        </p>
+      </div>
+
+      <div class="benefits">
+
+        <div class="benefit">
+          <div class="icon">🚗</div>
+          <h3>More Freedom</h3>
+          <p>Plan your journey around your own schedule.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="icon">✈️</div>
+          <h3>Airport Pickup</h3>
+          <p>Compare options for convenient airport collection.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="icon">🗺️</div>
+          <h3>Explore Italy</h3>
+          <p>Travel beyond Rome and discover more of Italy.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="icon">💶</div>
+          <h3>Compare Options</h3>
+          <p>Explore different vehicles and rental options.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="dark-section" id="locations">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Popular Rental Locations</h2>
+        <p>
+          Compare rental options for some of the most convenient
+          pickup locations around Rome.
+        </p>
+      </div>
+
+      <div class="cards locations">
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&q=80"
+            alt="Rome Italy">
+          <div class="card-content">
+            <h3>Rome City Centre</h3>
+            <p>
+              Suitable for travelers staying in central Rome who
+              want to explore Italy by car.
+            </p>
+
+            <a
+              class="btn"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              Compare Cars
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1516900557549-41557d405adf?auto=format&fit=crop&w=900&q=80"
+            alt="Rome airport travel">
+          <div class="card-content">
+            <h3>Rome Fiumicino Airport</h3>
+            <p>
+              Compare rental options for travelers arriving through
+              Rome's main international airport.
+            </p>
+
+            <a
+              class="btn"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              Compare Airport Cars
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=900&q=80"
+            alt="Rome travel">
+          <div class="card-content">
+            <h3>Rome Ciampino Airport</h3>
+            <p>
+              Explore rental possibilities for travelers flying
+              into Ciampino Airport.
+            </p>
+
+            <a
+              class="btn"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              Compare Cars
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAR TYPES -->
+  <section id="cars">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Popular Car Categories</h2>
+        <p>
+          Choose a vehicle category that matches your trip.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Economy Cars</h3>
+            <p>
+              Practical options for travelers looking for
+              an efficient rental.
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              View Options
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Compact Cars</h3>
+            <p>
+              A useful choice for navigating cities and
+              smaller Italian roads.
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              View Options
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Automatic Cars</h3>
+            <p>
+              Convenient for drivers who prefer automatic
+              transmission.
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              View Options
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Family Cars</h3>
+            <p>
+              More space for families, luggage and longer journeys.
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              View Options
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>SUVs</h3>
+            <p>
+              Extra space and a comfortable option for road trips.
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              View Options
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Luxury Cars</h3>
+            <p>
+              Explore premium vehicle options for a special trip.
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://www.discovercars.com/?a_aid=zadocktravel"
+              target="_blank"
+              rel="nofollow sponsored noopener">
+              View Options
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ROAD TRIP -->
+  <section class="roadtrip">
+    <div class="container roadtrip-content">
+
+      <h2>Explore Beyond Rome</h2>
+
+      <p>
+        Planning an Italian road trip? Rome can be a starting point
+        for journeys toward Florence, Naples, Tuscany, Siena,
+        Tivoli and other destinations.
+      </p>
+
+      <a
+        class="btn"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener">
+        Find a Rental Car
+      </a>
+
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section id="tips">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Rome Driving Tips</h2>
+        <p>
+          Helpful information before you start driving in Rome and Italy.
+        </p>
+      </div>
+
+      <div class="tips">
+
+        <div class="tip">
+          <h3>Understand ZTL Zones</h3>
+          <p>
+            Rome has restricted traffic zones known as ZTLs.
+            Check current restrictions before driving into central areas.
+          </p>
+        </div>
+
+        <div class="tip">
+          <h3>Check Parking Rules</h3>
+          <p>
+            Parking availability and restrictions vary by area.
+            Always check signs and local regulations.
+          </p>
+        </div>
+
+        <div class="tip">
+          <h3>Choose the Right Vehicle</h3>
+          <p>
+            Consider vehicle size, luggage space and transmission
+            type when selecting your rental.
+          </p>
+        </div>
+
+        <div class="tip">
+          <h3>Review Rental Conditions</h3>
+          <p>
+            Before booking, carefully review insurance,
+            deposit, mileage and fuel policies.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="dark-section">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq">
+
+        <details>
+          <summary>Can I rent a car at Rome Airport?</summary>
+          <p>
+            Yes. Rental options are available through major rental
+            locations around Rome, including airport locations.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is it better to rent at the airport or city centre?</summary>
+          <p>
+            It depends

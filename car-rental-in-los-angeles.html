@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Los Angeles Car Rental Guide | Compare Rental Cars</title>
+
+  <meta name="description" content="Compare rental car options for Los Angeles, LAX Airport, Hollywood, Santa Monica, Beverly Hills and Southern California. Find a vehicle for your next trip.">
+  <meta name="keywords" content="Los Angeles car rental, LAX car rental, rental cars Los Angeles, car rental near LAX, California car rental">
+
+  <meta property="og:title" content="Los Angeles Car Rental Guide">
+  <meta property="og:description" content="Compare rental car options for your Los Angeles trip.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      background: #080808;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #b99745;
+    }
+
+    .nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #d6b45c;
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: .5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d6b45c;
+    }
+
+    .nav-btn {
+      background: #c9a34e;
+      color: #080808 !important;
+      padding: 11px 17px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,0,0,.66), rgba(0,0,0,.66)),
+        url("https://images.unsplash.com/photo-1531219572328-a0171b4448a3?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 80px 0;
+    }
+
+    .hero-label {
+      color: #d6b45c;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #eee;
+      margin-bottom: 30px;
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn-gold {
+      background: #c9a34e;
+      color: #080808;
+    }
+
+    .btn-gold:hover {
+      background: #e0c16c;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #111;
+    }
+
+    /* INTRO */
+    .intro {
+      background: white;
+      padding: 65px 0;
+      text-align: center;
+    }
+
+    .intro h2,
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: auto;
+      color: #666;
+    }
+
+    /* TRUST */
+    .trust {
+      padding: 70px 0;
+      background: #111;
+      color: white;
+    }
+
+    .trust-box {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .trust h2 {
+      color: #d6b45c;
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .trust p {
+      color: #ddd;
+      margin-bottom: 25px;
+    }
+
+    /* CARDS */
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading p {
+      color: #666;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 7px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+      border-top: 3px solid #c9a34e;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* LAX */
+    .lax {
+      background: #eee;
+    }
+
+    .lax-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .lax-image {
+      min-height: 390px;
+      border-radius: 8px;
+      background:
+        linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
+        url("https://images.unsplash.com/photo-1495811-9d72a5bfae7c?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+    }
+
+    .lax-text h2 {
+      font-size: 37px;
+      margin-bottom: 15px;
+    }
+
+    .lax-text p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .lax-text ul {
+      margin: 20px 0 25px 20px;
+      color: #555;
+    }
+
+    .lax-text li {
+      margin-bottom: 8px;
+    }
+
+    /* TRAVEL */
+    .travel-card {
+      min-height: 210px;
+    }
+
+    .travel-card h3 {
+      color: #111;
+    }
+
+    /* CTA */
+    .final-cta {
+      background:
+        linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.78)),
+        url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .final-cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .final-cta p {
+      color: #ddd;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      margin-bottom: 12px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.05);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    details p {
+      color: #666;
+      margin-top: 12px;
+    }
+
+    /* DISCLOSURE */
+    .disclosure {
+      background: #f0eadc;
+      padding: 25px;
+      margin-top: 35px;
+      border-left: 4px solid #c9a34e;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #070707;
+      color: #aaa;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 {
+      color: #d6b45c;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #aaa;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: #d6b45c;
+    }
+
+    .copyright {
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
+        padding: 17px 0;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .hero {
+        min-height: 560px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lax-content {
+        grid-template-columns: 1fr;
+      }
+
+      .lax-image {
+        min-height: 280px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .final-cta h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">LA CAR RENTAL GUIDE</a>
+
+      <nav>
+        <a href="#rental">Car Rental</a>
+        <a href="#lax">LAX</a>
+        <a href="#travel">Travel Guide</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+
+        <a
+          href="https://www.discovercars.com/?a_aid=zadocktravel"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="nav-btn">
+          Compare Cars
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-label">
+          Los Angeles • California
+        </div>
+
+        <h1>
+          Find the Right Rental Car for Your Los Angeles Trip
+        </h1>
+
+        <p>
+          Compare rental car options for Los Angeles, LAX Airport,
+          Hollywood, Santa Monica, Beverly Hills and destinations
+          throughout Southern California.
+        </p>
+
+        <div class="buttons">
+
+          <a
+            href="https://www.discovercars.com/?a_aid=zadocktravel"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+            class="btn btn-gold">
+            Compare Los Angeles Rental Cars
+          </a>
+
+          <a href="#travel" class="btn btn-outline">
+            Explore Los Angeles
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+
+      <h2>Los Angeles Car Rental Guide</h2>
+
+      <p>
+        Planning a trip to Los Angeles? A rental car can give you
+        flexibility to explore the city's famous neighborhoods,
+        beaches, attractions and destinations across Southern California.
+        Use this guide to learn about rental car options and compare
+        available vehicles before your trip.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- COMPARE -->
+  <section class="trust">
+    <div class="container">
+      <div class="trust-box">
+
+        <h2>Compare Before You Book</h2>
+
+        <p>
+          Compare available rental car options, vehicle categories,
+          prices and rental conditions before making your booking.
+        </p>
+
+        <a
+          href="https://www.discovercars.com/?a_aid=zadocktravel"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="btn btn-gold">
+          Search Los Angeles Rental Cars
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LOCATIONS -->
+  <section class="section" id="rental">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2 class="section-title">Popular Los Angeles Rental Locations</h2>
+        <p>
+          Explore rental car options based on where your Los Angeles
+          trip begins.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Los Angeles International Airport</h3>
+          <p>
+            Arriving at LAX? Compare rental car options before starting
+            your Los Angeles adventure.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Downtown Los Angeles</h3>
+          <p>
+            Staying downtown? Learn about rental car options for exploring
+            central Los Angeles and surrounding areas.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Hollywood</h3>
+          <p>
+            Explore Hollywood and nearby attractions with a rental vehicle
+            that fits your travel plans.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Santa Monica</h3>
+          <p>
+            Discover the coast and surrounding communities from your
+            Santa Monica base.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Beverly Hills</h3>
+          <p>
+            Travelers staying in Beverly Hills can compare vehicle
+            options for local and regional journeys.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Southern California</h3>
+          <p>
+            Planning a longer road trip? Compare vehicles suitable for
+            exploring destinations beyond Los Angeles.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CAR TYPES -->
+  <section class="section" style="background:#eee;">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2 class="section-title">Popular Rental Car Categories</h2>
+        <p>
+          Choose a vehicle category based on your passengers,
+          luggage and travel plans.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Economy Cars</h3>
+          <p>
+            A practical option for travelers looking for a smaller vehicle
+            for city travel.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Compact Cars</h3>
+          <p>
+            A balance between easy city driving and everyday practicality.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Midsize Cars</h3>
+          <p>
+            Suitable for travelers who want additional space and comfort.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>SUVs</h3>
+          <p>
+            A popular category for families, groups and travelers carrying
+            additional luggage.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Luxury Cars</h3>
+          <p>
+            Consider a premium vehicle when comfort and style are priorities.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Minivans</h3>
+          <p>
+            A useful category for larger families or groups traveling together.
+          </p>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:35px;">
+        <a
+          href="https://www.discovercars.com/?a_aid=zadocktravel"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="btn btn-gold">
+          Compare Available Cars
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- LAX -->
+  <section class="section lax" id="lax">
+
+    <div class="container">
+
+      <div class="lax-content">
+
+        <div class="lax-image"></div>
+
+        <div class="lax-text">
+
+          <h2>Los Angeles Airport Car Rental Guide</h2>
+
+          <p>
+            Los Angeles International Airport is a major arrival point
+            for visitors coming to Southern California.
+          </p>
+
+          <p>
+            Before booking, compare vehicle categories and rental
+            conditions to find an option that suits your trip.
+          </p>
+
+          <ul>
+            <li>Consider your number of passengers.</li>
+            <li>Check how much luggage you will carry.</li>
+            <li>Compare vehicle categories.</li>
+            <li>Review rental conditions before booking.</li>
+            <li>Plan your pickup and return carefully.</li>
+          </ul>
+
+          <a
+            href="https://www.discovercars.com/?a_aid=zadocktravel"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+            class="btn btn-gold">
+            Compare LAX Rental Cars
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TRAVEL GUIDE -->
+  <section class="section" id="travel">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2 class="section-title">Explore Los Angeles</h2>
+        <p>
+          Plan your trip around some of the most popular destinations
+          in and around Los Angeles.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card travel-card">
+          <h3>Hollywood</h3>
+          <p>
+            Explore one of Los Angeles' most recognizable areas and
+            discover attractions around Hollywood Boulevard.
+          </p>
+        </div>
+
+        <div class="card travel-card">
+          <h3>Santa Monica</h3>
+          <p>
+            Visit the Pacific coast and enjoy the beaches, restaurants
+            and attractions around Santa Monica.
+          </p>
+        </div>
+
+        <div class="card travel-card">
+          <h3>Venice Beach</h3>
+          <p>
+            Add Venice Beach to your itinerary for a different
+            Southern California coastal experience.
+          </p>
+        </div>
+
+        <div class="card travel-card">
+          <h3>Beverly Hills</h3>
+          <p>
+            Explore the famous streets, shopping areas and attractions
+            around Beverly Hills.
+          </p>
+        </div>
+
+        <div class="card travel-card">
+          <h3>Griffith Observatory</h3>
+          <p>
+            Include Griffith Observatory when planning your Los Angeles
+            sightseeing itinerary.
+          </p>
+        </div>
+
+        <div class="card travel-card">
+          <h3>Malibu</h3>
+          <p>
+            Consider a coastal drive toward Malibu when planning a
+            Southern California road trip.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+
+    <h2>Ready to Explore Los Angeles?</h2>
+
+    <p>
+      Compare rental car options before your trip and choose a vehicle
+      that fits your travel plans.
+    </p>
+
+    <a
+      href="https://www.discovercars.com/?a_aid=zadocktravel"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+      class="btn btn-gold">
+      Compare Rental Cars
+    </a>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2 class="section-title">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="faq">
+
+        <details>
+          <summary>Is renting a car useful in Los Angeles?</summary>
+          <p>
+            A rental car can be useful for travelers who want flexibility
+            to explore different parts of Los Angeles and Southern California.
+          </p>
+        </details>
+
+        <details>
+          <summary>Where can I rent a car near LAX?</summary>
+          <p>
+            Travelers arriving at Los Angeles International Airport can
+            compare available rental options and review pickup information
+            before booking.
+          </p>
+        </details>
+
+        <details>
+          <summary>What type of rental car is best for Los Angeles?</summary>
+          <p>
+            The best vehicle depends on your group size, luggage,
+            driving plans and personal preferences.
+          </p>
+        </details>
+
+        <details>
+          <summary>Should I book a rental car before traveling?</summary>
+          <p>
+            Comparing rental options before your trip can help you review
+            available vehicles and rental conditions in advance.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I use a rental car to explore Southern California?</summary>
+          <p>
+            Yes. Travelers may choose a rental vehicle when planning
+            journeys beyond central Los Angeles, depending on their itinerary
+            and rental conditions.
+          </p>
+        </details>
+
+        <details>
+          <summary>What should I consider when comparing rental cars?</summary>
+          <p>
+            Consider vehicle size, passengers, luggage, rental conditions,
+            pickup location and the requirements that apply to your booking.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT / DISCLOSURE -->
+  <section class="section" id="contact" style="background:#fff;">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2 class="section-title">About This Guide</h2>
+
+        <p>
+          Los Angeles Car Rental Guide provides travel information to help
+          visitors research rental car options and plan their journeys
+          around Los Angeles and Southern California.
+        </p>
+      </div>
+
+      <div class="disclosure">
+
+        <strong>Affiliate Disclosure</strong><br><br>
+
+        This website contains affiliate links. We may earn a com

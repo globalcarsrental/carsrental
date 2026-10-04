@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>London Car Rental Guide | Compare Rental Cars in London</title>
+
+  <meta name="description" content="Compare London car rental options, explore airport pickup locations, learn about driving in London, and find useful tips for your UK trip.">
+
+  <meta name="keywords" content="London car rental, car rental London, London car hire, Heathrow car rental, Gatwick car rental, UK car rental, rental cars London">
+
+  <meta property="og:title" content="London Car Rental Guide">
+  <meta property="og:description" content="Compare rental car options and explore useful London car rental and travel information.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f7f7f7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      background: #080808;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #c9a227;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #d4af37;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .nav-button {
+      background: #d4af37;
+      color: #080808;
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 6px;
+      transition: .3s;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #080808;
+    }
+
+    .btn-gold:hover {
+      background: #f0cf62;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #111;
+    }
+
+    .disclosure {
+      font-size: 12px;
+      opacity: .8;
+      margin-top: 15px;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+    }
+
+    /* SEARCH */
+    .search-section {
+      background: white;
+    }
+
+    .search-box {
+      max-width: 1000px;
+      margin: auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.12);
+    }
+
+    .search-box h3 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      color: white;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .search-button {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 9px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card-link {
+      color: #9b7612;
+      font-weight: bold;
+    }
+
+    /* FEATURES */
+    .features {
+      background: #111;
+      color: white;
+    }
+
+    .features .section-title p {
+      color: #ccc;
+    }
+
+    .features .cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .feature-card {
+      padding: 28px 20px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 38px;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    /* TRAVEL */
+    .travel-card {
+      min-height: 350px;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: end;
+    }
+
+    .travel-card img {
+      height: 350px;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .travel-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.9));
+      z-index: 1;
+    }
+
+    .travel-content {
+      position: relative;
+      z-index: 2;
+      padding: 25px;
+    }
+
+    .travel-content h3 {
+      color: white;
+    }
+
+    /* TIPS */
+    .tips {
+      background: white;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .tip {
+      padding: 20px;
+      border-left: 4px solid #d4af37;
+      background: #f8f8f8;
+    }
+
+    .tip strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* CTA */
+    .cta {
+      background:
+        linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.82)),
+        url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: auto auto 25px;
+      color: #ddd;
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      margin-bottom: 10px;
+      padding: 18px 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    details p {
+      padding-top: 12px;
+      color: #666;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050505;
+      color: #aaa;
+      padding: 50px 20px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      display: block;
+      color: #aaa;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #333;
+      margin-top: 35px;
+      padding-top: 20px;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .cards,
+      .features .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 55px 15px;
+      }
+
+      .hero {
+        min-height: 570px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .cards,
+      .features .cards,
+      .form-grid,
+      .tips-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-box {
+        padding: 20px;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+      }
+
+      .nav-container {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-container">
+    <a href="#" class="logo">LONDON CAR RENTAL GUIDE</a>
+
+    <nav>
+      <a href="#rental">Car Rental</a>
+      <a href="#airports">Airports</a>
+      <a href="#driving">Driving</a>
+      <a href="#destinations">Travel Guide</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+
+    <a class="nav-button"
+       href="https://www.discovercars.com/?a_aid=zadocktravel"
+       target="_blank"
+       rel="nofollow sponsored noopener">
+      Compare Cars
+    </a>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+
+    <h1>
+      Find the Right
+      <span class="gold">Rental Car</span>
+      for London
+    </h1>
+
+    <p>
+      Compare rental car options for your London trip and discover
+      convenient pickup locations for your journey across the UK.
+    </p>
+
+    <a class="btn btn-gold"
+       href="https://www.discovercars.com/?a_aid=zadocktravel"
+       target="_blank"
+       rel="nofollow sponsored noopener">
+      Compare Rental Cars
+    </a>
+
+    <a class="btn btn-outline" href="#rental">
+      Explore the Guide
+    </a>
+
+    <p class="disclosure">
+      Affiliate Disclosure: We may earn a commission when you book
+      through links on this website, at no additional cost to you.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- SEARCH -->
+<section class="search-section" id="rental">
+
+  <div class="section-title">
+    <h2>Compare London Car Rental Options</h2>
+    <p>
+      Explore rental options and compare vehicles for your London journey.
+    </p>
+  </div>
+
+  <div class="search-box">
+
+    <h3>Start Your Car Rental Search</h3>
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label>Pick-up Location</label>
+        <input type="text" placeholder="London">
+      </div>
+
+      <div class="form-group">
+        <label>Pick-up Date</label>
+        <input type="date">
+      </div>
+
+      <div class="form-group">
+        <label>Pick-up Time</label>
+        <input type="time">
+      </div>
+
+      <div class="form-group">
+        <label>Drop-off Date</label>
+        <input type="date">
+      </div>
+
+      <div class="form-group">
+        <label>Drop-off Time</label>
+        <input type="time">
+      </div>
+
+      <div class="form-group">
+        <label>Driver Age</label>
+        <select>
+          <option>25+</option>
+          <option>21–24</option>
+          <option>18–20</option>
+        </select>
+      </div>
+
+    </div>
+
+    <a class="btn btn-gold search-button"
+       href="https://www.discovercars.com/?a_aid=zadocktravel"
+       target="_blank"
+       rel="nofollow sponsored noopener">
+      Search Rental Cars
+    </a>
+
+  </div>
+</section>
+
+
+<!-- WHY RENT -->
+<section class="features">
+
+  <div class="section-title">
+    <h2>Why Consider a Rental Car?</h2>
+    <p>
+      A rental car can provide flexibility for travelers who want
+      to explore beyond central London.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="cards">
+
+      <div class="feature-card">
+        <div class="feature-icon">✦</div>
+        <h3>Explore Beyond London</h3>
+        <p>
+          Discover destinations and attractions outside central London
+          at your own pace.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">◈</div>
+        <h3>Flexible Travel</h3>
+        <p>
+          Enjoy greater flexibility when your itinerary includes
+          multiple destinations.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">✈</div>
+        <h3>Airport Convenience</h3>
+        <p>
+          Compare rental options around major London airports.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">◆</div>
+        <h3>Business Travel</h3>
+        <p>
+          A rental vehicle can be useful when visiting several
+          locations during a business trip.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- AIRPORTS -->
+<section id="airports">
+
+  <div class="section-title">
+    <h2>London Airport Car Rental</h2>
+    <p>
+      Compare rental options at major airports serving London.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80" alt="London Heathrow airport">
+        <div class="card-content">
+          <h3>Heathrow Airport</h3>
+          <p>
+            A major international gateway to London with a wide range
+            of transportation options.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Cars →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=900&q=80" alt="Airport terminal">
+        <div class="card-content">
+          <h3>Gatwick Airport</h3>
+          <p>
+            A popular choice for travelers arriving south of London.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Cars →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=900&q=80" alt="Airport travel">
+        <div class="card-content">
+          <h3>Stansted Airport</h3>
+          <p>
+            An important airport for travelers visiting London and
+            surrounding destinations.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Cars →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=900&q=80" alt="Airport airplane">
+        <div class="card-content">
+          <h3>Luton Airport</h3>
+          <p>
+            Convenient for travelers heading into London or exploring
+            destinations north of the city.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Cars →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=900&q=80" alt="London City">
+        <div class="card-content">
+          <h3>London City Airport</h3>
+          <p>
+            A convenient airport for travelers heading toward central
+            and eastern London.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Cars →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Road trip">
+        <div class="card-content">
+          <h3>London Road Trips</h3>
+          <p>
+            Compare vehicles suitable for exploring destinations
+            outside the capital.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Cars →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CAR TYPES -->
+<section class="search-section">
+
+  <div class="section-title">
+    <h2>Choose a Car for Your Journey</h2>
+    <p>
+      Different travelers have different needs. Explore common rental
+      vehicle categories.
+    </p>
+  </div>
+
+  <div class="container">
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Economy Cars</h3>
+          <p>
+            A practical option for travelers looking for a smaller vehicle.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Options →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Compact Cars</h3>
+          <p>
+            A balance between everyday practicality and passenger space.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Options →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Family Cars</h3>
+          <p>
+            Useful for families traveling with passengers and luggage.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Options →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>SUVs</h3>
+          <p>
+            Consider an SUV when you need additional space and versatility.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Options →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Luxury Cars</h3>
+          <p>
+            Explore premium vehicle categories for special journeys.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+             target="_blank"
+             rel="nofollow sponsored noopener">
+            Compare Options →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h3>Automatic Cars</h3>
+          <p>
+            Compare automatic transmission vehicles where available.
+          </p>
+          <a class="card-link"
+             href="https://www.discovercars.com/?a_aid=zadocktravel"
+        
