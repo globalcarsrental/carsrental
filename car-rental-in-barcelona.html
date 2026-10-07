@@ -1,967 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Barcelona Car Rental Guide | Compare Rental Cars</title>
+<title>Barcelona Car Rental Guide | Compare Rental Cars in Barcelona</title>
 
-  <meta name="description" content="Compare rental car options for Barcelona Airport and the city centre. Explore Barcelona, Catalonia and nearby destinations with a convenient rental car.">
+<meta name="description" content="Compare Barcelona car rental options, airport car hire and rental cars for your Spain trip. Explore Barcelona and beyond with a convenient rental car.">
 
-  <meta name="keywords" content="Barcelona car rental, car rental Barcelona, Barcelona airport car rental, rent a car Barcelona, Spain car rental, Barcelona road trips">
+<meta name="keywords" content="Barcelona car rental, car rental in Barcelona, Barcelona car hire, rent a car in Barcelona, Barcelona rental cars, Barcelona airport car rental, car hire Barcelona airport, cheap car rental Barcelona, best car rental Barcelona, Barcelona car rental deals, rental cars in Barcelona Spain, Barcelona airport car hire, compare Barcelona car rentals, Barcelona rental car guide, car hire in Barcelona Spain, Barcelona travel car rental, Barcelona car rental prices, Barcelona car rental comparison, Spain car rental Barcelona, Barcelona road trip car rental">
 
-  <meta name="author" content="Barcelona Car Rental Guide">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Global Car Hire Guide">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<link rel="canonical" href="https://globalcarsrental.github.io/carsrental/car-rental-barcelona-guide.html">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<meta property="og:title" content="Barcelona Car Rental Guide | Compare Rental Cars">
+<meta property="og:description" content="Compare rental cars in Barcelona and find an option that fits your trip and travel plans.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1600&q=80">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      background: #f7f7f7;
-      color: #222;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    background: #ffffff;
+    line-height: 1.7;
+}
 
-    .container {
-      width: 92%;
-      max-width: 1180px;
-      margin: auto;
-    }
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.58)),
+        url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+}
 
-    /* HEADER */
-    header {
-      background: #090909;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #b89445;
-    }
+.hero-content {
+    max-width: 850px;
+}
 
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.hero h1 {
+    font-size: clamp(38px, 7vw, 70px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
 
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 21px;
-      font-weight: bold;
-      color: #d4af62;
-      letter-spacing: .5px;
-    }
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #f4f4f4;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+.btn {
+    display: inline-block;
+    background: #16843a;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    margin: 7px;
+}
 
-    nav a {
-      font-size: 14px;
-      color: #eee;
-    }
+.btn:hover {
+    background: #0e642b;
+    transform: translateY(-2px);
+}
 
-    nav a:hover {
-      color: #d4af62;
-    }
+.disclosure {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.85;
+}
 
-    .nav-button {
-      background: #d4af62;
-      color: #111;
-      padding: 11px 17px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
+}
 
-    .nav-button:hover {
-      background: #fff;
-      color: #111;
-    }
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-    /* HERO */
+.section-title h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #666;
+    max-width: 720px;
+    margin: auto;
+}
+
+.content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.content h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.content h3 {
+    font-size: 22px;
+    margin: 20px 0 8px;
+}
+
+.content p {
+    margin-bottom: 18px;
+    color: #444;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.card p {
+    color: #666;
+}
+
+.light {
+    background: #f7f8f7;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.step {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.number {
+    width: 50px;
+    height: 50px;
+    background: #16843a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ul {
+    padding-left: 25px;
+    margin-bottom: 25px;
+}
+
+li {
+    margin-bottom: 9px;
+}
+
+.cta {
+    background: #151515;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.cta h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #ddd;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+footer {
+    background: #0d0d0d;
+    color: #aaa;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer strong {
+    color: white;
+}
+
+footer a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 7px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.footer-links {
+    margin: 18px 0;
+}
+
+@media (max-width: 600px) {
     .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.72)),
-        url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 760px;
-      padding: 80px 0;
-    }
-
-    .hero-label {
-      color: #d4af62;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 22px;
+        min-height: 520px;
     }
 
     .hero p {
-      font-size: 19px;
-      color: #eee;
-      max-width: 680px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 24px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: .2s;
-    }
-
-    .btn-gold {
-      background: #d4af62;
-      color: #111;
-    }
-
-    .btn-gold:hover {
-      background: white;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid white;
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: #111;
-    }
-
-    .disclosure {
-      font-size: 12px;
-      color: #ccc;
-      margin-top: 20px;
-      max-width: 650px;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 75px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      max-width: 750px;
-      margin: 0 auto 45px;
-    }
-
-    .section-title span {
-      color: #a17b2e;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 13px;
-    }
-
-    .section-title h2 {
-      font-family: Georgia, serif;
-      font-size: 40px;
-      margin: 8px 0 14px;
-      color: #111;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    /* FEATURE GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 7px 25px rgba(0,0,0,.07);
-    }
-
-    .card-icon {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-family: Georgia, serif;
-      font-size: 21px;
-    }
-
-    .card p {
-      color: #666;
-      font-size: 15px;
-    }
-
-    /* DARK CTA */
-    .dark-section {
-      background: #0b0b0b;
-      color: white;
-    }
-
-    .dark-section .section-title h2 {
-      color: white;
-    }
-
-    .dark-section .section-title p {
-      color: #bbb;
-    }
-
-    /* LOCATION SECTIONS */
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .split-image {
-      min-height: 380px;
-      border-radius: 12px;
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 12px 35px rgba(0,0,0,.15);
-    }
-
-    .airport-image {
-      background-image:
-        linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
-        url("https://images.unsplash.com/photo-1556388158-158ea5ccacbd?auto=format&fit=crop&w=1200&q=80");
-    }
-
-    .city-image {
-      background-image:
-        linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
-        url("https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=1200&q=80");
-    }
-
-    .split-content h2 {
-      font-family: Georgia, serif;
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
-
-    .split-content p {
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    .dark-section .split-content p {
-      color: #ccc;
-    }
-
-    .check-list {
-      list-style: none;
-      margin: 20px 0 28px;
-    }
-
-    .check-list li {
-      margin-bottom: 10px;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      color: #b89445;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    /* DESTINATIONS */
-    .destinations {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .destination {
-      min-height: 270px;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .destination::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,.85));
-    }
-
-    .destination-content {
-      position: relative;
-      z-index: 2;
-      padding: 25px;
-      color: white;
-    }
-
-    .destination-content h3 {
-      font-family: Georgia, serif;
-      font-size: 25px;
-      margin-bottom: 5px;
-    }
-
-    .destination-content p {
-      font-size: 14px;
-      color: #ddd;
-    }
-
-    .montserrat {
-      background-image: url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .sitges {
-      background-image: url("https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .girona {
-      background-image: url("https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .costa {
-      background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .tarragona {
-      background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .andorra {
-      background-image: url("https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    /* CAR TYPES */
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .car-card {
-      background: white;
-      padding: 30px 22px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 7px 25px rgba(0,0,0,.06);
-    }
-
-    .car-card .car {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
-
-    .car-card h3 {
-      font-family: Georgia, serif;
-      margin-bottom: 10px;
-    }
-
-    .car-card p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* STEPS */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .step {
-      background: #111;
-      color: white;
-      padding: 35px;
-      border-radius: 10px;
-    }
-
-    .number {
-      width: 42px;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #d4af62;
-      color: #111;
-      border-radius: 50%;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .step h3 {
-      font-family: Georgia, serif;
-      margin-bottom: 10px;
-    }
-
-    .step p {
-      color: #bbb;
-      font-size: 14px;
-    }
-
-    /* GUIDE */
-    .guide {
-      max-width: 850px;
-      margin: auto;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.06);
-    }
-
-    .guide h3 {
-      font-family: Georgia, serif;
-      margin: 25px 0 8px;
-      font-size: 23px;
-    }
-
-    .guide h3:first-child {
-      margin-top: 0;
-    }
-
-    .guide p {
-      color: #666;
-    }
-
-    /* FAQ */
-    .faq {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    details {
-      background: white;
-      margin-bottom: 12px;
-      padding: 20px 24px;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.05);
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    details p {
-      color: #666;
-      margin-top: 12px;
-    }
-
-    /* FINAL CTA */
-    .final-cta {
-      background:
-        linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.85)),
-        url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-      color: white;
-      text-align: center;
-    }
-
-    .final-cta h2 {
-      font-family: Georgia, serif;
-      font-size: 44px;
-      margin-bottom: 15px;
-    }
-
-    .final-cta p {
-      color: #ddd;
-      max-width: 650px;
-      margin: 0 auto 25px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #050505;
-      color: white;
-      padding: 55px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      padding-bottom: 35px;
-    }
-
-    footer h3 {
-      color: #d4af62;
-      font-family: Georgia, serif;
-      margin-bottom: 14px;
-    }
-
-    footer p,
-    footer a {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    footer a:hover {
-      color: #d4af62;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .copyright {
-      border-top: 1px solid #333;
-      padding-top: 20px;
-      color: #777;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    /* MOBILE */
-    @media (max-width: 900px) {
-      nav a:not(.nav-button) {
-        display: none;
-      }
-
-      .grid,
-      .car-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .destinations {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .nav {
-        min-height: 65px;
-      }
-
-      .logo {
         font-size: 17px;
-      }
-
-      .nav-button {
-        padding: 9px 11px;
-        font-size: 12px;
-      }
-
-      .hero {
-        min-height: 600px;
-      }
-
-      .hero h1 {
-        font-size: 44px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 55px 0;
-      }
-
-      .section-title h2 {
-        font-size: 31px;
-      }
-
-      .grid,
-      .car-grid,
-      .destinations,
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .split-image {
-        min-height: 270px;
-      }
-
-      .split-content h2 {
-        font-size: 31px;
-      }
-
-      .guide {
-        padding: 25px;
-      }
-
-      .final-cta h2 {
-        font-size: 34px;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        text-align: center;
-        width: 100%;
-      }
     }
-  </style>
+
+    .container {
+        padding: 50px 18px;
+    }
+
+    .section-title h2,
+    .content h2 {
+        font-size: 27px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
+<header class="hero">
+    <div class="hero-content">
+        <h1>Barcelona Car Rental Guide</h1>
 
-      <a href="#" class="logo">
-        Barcelona Car Rental Guide
-      </a>
-
-      <nav>
-        <a href="#airport">Airport</a>
-        <a href="#destinations">Road Trips</a>
-        <a href="#guide">Driving Guide</a>
-        <a href="#faq">FAQ</a>
-
-        <!-- AFFILIATE LINK -->
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="nav-button">
-          Compare Cars
-        </a>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-content">
-
-      <div class="hero-label">
-        Barcelona • Spain
-      </div>
-
-      <h1>
-        Rent a Car in Barcelona With Confidence
-      </h1>
-
-      <p>
-        Compare rental car options for Barcelona Airport,
-        the city centre and road trips across Catalonia.
-        Find a vehicle that fits your journey and budget.
-      </p>
-
-      <div class="buttons">
-
-        <!-- MAIN AFFILIATE CTA -->
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-gold">
-          Compare Rental Cars
-        </a>
-
-        <a href="#guide" class="btn btn-outline">
-          Explore Driving Guide
-        </a>
-
-      </div>
-
-      <p class="disclosure">
-        Affiliate disclosure: We may earn a commission when
-        you book through links on this website, at no additional
-        cost to you.
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- WHY RENT -->
-  <section>
-    <div class="container">
-
-      <div class="section-title">
-        <span>Travel Smarter</span>
-        <h2>Why Consider Renting a Car?</h2>
         <p>
-          A rental car can give you flexibility to explore
-          Barcelona and destinations beyond the city.
+            Compare rental cars in Barcelona and find a vehicle
+            that fits your trip, budget and travel plans.
         </p>
-      </div>
 
-      <div class="grid">
+        <a class="btn"
+           href="https://www.discovercars.com/?a_aid=zadocktravel"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+           Compare Barcelona Rental Cars
+        </a>
+
+        <div class="disclosure">
+            We may earn a commission when you book through our partner links.
+        </div>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content">
+        <h2>Renting a Car in Barcelona</h2>
+
+        <p>
+            Renting a car in Barcelona can give travelers greater flexibility
+            when exploring the city, surrounding towns and destinations across
+            Catalonia. Whether you're planning a short city stay or a longer
+            Spain road trip, comparing rental cars before your journey can help
+            you find an option that matches your needs.
+        </p>
+
+        <p>
+            Compare vehicle types, pickup locations and rental conditions before
+            making your booking.
+        </p>
+
+        <a class="btn"
+           href="https://www.discovercars.com/?a_aid=zadocktravel"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+           Compare Rental Cars
+        </a>
+    </div>
+</section>
+
+<section class="container light">
+    <div class="section-title">
+        <h2>Where to Pick Up Your Rental Car</h2>
+        <p>Choose a pickup location that works best for your Barcelona itinerary.</p>
+    </div>
+
+    <div class="cards">
 
         <div class="card">
-          <div class="card-icon">🚗</div>
-          <h3>Explore Beyond Barcelona</h3>
-          <p>
-            Discover destinations outside the city and
-            experience more of Catalonia.
-          </p>
+            <h3>Barcelona Airport</h3>
+            <p>
+                Barcelona–El Prat Airport is a convenient option for travelers
+                who want to collect their vehicle soon after landing.
+            </p>
         </div>
 
         <div class="card">
-          <div class="card-icon">🗺️</div>
-          <h3>Flexible Travel</h3>
-          <p>
-            Create your own itinerary and choose when
-            and where you want to travel.
-          </p>
+            <h3>Barcelona City</h3>
+            <p>
+                City rental locations can be useful if you plan to spend time
+                in Barcelona before starting a road trip.
+            </p>
         </div>
 
         <div class="card">
-          <div class="card-icon">✈️</div>
-          <h3>Airport Convenience</h3>
-          <p>
-            Compare options for travelers arriving through
-            Barcelona–El Prat Airport.
-          </p>
+            <h3>Transport Areas</h3>
+            <p>
+                Depending on availability, rental vehicles may also be available
+                near major transport and central areas.
+            </p>
         </div>
-
-        <div class="card">
-          <div class="card-icon">🔎</div>
-          <h3>Compare Options</h3>
-          <p>
-            Explore available rental cars and review
-            important rental conditions before booking.
-          </p>
-        </div>
-
-      </div>
 
     </div>
-  </section>
+</section>
 
+<section class="container">
+    <div class="section-title">
+        <h2>Popular Car Rental Options</h2>
+        <p>Compare different vehicle categories based on your travel requirements.</p>
+    </div>
 
-  <!-- AIRPORT -->
-  <section id="airport" class="dark-section">
-    <div class="container split">
+    <div class="cards">
 
-      <div class="split-image airport-image"></div>
+        <div class="card">
+            <h3>Economy Cars</h3>
+            <p>Practical for travelers looking for an efficient city vehicle.</p>
+        </div>
 
-      <div class="split-content">
+        <div class="card">
+            <h3>Compact Cars</h3>
+            <p>A convenient choice for city driving and longer journeys.</p>
+        </div>
+
+        <div class="card">
+            <h3>SUVs</h3>
+            <p>More space for passengers and luggage when exploring beyond Barcelona.</p>
+        </div>
+
+        <div class="card">
+            <h3>Luxury Cars</h3>
+            <p>A premium option for travelers who prefer additional comfort and style.</p>
+        </div>
+
+        <div class="card">
+            <h3>Family Cars</h3>
+            <p>Extra passenger and luggage space for family trips.</p>
+        </div>
+
+        <div class="card">
+            <h3>Automatic Cars</h3>
+            <p>A convenient option for drivers who prefer automatic transmission.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="container light">
+    <div class="content">
+
+        <h2>Driving in Barcelona</h2>
+
+        <p>
+            Before renting a car in Barcelona, consider traffic conditions,
+            parking availability and your planned route. City driving can be
+            different from driving on highways and rural roads.
+        </p>
+
+        <h3>Parking</h3>
+        <p>
+            Check parking rules and restrictions before leaving your rental
+            vehicle. Central areas can be busy, so planning your parking in
+            advance can make your trip easier.
+        </p>
+
+        <h3>Road Trips</h3>
+        <p>
+            A rental car can also be useful when traveling outside the city
+            toward destinations such as Costa Brava, Girona or Montserrat.
+        </p>
+
+        <h3>Rental Conditions</h3>
+        <p>
+            Always review the rental agreement, fuel policy, mileage limits,
+            deposit requirements and insurance or excess conditions before
+            collecting the vehicle.
+        </p>
+
+    </div>
+</section>
+
+<section class="container">
+    <div class="content">
 
         <h2>Barcelona Airport Car Rental</h2>
 
         <p>
-          Flying into Barcelona–El Prat Airport?
-          Comparing rental options before your trip can
-          help you plan your arrival and onward journey.
+            If you're flying into Barcelona–El Prat Airport, comparing
+            Barcelona airport car rental options before your trip can help
+            you understand available vehicles and pickup arrangements.
         </p>
-
-        <ul class="check-list">
-          <li>Compare available rental vehicles</li>
-          <li>Review pickup locations</li>
-          <li>Check rental conditions</li>
-          <li>Choose a vehicle for your itinerary</li>
-        </ul>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-gold">
-          Compare Airport Rental Cars
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- CITY CENTRE -->
-  <section>
-    <div class="container split">
-
-      <div class="split-content">
-
-        <h2>Car Rental in Barcelona City Centre</h2>
 
         <p>
-          Staying in central Barcelona? Consider your
-          parking arrangements, traffic conditions and
-          planned destinations before choosing a rental car.
+            Compare your options online and review the rental conditions before
+            choosing a vehicle.
         </p>
 
-        <ul class="check-list">
-          <li>Think about where you will park</li>
-          <li>Consider the size of your vehicle</li>
-          <li>Plan trips outside the city</li>
-          <li>Review rental policies before booking</li>
-        </ul>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-gold">
-          Find a Rental Car
+        <a class="btn"
+           href="https://www.discovercars.com/?a_aid=zadocktravel"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+           Compare Airport Rental Cars
         </a>
 
-      </div>
-
-      <div class="split-image city-image"></div>
-
     </div>
-  </section>
+</section>
 
+<section class="container light">
+    <div class="section-title">
+        <h2>Popular Places to Explore by Car</h2>
+        <p>Barcelona can also be a starting point for exploring other destinations in Catalonia.</p>
+    </div>
 
-  <!-- ROAD TRIPS -->
-  <section id="destinations" class="dark-section">
+    <div class="cards">
 
-    <div class="container">
-
-      <div class="section-title">
-        <span>Beyond the City</span>
-        <h2>Popular Road Trip Ideas</h2>
-        <p>
-          Barcelona is a convenient starting point for
-          exploring destinations across Catalonia and beyond.
-        </p>
-      </div>
-
-      <div class="destinations">
-
-        <div class="destination montserrat">
-          <div class="destination-content">
-            <h3>Montserrat</h3>
-            <p>Explore the famous mountain and monastery.</p>
-          </div>
+        <div class="card">
+            <h3>Barcelona</h3>
+            <p>Explore the city's architecture, neighborhoods and attractions.</p>
         </div>
 
-        <div class="destination sitges">
-          <div class="destination-content">
+        <div class="card">
             <h3>Sitges</h3>
-            <p>A popular coastal destination near Barcelona.</p>
-          </div>
+            <p>A popular coastal destination south of Barcelona.</p>
         </div>
 
-        <div class="destination girona">
-          <div class="destination-content">
-            <h3>Girona</h3>
-            <p>Discover historic streets and Catalan culture.</p>
-          </div>
-        </div>
-
-        <div class="destination costa">
-          <div class="destination-content">
+        <div class="card">
             <h3>Costa Brava</h3>
-            <p>Explore scenic Mediterranean coastal towns.</p>
-          </div>
+            <p>Discover coastal towns and Mediterranean scenery.</p>
         </div>
 
-        <div class="destination tarragona">
-          <div class="destination-content">
+        <div class="card">
+            <h3>Montserrat</h3>
+            <p>Visit the famous mountain and monastery outside Barcelona.</p>
+        </div>
+
+        <div class="card">
+            <h3>Girona</h3>
+            <p>Explore the historic city and surrounding Catalan region.</p>
+        </div>
+
+        <div class="card">
             <h3>Tarragona</h3>
-            <p>Discover Roman history and Mediterranean scenery.</p>
-          </div>
+            <p>Discover historic attractions and Mediterranean coastal areas.</p>
         </div>
-
-        <div class="destination andorra">
-          <div class="destination-content">
-            <h3>Andorra</h3>
-            <p>Plan a longer mountain journey from Barcelona.</p>
-          </div>
-        </div>
-
-      </div>
 
     </div>
-  </section>
+</section>
 
+<section class="container">
+    <div class="content">
 
-  <!-- CAR TYPES -->
-  <section>
+        <h2>Tips for Finding a Better Rental Car</h2>
 
-    <div class="container">
+        <ul>
+            <li>Compare several vehicles before booking.</li>
+            <li>Check the complete rental price.</li>
+            <li>Review the mileage conditions.</li>
+            <li>Check the fuel policy.</li>
+            <li>Review deposit requirements.</li>
+            <li>Understand insurance and excess conditions.</li>
+            <li>Confirm pickup and return times.</li>
+            <li>Check cancellation conditions.</li>
+        </ul>
 
-      <div class="section-title">
-        <span>Choose Your Vehicle</span>
-        <h2>Which Rental Car Fits Your Trip?</h2>
-        <p>
-          Consider passenger numbers, luggage, driving plans
-          and your preferred travel style.
-        </p>
-      </div>
+    </div>
+</section>
 
-      <div class="car-grid">
+<section class="container light">
+    <div class="section-title">
+        <h2>How to Compare Rental Cars</h2>
+        <p>Follow three simple steps before your Barcelona trip.</p>
+    </div>
 
-        <div class="car-card">
-          <div class="car">🚗</div>
-          <h3>Economy</h3>
-          <p>
-            A practical option for couples and city travelers.
-          </p>
+    <div class="steps">
+
+        <div class="step">
+            <div class="number">1</div>
+            <h3>Enter Your Dates</h3>
+            <p>Select your travel dates and pickup location.</p>
         </div>
 
-        <div class="car-card">
-          <div class="car">🚘</div>
-          <h3>Compact</h3>
-          <p>
-            A useful balance of space and practicality.
-          </p>
+        <div class="step">
+            <div class="number">2</div>
+            <h3>Compare Vehicles</h3>
+            <p>Review available vehicles and rental conditions.</p>
         </div>
 
-        <div class="car-card">
-          <div class="car">🚙</div>
-          <h3>SUV</h3>
-          <p>
-            Consider an SUV when you want additional space.
-          </p>
+        <div class="step">
+            <div class="number">3</div>
+            <h3>Choose Your Option</h3>
+            <p>Select the rental option that best suits your trip.</p>
         </div>
 
-        <div class="car-card">
-          <div class="car">🏎️</div>
-          <h3>Luxury</h3>
-          <p>
-            A premium choice for traveler
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+        <a class="btn"
+           href="https://www.discovercars.com/?a_aid=zadocktravel"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+           Compare Cars in Barcelona
+        </a>
+    </div>
+</section>
+
+<section class="cta">
+
+    <h2>Planning a Barcelona Trip?</h2>
+
+    <p>
+        Compare available rental cars before you travel and choose
+        an option that fits your plans.
+    </p>
+
+    <a class="btn"
+       href="https://www.discovercars.com/?a_aid=zadocktravel"
+       target="_blank"
+       rel="nofollow sponsored noopener">
+       Compare Barcelona Car Rentals
+    </a>
+
+</section>
+
+<footer>
+
+    <p><strong>Global Car Hire Guide</strong></p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#">Barcelona</a>
+        <a href="#">Popular Destinations</a>
+        <a href="#">Car Rental Guides</a>
+        <a href="#">Privacy</a>
+        <a href="#">Affiliate Disclosure</a>
+    </div>
+
+    <p>
+        Affiliate Disclosure: Global Car Hire Guide may receive a commission
+        when users book through certain partner links. This does not increase
+        the price paid by the customer.
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 Global Car Hire Guide. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+  </html>
