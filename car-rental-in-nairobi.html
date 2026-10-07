@@ -1,900 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Nairobi Car Rental Guide | Compare Rental Cars in Nairobi</title>
-  <meta name="description" content="Discover and compare car rental options in Nairobi, Kenya, including convenient options for travelers arriving at Jomo Kenyatta International Airport.">
-  <meta name="keywords" content="Nairobi car rental, car rental Nairobi, Nairobi airport car rental, Kenya car rental, rent a car Nairobi">
-
-  <meta property="og:title" content="Nairobi Car Rental Guide">
-  <meta property="og:description" content="Compare rental car options for your Nairobi trip.">
-  <meta property="og:type" content="website">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f7;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    /* HEADER */
-    header {
-      background: #080808;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #333;
-    }
-
-    .nav {
-      min-height: 75px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #d4af37;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
-    nav a {
-      color: #fff;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    .nav-btn {
-      background: #d4af37;
-      color: #000;
-      padding: 11px 18px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      background:
-        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.62)),
-        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 760px;
-      padding: 80px 0;
-    }
-
-    .eyebrow {
-      color: #d4af37;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
-
-    .hero p {
-      font-size: 19px;
-      max-width: 680px;
-      color: #eee;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 23px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: .3s;
-    }
-
-    .btn-gold {
-      background: #d4af37;
-      color: #000;
-    }
-
-    .btn-gold:hover {
-      background: #f0d36a;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid white;
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: #000;
-    }
-
-    /* SEARCH */
-    .search-wrapper {
-      margin-top: -65px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .search-box {
-      background: white;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 12px 40px rgba(0,0,0,.15);
-    }
-
-    .search-box h2 {
-      margin-bottom: 18px;
-    }
-
-    .search-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
-    .field label {
-      display: block;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 6px;
-      color: #555;
-    }
-
-    .field input {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    .search-button {
-      width: 100%;
-      border: 0;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 45px;
-    }
-
-    .section-title h2 {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    /* BENEFITS */
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .benefit {
-      background: white;
-      padding: 28px;
-      border-radius: 8px;
-      border: 1px solid #eee;
-    }
-
-    .benefit-icon {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-
-    .benefit h3 {
-      margin-bottom: 8px;
-    }
-
-    .benefit p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* CATEGORIES */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .category {
-      min-height: 260px;
-      padding: 25px;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: white;
-      overflow: hidden;
-      position: relative;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .category::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,.8));
-    }
-
-    .category-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .category h3 {
-      margin-bottom: 12px;
-    }
-
-    .small-btn {
-      display: inline-block;
-      background: #d4af37;
-      color: #000;
-      padding: 9px 14px;
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    /* AIRPORT */
-    .airport {
-      background: #0a0a0a;
-      color: white;
-    }
-
-    .airport-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 55px;
-    }
-
-    .airport-image {
-      min-height: 400px;
-      border-radius: 10px;
-      background:
-        url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
-    }
-
-    .airport h2 {
-      font-size: 42px;
-      margin-bottom: 18px;
-    }
-
-    .airport p {
-      color: #ccc;
-      margin-bottom: 25px;
-    }
-
-    /* DESTINATIONS */
-    .places {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .place {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid #eee;
-    }
-
-    .place h3 {
-      margin-bottom: 8px;
-    }
-
-    .place p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* TIPS */
-    .tips {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .tip {
-      background: white;
-      padding: 22px;
-      border-left: 4px solid #d4af37;
-      box-shadow: 0 4px 15px rgba(0,0,0,.05);
-    }
-
-    /* FAQ */
-    .faq {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    details {
-      background: white;
-      margin-bottom: 12px;
-      padding: 20px;
-      border-radius: 6px;
-      border: 1px solid #eee;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    details p {
-      margin-top: 12px;
-      color: #666;
-    }
-
-    /* CTA */
-    .cta {
-      background:
-        linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.78)),
-        url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-      color: white;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      max-width: 650px;
-      margin: 0 auto 25px;
-      color: #ddd;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #050505;
-      color: white;
-      padding: 55px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    footer h3 {
-      margin-bottom: 14px;
-    }
-
-    footer p {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    footer a {
-      display: block;
-      color: #aaa;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    footer a:hover {
-      color: #d4af37;
-    }
-
-    .copyright {
-      border-top: 1px solid #222;
-      padding-top: 20px;
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      nav {
-        display: none;
-      }
-
-      .search-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .benefits,
-      .categories {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .airport-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .places {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .nav {
-        min-height: 65px;
-      }
-
-      .logo {
-        font-size: 17px;
-      }
-
-      .nav-btn {
-        padding: 9px 12px;
-        font-size: 12px;
-      }
-
-      .hero {
-        min-height: 560px;
-      }
-
-      .hero-content {
-        padding: 60px 0;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
-      .search-grid,
-      .benefits,
-      .categories,
-      .places,
-      .tips,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .search-wrapper {
-        margin-top: -35px;
-      }
-
-      .airport h2,
-      .section-title h2,
-      .cta h2 {
-        font-size: 30px;
-      }
-
-      .airport-image {
-        min-height: 280px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Car Rental Nairobi – Compare Rental Cars & Deals</title>
+
+<meta name="description" content="Compare car rental in Nairobi and find rental cars for your Nairobi trip. Explore Nairobi Airport car rental options, vehicle types, driving tips and useful rental advice.">
+<meta name="keywords" content="car rental Nairobi, car hire Nairobi, Nairobi car rental, car rental Nairobi Airport, car hire Nairobi Airport, rent a car in Nairobi, Nairobi airport car rental, cheap car rental Nairobi, Nairobi rental cars, best car rental Nairobi">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Global Car Hire Guide">
+<link rel="canonical" href="https://globalcarsrental.github.io/carsrental/car-rental-nairobi-guide.html">
+
+<meta property="og:title" content="Car Rental Nairobi – Compare Rental Cars & Deals">
+<meta property="og:description" content="Compare rental cars in Nairobi before your trip. Explore Nairobi Airport car rental options, vehicle types and useful driving tips.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=80">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#222;
+    line-height:1.7;
+}
+
+.hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,64px);
+    line-height:1.1;
+    margin-bottom:22px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:720px;
+    margin:0 auto 30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#159447;
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:6px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0d7336;
+    transform:translateY(-2px);
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:65px 20px;
+}
+
+section h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.section-intro{
+    text-align:center;
+    max-width:780px;
+    margin:0 auto 40px;
+    color:#555;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 6px 25px rgba(0,0,0,.08);
+    border:1px solid #eee;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#111;
+}
+
+.card p{
+    color:#555;
+}
+
+.highlight{
+    background:#f6faf7;
+}
+
+.cta{
+    background:#f4f7f5;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.cta h2{
+    margin-bottom:15px;
+}
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:white;
+    border:1px solid #e5e5e5;
+    margin:12px 0;
+    padding:18px 20px;
+    border-radius:8px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.disclosure{
+    font-size:13px;
+    color:#777;
+    margin-top:25px;
+}
+
+footer{
+    background:#111;
+    color:#ccc;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 8px;
+}
+
+@media(max-width:600px){
+    .hero{
+        min-height:500px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section h2{
+        font-size:28px;
+    }
+
+    .container{
+        padding:50px 18px;
+    }
+}
+</style>
+
+<!-- FAQ Structured Data -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+   {
+     "@type":"Question",
+     "name":"How much does it cost to rent a car in Nairobi?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"Rental prices vary depending on the vehicle, rental dates, location, insurance and other conditions. Comparing available options before booking can help you find a suitable deal."
+     }
+   },
+   {
+     "@type":"Question",
+     "name":"Can I rent a car at Nairobi Airport?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"Yes. Travelers can compare car rental options available for Nairobi Airport and choose a vehicle that suits their trip."
+     }
+   },
+   {
+     "@type":"Question",
+     "name":"What type of car is best for Nairobi?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"The best vehicle depends on your itinerary. Economy and compact cars can suit city travel, while SUVs may be useful for longer journeys or different road conditions."
+     }
+   },
+   {
+     "@type":"Question",
+     "name":"Is it better to book a rental car in advance?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"Booking in advance allows travelers to compare available vehicles and prices before arriving in Nairobi."
+     }
+   },
+   {
+     "@type":"Question",
+     "name":"Can tourists rent cars in Nairobi?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"Visitors can explore rental options in Nairobi, subject to the rental company's driver, identification and licensing requirements."
+     }
+   }
+ ]
+}
+</script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
-      <a href="#" class="logo">Nairobi <span>Car Rental Guide</span></a>
+<header class="hero">
+    <div class="hero-content">
+        <h1>Car Rental in Nairobi</h1>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#cars">Rental Cars</a>
-        <a href="#nairobi">Nairobi</a>
-        <a href="#airport">Airport</a>
-        <a href="#tips">Tips</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <p>
+            Compare rental cars in Nairobi before you travel.
+            Explore Nairobi Airport car rental options, vehicle types
+            and useful tips for planning your journey.
+        </p>
 
-      <a
-        href="https://www.discovercars.com/?a_aid=zadocktravel"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-        class="nav-btn">
-        Find a Rental Car
-      </a>
+        <a class="btn"
+           href="https://www.discovercars.com/?a_aid=zadocktravel"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+           Compare Nairobi Car Rentals
+        </a>
     </div>
-  </header>
+</header>
 
-  <!-- HERO -->
-  <main id="home">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="eyebrow">Nairobi • Kenya</div>
+<section>
+<div class="container">
 
-          <h1>Find Your Perfect Rental Car in Nairobi</h1>
+<h2>Compare Car Rental Deals in Nairobi</h2>
 
-          <p>
-            Compare rental car options for your Nairobi trip, whether you're
-            visiting for business, tourism, or exploring Kenya.
-          </p>
+<p class="section-intro">
+Planning a trip to Nairobi? Comparing rental cars before your journey
+can help you understand your available vehicle options and choose a
+car that matches your travel plans.
+</p>
 
-          <div class="buttons">
-            <a
-              href="https://www.discovercars.com/?a_aid=zadocktravel"
-              target="_blank"
-              rel="nofollow sponsored noopener"
-              class="btn btn-gold">
-              Search Rental Cars
-            </a>
+<div style="text-align:center;">
+<a class="btn"
+   href="https://www.discovercars.com/?a_aid=zadocktravel"
+   target="_blank"
+   rel="nofollow sponsored noopener">
+   Check Rental Cars & Prices
+</a>
+</div>
 
-            <a href="#nairobi" class="btn btn-outline">
-              Explore Nairobi
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+<p class="disclosure">
+Affiliate disclosure: This website may earn a commission when you book
+through some links on this page, at no additional cost to you.
+</p>
 
-    <!-- SEARCH -->
-    <div class="container search-wrapper">
-      <div class="search-box">
-        <h2>Compare Rental Cars</h2>
+</div>
+</section>
 
-        <div class="search-grid">
-          <div class="field">
-            <label>Pick-up Location</label>
-            <input type="text" placeholder="Nairobi">
-          </div>
+<section class="highlight">
+<div class="container">
 
-          <div class="field">
-            <label>Pick-up Date</label>
-            <input type="date">
-          </div>
+<h2>Why Rent a Car in Nairobi?</h2>
 
-          <div class="field">
-            <label>Pick-up Time</label>
-            <input type="time">
-          </div>
+<div class="grid">
 
-          <div class="field">
-            <label>Drop-off Date</label>
-            <input type="date">
-          </div>
+<div class="card">
+<h3>Explore More</h3>
+<p>
+A rental car can give you greater flexibility when exploring Nairobi
+and destinations around the city.
+</p>
+</div>
 
-          <div class="field">
-            <a
-              href="https://www.discovercars.com/?a_aid=zadocktravel"
-              target="_blank"
-              rel="nofollow sponsored noopener"
-              class="btn btn-gold search-button">
-              Compare Cars
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="card">
+<h3>Airport Convenience</h3>
+<p>
+Compare Nairobi Airport car rental options before your arrival so you
+can plan your transportation in advance.
+</p>
+</div>
 
-    <!-- BENEFITS -->
-    <section id="nairobi">
-      <div class="container">
+<div class="card">
+<h3>Flexible Travel</h3>
+<p>
+Having your own rental vehicle can make it easier to plan your
+schedule without relying entirely on public transportation.
+</p>
+</div>
 
-        <div class="section-title">
-          <h2>Why Rent a Car in Nairobi?</h2>
-          <p>
-            A rental car can give you the flexibility to travel around Nairobi
-            and explore more of Kenya at your own pace.
-          </p>
-        </div>
+</div>
+</div>
+</section>
 
-        <div class="benefits">
+<section>
+<div class="container">
 
-          <div class="benefit">
-            <div class="benefit-icon">✈️</div>
-            <h3>Airport Convenience</h3>
-            <p>
-              Explore rental options for travelers arriving at
-              Jomo Kenyatta International Airport.
-            </p>
-          </div>
+<h2>Nairobi Airport Car Rental</h2>
 
-          <div class="benefit">
-            <div class="benefit-icon">🚗</div>
-            <h3>Travel Freedom</h3>
-            <p>
-              Choose a vehicle that suits your schedule and travel plans.
-            </p>
-          </div>
+<p class="section-intro">
+If you are flying into Nairobi, comparing Nairobi airport car rental
+options before your trip can make your arrival easier. Check available
+vehicles and compare options before making your decision.
+</p>
 
-          <div class="benefit">
-            <div class="benefit-icon">🌍</div>
-            <h3>Explore More</h3>
-            <p>
-              Discover Nairobi attractions and destinations beyond the city.
-            </p>
-          </div>
+<div style="text-align:center;">
+<a class="btn"
+   href="https://www.discovercars.com/?a_aid=zadocktravel"
+   target="_blank"
+   rel="nofollow sponsored noopener">
+   Compare Airport Rental Cars
+</a>
+</div>
 
-          <div class="benefit">
-            <div class="benefit-icon">💼</div>
-            <h3>Business Travel</h3>
-            <p>
-              Convenient transportation for meetings, conferences and business trips.
-            </p>
-          </div>
+</div>
+</section>
 
-        </div>
-      </div>
-    </section>
+<section class="highlight">
+<div class="container">
 
-    <!-- CATEGORIES -->
-    <section id="cars" style="background:#eeeeee;">
-      <div class="container">
+<h2>Popular Rental Car Types</h2>
 
-        <div class="section-title">
-          <h2>Popular Rental Car Categories</h2>
-          <p>
-            Compare different vehicle categories and find an option suitable
-            for your Nairobi journey.
-          </p>
-        </div>
+<div class="grid">
 
-        <div class="categories">
+<div class="card">
+<h3>Economy Cars</h3>
+<p>
+A practical option for travelers looking for a smaller vehicle for
+city journeys.
+</p>
+</div>
 
-          <div class="category"
-            style="background-image:url('https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=900&q=80');">
-            <div class="category-content">
-              <h3>Economy Cars</h3>
-              <a
-                href="https://www.discovercars.com/?a_aid=zadocktravel"
-                target="_blank"
-                rel="nofollow sponsored noopener"
-                class="small-btn">
-                Compare Cars
-              </a>
-            </div>
-          </div>
+<div class="card">
+<h3>Compact Cars</h3>
+<p>
+Compact vehicles can offer a balance between comfort, size and
+everyday driving convenience.
+</p>
+</div>
 
-          <div class="category"
-            style="background-image:url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80');">
-            <div class="category-content">
-              <h3>Compact Cars</h3>
-              <a
-                href="https://www.discovercars.com/?a_aid=zadocktravel"
-                target="_blank"
-                rel="nofollow sponsored noopener"
-                class="small-btn">
-                Compare Cars
-              </a>
-            </div>
-          </div>
+<div class="card">
+<h3>SUVs</h3>
+<p>
+SUVs provide additional space and can be useful for travelers planning
+longer journeys.
+</p>
+</div>
 
-          <div class="category"
-            style="background-image:url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80');">
-            <div class="category-content">
-              <h3>SUVs</h3>
-              <a
-                href="https://www.discovercars.com/?a_aid=zadocktravel"
-                target="_blank"
-                rel="nofollow sponsored noopener"
-                class="small-btn">
-                Compare Cars
-              </a>
-            </div>
-          </div>
+<div class="card">
+<h3>Luxury Cars</h3>
+<p>
+For travelers who prefer additional comfort and a premium driving
+experience, luxury vehicles may be available.
+</p>
+</div>
 
-          <div class="category"
-            style="background-image:url('https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=900&q=80');">
-            <div class="category-content">
-              <h3>Luxury Cars</h3>
-              <a
-                href="https://www.discovercars.com/?a_aid=zadocktravel"
-                target="_blank"
-                rel="nofollow sponsored noopener"
-                class="small-btn">
-                Compare Cars
-              </a>
-            </div>
-          </div>
+</div>
+</div>
+</section>
 
-        </div>
-      </div>
-    </section>
+<section>
+<div class="container">
 
-    <!-- AIRPORT -->
-    <section id="airport" class="airport">
-      <div class="container airport-grid">
+<h2>Popular Places to Explore Around Nairobi</h2>
 
-        <div class="airport-image"></div>
+<div class="grid">
 
-        <div>
-          <div class="eyebrow">Airport Car Rental</div>
+<div class="card">
+<h3>Nairobi National Park</h3>
+<p>
+A unique wildlife destination located close to Nairobi city.
+</p>
+</div>
 
-          <h2>Jomo Kenyatta International Airport</h2>
+<div class="card">
+<h3>Karen</h3>
+<p>
+Explore one of Nairobi's well-known residential and tourist areas.
+</p>
+</div>
 
-          <p>
-            Arriving in Nairobi? Explore available rental car options and
-            compare vehicles for your trip before heading into the city.
-          </p>
+<div class="card">
+<h3>Giraffe Centre</h3>
+<p>
+A popular attraction for visitors interested in wildlife and
+conservation.
+</p>
+</div>
 
-          <a
-            href="https://www.discovercars.com/?a_aid=zadocktravel"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            class="btn btn-gold">
-            Compare Nairobi Airport Cars
-          </a>
-        </div>
+<div class="card">
+<h3>Ngong Hills</h3>
+<p>
+A scenic destination outside central Nairobi that can be included
+in a wider day trip.
+</p>
+</div>
 
-      </div>
-    </section>
+</div>
+</div>
+</section>
 
-    <!-- PLACES -->
-    <section>
-      <div class="container">
+<section class="highlight">
+<div class="container">
 
-        <div class="section-title">
-          <h2>Explore Nairobi by Car</h2>
-          <p>
-            Plan your journey around some of Nairobi's popular areas and attractions.
-          </p>
-        </div>
+<h2>Driving in Nairobi: Useful Tips</h2>
 
-        <div class="places">
+<div class="grid">
 
-          <div class="place">
-            <h3>🦁 Nairobi National Park</h3>
-            <p>
-              Experience wildlife close to the city and enjoy one of Nairobi's
-              most unique attractions.
-            </p>
-          </div>
+<div class="card">
+<h3>Plan Your Route</h3>
+<p>
+Check your route before leaving and allow extra time for traffic,
+especially during busy periods.
+</p>
+</div>
 
-          <div class="place">
-            <h3>🌿 Karen</h3>
-            <p>
-              Discover the leafy Karen area, restaurants, attractions and
-              nearby destinations.
-            </p>
-          </div>
+<div class="card">
+<h3>Check the Vehicle</h3>
+<p>
+Inspect the vehicle and confirm its condition before starting your
+rental period.
+</p>
+</div>
 
-          <div class="place">
-            <h3>🏙️ Westlands</h3>
-            <p>
-              A popular Nairobi business, entertainment and shopping district.
-            </p>
-          </div>
+<div class="card">
+<h3>Review Rental Terms</h3>
+<p>
+Read the rental company's fuel, mileage, insurance, deposit and
+cancellation conditions carefully.
+</p>
+</div>
 
-          <div class="place">
-            <h3>🌳 Karura Forest</h3>
-            <p>
-              Visit one of Nairobi's best-known green spaces and enjoy a break
-              from the city.
-            </p>
-          </div>
+<div class="card">
+<h3>Carry Required Documents</h3>
+<p>
+Make sure you meet the rental company's identification and driving
+requirements before collecting your vehicle.
+</p>
+</div>
 
-          <div class="place">
-            <h3>⛰️ Ngong Hills</h3>
-            <p>
-              Plan a trip outside central Nairobi and enjoy scenic landscapes.
-            </p>
-          </div>
+</div>
+</div>
+</section>
 
-          <div class="place">
-            <h3>🏢 Nairobi CBD</h3>
-            <p>
-              Convenient for business travelers, shopping and city activities.
-            </p>
-          </div>
+<section>
+<div class="container">
 
-        </div>
-      </div>
-    </section>
+<h2>Car Rental Tips for First-Time Visitors</h2>
 
-    <!-- TIPS -->
-    <section id="tips" style="background:#eeeeee;">
-      <div class="container">
+<div class="grid">
 
-        <div class="section-title">
-          <h2>Car Rental Tips</h2>
-          <p>
-            A few things to consider before confirming your rental.
-          </p>
-        </div>
+<div class="card">
+<h3>Compare Before Booking</h3>
+<p>
+Do not choose the first option you see. Compare available vehicles
+and rental conditions.
+</p>
+</div>
 
-        <div class="tips">
+<div class="card">
+<h3>Check Pickup Location</h3>
+<p>
+Confirm exactly where the vehicle will be collected and returned.
+</p>
+</div>
 
-          <div class="tip">
-            <strong>Check the rental terms</strong>
-            <p>Review the conditions before booking.</p>
-          </div>
+<div class="card">
+<h3>Understand Insurance</h3>
+<p>
+Review what is included in the rental agreement and understand any
+additional protection options.
+</p>
+</div>
 
-          <div class="tip">
-            <strong>Compare vehicle options</strong>
-            <p>Look at different categories before choosing a car.</p>
-          </div>
+</div>
 
-          <div class="tip">
-            <strong>Check fuel policies</strong>
-            <p>Understand how fuel is handled by the rental provider.</p>
-          </div>
+</div>
+</section>
 
-          <div class="tip">
-            <strong>Review mileage limits</strong>
-            <p>Check whether your rental includes unlimited or restricted mileage.</p>
-          </div>
+<section class="highlight">
+<div class="container faq">
 
-          <div class="tip">
-            <strong>Confirm pick-up details</strong>
-            <p>Make sure you understand exactly where and when to collect the vehicle.</p>
-          </div>
+<h2>Frequently Asked Questions</h2>
 
-          <div class="tip">
-            <strong>Check insurance requirements</strong>
-            <p>Review insurance, deposit and other applica
+<details>
+<summary>How much does it cost to rent a car in Nairobi?</summary>
+<p>
+Prices vary according to the vehicle, dates, rental company,
+insurance and other booking conditions. Compare available options
+before booking.
+</p>
+</details>
+
+<details>
+<summary>Can I rent a car at Nairobi Airport?</summary>
+<p>
+Yes. Travelers can compare rental vehicles available for Nairobi
+Airport and select an option that fits their travel plans.
+</p>
+</details>
+
+<details>
+<summary>What type of car is best for Nairobi?</summary>
+<p>
+It depends on your itinerary. Economy and compact cars may suit city
+travel, while SUVs can provide additional space for longer journeys.
+</p>
+</details>
+
+<details>
+<summary>Is it better to book a rental car in advance?</summary>
+<p>
+Booking ahead allows you to compare available vehicles and prices
+before arriving in Nairobi.
+</p>
+</details>
+
+<details>
+<summary>Can tourists rent cars in Nairobi?</summary>
+<p>
+Visitors can explore available rental options, subject to the rental
+company's identification, licensing and driver requirements.
+</p>
+</details>
+
+</div>
+</section>
+
+<section class="cta">
+
+<h2>Ready to Compare Nairobi Rental Cars?</h2>
+
+<p>
+Compare available rental cars before your Nairobi trip and find an
+option that fits your journey.
+</p>
+
+<a class="btn"
+   href="https://www.discovercars.com/?a_aid=zadocktravel"
+   target="_blank"
+   rel="nofollow sponsored noopener">
+   Compare Car Rental Options
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Global Car Hire Guide. All rights reserved.</p>
+
+<p style="margin-top:10px;">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms</a>
+<a href="#">Affiliate Disclosure</a>
+</p>
+
+</footer>
+
+</body>
+  </html>
