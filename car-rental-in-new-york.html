@@ -4,171 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>New York Car Rental Guide | Compare Rental Cars</title>
+  <title>Car Rental New York Guide | Compare Rental Cars</title>
 
-  <meta name="description" content="Find and compare car rental options in New York City and across New York State. Explore rental cars for airports, business trips, vacations and road trips.">
+  <meta name="description" content="Explore our New York car rental guide. Compare rental cars, prices, airport pickup options and vehicle types for your trip to New York City.">
+  <meta name="keywords" content="car rental New York, New York car rental, car rental in New York, New York rental cars, rent a car in New York, New York City car rental, car hire New York, JFK car rental, LaGuardia car rental, Newark car rental, Manhattan car rental, New York airport car rental, cheap car rental New York, best car rental New York, compare car rentals New York, New York rental car prices, car rental deals New York">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Car Rental New York Guide">
 
-  <meta name="keywords" content="car rental New York, New York car rental, car rental NYC, New York City car hire, JFK car rental, LaGuardia car rental, Newark car rental, Buffalo car rental">
+  <meta property="og:title" content="Car Rental New York Guide">
+  <meta property="og:description" content="Compare New York car rental options and find a vehicle for your trip.">
+  <meta property="og:type" content="website">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      background: #f7f7f7;
-      color: #171717;
+      color: #222;
+      background: #ffffff;
+      line-height: 1.7;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    /* HEADER */
-    header {
-      background: #0b0b0b;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.25);
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: bold;
-      color: #d4af37;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    nav a {
-      color: #fff;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    .nav-btn {
-      background: #d4af37;
-      color: #111 !important;
-      padding: 10px 16px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    /* HERO */
     .hero {
-      min-height: 620px;
+      min-height: 560px;
+      background:
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.92)),
+        url("https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
       display: flex;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      color: white;
       padding: 80px 20px;
-      background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
-        url("https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
     }
 
     .hero-content {
-      max-width: 900px;
-      margin: auto;
+      max-width: 850px;
     }
 
-    .hero h1 {
-      font-size: clamp(38px, 7vw, 70px);
-      line-height: 1.1;
+    .badge {
+      display: inline-block;
+      background: #f2f2f2;
+      color: #16803c;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 52px;
+      line-height: 1.15;
       margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: #d4af37;
+      color: #111;
     }
 
     .hero p {
-      max-width: 720px;
-      margin: auto;
-      font-size: 19px;
-      color: #eee;
-    }
-
-    .hero-buttons {
-      margin-top: 32px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+      font-size: 20px;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
-      border-radius: 5px;
+      background: #16803c;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
+      margin: 6px;
       transition: 0.3s;
     }
 
-    .btn-gold {
-      background: #d4af37;
-      color: #111;
-    }
-
-    .btn-gold:hover {
-      background: #f0cf58;
+    .btn:hover {
+      background: #0f602d;
       transform: translateY(-2px);
     }
 
-    .btn-outline {
-      border: 1px solid #fff;
-      color: #fff;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: #111;
-    }
-
-    .disclosure {
-      margin-top: 18px;
-      font-size: 12px;
-      color: #ddd;
-    }
-
-    /* GENERAL */
-    section {
-      padding: 75px 20px;
+    .small-link {
+      display: block;
+      margin-top: 12px;
+      color: #16803c;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .container {
-      max-width: 1150px;
+      max-width: 1100px;
       margin: auto;
+      padding: 70px 20px;
+    }
+
+    section {
+      border-bottom: 1px solid #eeeeee;
     }
 
     .section-title {
@@ -178,7 +113,8 @@
 
     .section-title h2 {
       font-size: 36px;
-      margin-bottom: 10px;
+      color: #111;
+      margin-bottom: 12px;
     }
 
     .section-title p {
@@ -187,65 +123,20 @@
       margin: auto;
     }
 
-    /* SEARCH */
-    .search-section {
-      background: white;
-      margin-top: -45px;
-      position: relative;
-      z-index: 5;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 12px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-      padding: 35px;
+    .content {
+      max-width: 850px;
+      margin: auto;
     }
 
-    .search-section h2 {
-      text-align: center;
-      margin-bottom: 25px;
+    .content h3 {
+      color: #111;
+      font-size: 24px;
+      margin: 28px 0 10px;
     }
 
-    .search-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .field label {
-      display: block;
-      font-weight: bold;
-      font-size: 13px;
-      margin-bottom: 7px;
-    }
-
-    .field input,
-    .field select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-
-    .search-button {
-      grid-column: 1 / -1;
-      text-align: center;
-      margin-top: 8px;
-    }
-
-    .search-button a {
-      display: inline-block;
-      background: #111;
-      color: #d4af37;
-      padding: 14px 35px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    /* LOCATIONS */
-    .locations {
-      background: #f3f3f3;
+    .content p {
+      margin-bottom: 18px;
+      color: #444;
     }
 
     .cards {
@@ -255,278 +146,122 @@
     }
 
     .card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.14);
-    }
-
-    .card img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 22px;
+      background: #fff;
+      border: 1px solid #e9e9e9;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
     }
 
     .card h3 {
       margin-bottom: 10px;
-      font-size: 21px;
+      color: #111;
     }
 
     .card p {
       color: #666;
-      font-size: 14px;
-      margin-bottom: 18px;
     }
 
-    .small-btn {
-      display: inline-block;
-      background: #111;
-      color: #d4af37;
-      padding: 10px 15px;
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: bold;
+    ul {
+      padding-left: 22px;
+      color: #444;
     }
 
-    /* BENEFITS */
-    .benefits {
-      background: white;
+    li {
+      margin-bottom: 9px;
     }
 
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .benefit {
+    .cta {
+      background: #f7f9f7;
       text-align: center;
-      padding: 25px 15px;
-      border: 1px solid #eee;
-      border-radius: 8px;
+      border: 1px solid #e6eee8;
+      border-radius: 16px;
+      padding: 55px 25px;
     }
 
-    .benefit-icon {
-      font-size: 35px;
+    .cta h2 {
+      font-size: 34px;
       margin-bottom: 15px;
+      color: #111;
     }
 
-    .benefit h3 {
-      margin-bottom: 8px;
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #555;
     }
 
-    .benefit p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* ROAD TRIPS */
-    .roadtrips {
-      background: #111;
-      color: white;
-    }
-
-    .roadtrips .section-title p {
-      color: #bbb;
-    }
-
-    .road-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .road-item {
-      padding: 25px 15px;
-      border: 1px solid #333;
-      border-radius: 7px;
-      text-align: center;
-    }
-
-    .road-item h3 {
-      color: #d4af37;
-      font-size: 18px;
-    }
-
-    /* TIPS */
-    .tips {
-      background: #f7f7f7;
-    }
-
-    .tips-list {
-      max-width: 850px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-
-    .tip {
-      background: white;
-      padding: 18px;
-      border-left: 4px solid #d4af37;
-      border-radius: 4px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-    }
-
-    /* FAQ */
     .faq {
-      background: white;
-    }
-
-    .faq-container {
       max-width: 850px;
       margin: auto;
     }
 
     details {
-      background: #f7f7f7;
-      margin-bottom: 12px;
-      padding: 18px 20px;
-      border-radius: 5px;
-      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+      padding: 18px 0;
     }
 
     summary {
+      cursor: pointer;
       font-weight: bold;
+      color: #222;
+      font-size: 17px;
     }
 
     details p {
-      padding-top: 12px;
-      color: #666;
+      margin-top: 12px;
+      color: #555;
     }
 
-    /* CTA */
-    .cta {
-      background:
-        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-        url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
-      color: white;
-      text-align: center;
+    .disclosure {
+      background: #fafafa;
+      border-left: 4px solid #16803c;
+      padding: 18px;
+      margin-top: 35px;
+      color: #555;
+      font-size: 14px;
     }
 
-    .cta h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      color: #ddd;
-      margin-bottom: 25px;
-    }
-
-    /* FOOTER */
     footer {
-      background: #080808;
-      color: white;
-      padding: 50px 20px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
+      background: #111;
+      color: #ddd;
+      text-align: center;
+      padding: 45px 20px;
     }
 
     footer h3 {
-      color: #d4af37;
-      margin-bottom: 15px;
+      color: white;
+      margin-bottom: 10px;
     }
 
-    footer p,
-    footer a {
+    footer p {
+      max-width: 650px;
+      margin: auto;
       color: #aaa;
       font-size: 14px;
     }
 
-    footer a {
-      display: block;
-      margin-bottom: 8px;
+    .footer-links {
+      margin-top: 20px;
     }
 
-    footer a:hover {
-      color: #d4af37;
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 14px;
     }
 
-    .copyright {
-      max-width: 1150px;
-      margin: 35px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #292929;
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-    }
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 38px;
+      }
 
-    /* MOBILE */
-    @media (max-width: 850px) {
-
-      nav {
-        display: none;
+      .hero {
+        min-height: 500px;
       }
 
       .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .benefit-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .road-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .hero {
-        min-height: 570px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .search-section {
-        margin: -30px 15px 0;
-        padding: 25px 18px;
-      }
-
-      .search-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .search-button {
-        grid-column: auto;
-      }
-
-      .cards,
-      .benefit-grid,
-      .road-grid,
-      .tips-list,
-      .footer-grid {
         grid-template-columns: 1fr;
       }
 
@@ -535,148 +270,452 @@
       }
 
       .cta h2 {
-        font-size: 31px;
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 330px;
       }
     }
   </style>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it cost to rent a car in New York?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New York car rental prices vary depending on the vehicle, rental dates, pickup location, availability and other booking conditions. Compare available options before booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is the best place to rent a car in New York?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Travelers can compare rental options at New York airports, Manhattan and surrounding areas. The best location depends on your itinerary and pickup requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I rent a car at JFK Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Travelers can compare car rental options serving John F. Kennedy International Airport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I rent a car at LaGuardia Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Rental car options are available for travelers arriving at LaGuardia Airport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I rent a car in Manhattan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Travelers can compare rental locations in and around Manhattan, subject to availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it better to book a rental car in advance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Booking in advance allows travelers to compare available vehicles and prices before their trip."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="navbar">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">NEW YORK CAR RENTAL GUIDE</span>
 
-      <div class="logo">
-        NY Car Rental Guide
-      </div>
+      <h1>Car Rental New York Guide</h1>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#locations">Locations</a>
-        <a href="#airports">Airports</a>
-        <a href="#roadtrips">Road Trips</a>
-        <a href="#tips">Rental Tips</a>
-        <a href="#faq">FAQ</a>
+      <p>
+        Compare New York rental cars and find the right vehicle
+        for your next trip to New York City.
+      </p>
 
-        <a
-          class="nav-btn"
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener">
-          Search Cars
-        </a>
-      </nav>
+      <a
+        class="btn"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener">
+        Compare New York Car Rentals
+      </a>
 
+      <a
+        class="small-link"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener">
+        Search rental cars in New York →
+      </a>
     </div>
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+  <!-- INTRO -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Rent a Car in New York</h2>
+        <p>
+          A simple guide for travelers looking to compare rental cars
+          before visiting New York.
+        </p>
+      </div>
 
-    <div class="hero-content">
+      <div class="content">
+        <p>
+          Renting a car in New York can be useful for airport arrivals,
+          business trips, family travel and road trips beyond New York City.
+          Comparing available rental vehicles before your journey can help
+          you understand your options.
+        </p>
 
-      <h1>
-        Rent a Car in <span>New York</span> with Confidence
-      </h1>
+        <p>
+          New York has several rental locations, including major airports
+          and locations around Manhattan and the surrounding metropolitan area.
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <p>
-        Compare rental car options for New York City, airports,
-        business trips, vacations and road trips across New York State.
-      </p>
 
-      <div class="hero-buttons">
+  <!-- LOCATIONS -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Where to Rent a Car in New York</h2>
+        <p>
+          Compare rental options based on where you arrive and where your
+          journey begins.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>JFK Airport</h3>
+          <p>
+            Compare rental car options for travelers arriving at
+            John F. Kennedy International Airport.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>LaGuardia Airport</h3>
+          <p>
+            Explore rental options for travelers arriving through
+            LaGuardia Airport.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Newark Airport</h3>
+          <p>
+            Compare rental options serving travelers arriving at
+            Newark Liberty International Airport.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Manhattan</h3>
+          <p>
+            Travelers staying in Manhattan can compare nearby rental
+            locations based on availability.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>New York City</h3>
+          <p>
+            Compare vehicles suitable for different travel plans
+            around New York City.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Surrounding Areas</h3>
+          <p>
+            Rental cars can also be useful when planning trips beyond
+            central New York City.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VEHICLES -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Choose the Right Rental Car</h2>
+        <p>
+          Consider your passengers, luggage, destination and driving plans.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Economy Cars</h3>
+          <p>
+            A practical option for travelers looking for a smaller vehicle
+            for everyday travel.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>SUVs</h3>
+          <p>
+            A useful choice for families, groups or travelers carrying
+            additional luggage.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Luxury Cars</h3>
+          <p>
+            Consider premium vehicles for business trips, special occasions
+            or travelers seeking additional comfort.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TIPS -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>New York Car Rental Tips</h2>
+        <p>
+          Important things to consider before confirming your rental.
+        </p>
+      </div>
+
+      <div class="content">
+        <ul>
+          <li>Compare rental prices before booking.</li>
+          <li>Check the rental company's pickup and return requirements.</li>
+          <li>Review available insurance options carefully.</li>
+          <li>Understand the fuel policy.</li>
+          <li>Check whether mileage restrictions apply.</li>
+          <li>Consider parking costs when driving in New York City.</li>
+          <li>Check toll requirements for your planned routes.</li>
+          <li>Make sure your driving documents meet the rental requirements.</li>
+          <li>Check the vehicle condition before leaving the rental location.</li>
+          <li>Review the final rental terms before completing your booking.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Compare Before You Book</h2>
+
+        <p>
+          Compare available rental cars and prices before your New York trip
+          so you can choose an option that fits your travel plans.
+        </p>
 
         <a
-          class="btn btn-gold"
+          class="btn"
           href="https://www.discovercars.com/?a_aid=zadocktravel"
           target="_blank"
           rel="nofollow sponsored noopener">
-          Search Rental Cars
+          Compare Rental Cars in New York
         </a>
+      </div>
+    </div>
+  </section>
 
-        <a class="btn btn-outline" href="#locations">
-          Explore Locations
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>New York Car Rental FAQ</h2>
+        <p>Answers to common questions travelers ask before renting a car.</p>
+      </div>
+
+      <div class="faq">
+
+        <details>
+          <summary>How much does it cost to rent a car in New York?</summary>
+          <p>
+            Prices vary depending on the vehicle, rental dates, pickup
+            location, availability and booking conditions. Compare available
+            options before booking.
+          </p>
+        </details>
+
+        <details>
+          <summary>Where is the best place to rent a car in New York?</summary>
+          <p>
+            Travelers can compare rental options at airports, Manhattan and
+            surrounding areas. The best location depends on your itinerary.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I rent a car at JFK Airport?</summary>
+          <p>
+            Yes. Travelers can compare rental options serving
+            John F. Kennedy International Airport.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I rent a car at LaGuardia Airport?</summary>
+          <p>
+            Yes. Travelers can compare available rental options for
+            LaGuardia Airport.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I rent a car in Manhattan?</summary>
+          <p>
+            Yes. Rental locations are available in and around Manhattan,
+            depending on availability.
+          </p>
+        </details>
+
+        <details>
+          <summary>What type of car should I rent in New York?</summary>
+          <p>
+            The right vehicle depends on your passengers, luggage,
+            destination and travel plans.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I need insurance when renting a car?</summary>
+          <p>
+            Insurance requirements and available coverage can vary.
+            Review the rental terms carefully before booking.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is it better to book a rental car in advance?</summary>
+          <p>
+            Booking ahead gives you an opportunity to compare available
+            vehicles and prices before your trip.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I compare multiple rental car companies?</summary>
+          <p>
+            Yes. Comparison platforms can help travelers review available
+            rental options in one place.
+          </p>
+        </details>
+
+        <details>
+          <summary>What should I check before picking up my rental car?</summary>
+          <p>
+            Check your booking details, identification requirements,
+            payment requirements, insurance terms, fuel policy and vehicle
+            condition.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="container">
+      <div class="cta">
+
+        <h2>Ready to Compare New York Car Rentals?</h2>
+
+        <p>
+          Compare available rental cars and find an option that fits
+          your New York travel plans.
+        </p>
+
+        <a
+          class="btn"
+          href="https://www.discovercars.com/?a_aid=zadocktravel"
+          target="_blank"
+          rel="nofollow sponsored noopener">
+          Compare Cars &amp; Prices
         </a>
 
       </div>
 
       <div class="disclosure">
-        Affiliate disclosure: We may earn a commission when you book
-        through our partner links, at no additional cost to you.
+        <strong>Affiliate Disclosure:</strong>
+        This website may receive a commission when you book through
+        links on this page. This does not affect the price you pay.
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- SEARCH -->
-  <div class="search-section">
+  <!-- FOOTER -->
+  <footer>
+    <h3>Car Rental New York Guide</h3>
 
-    <h2>Find Your New York Rental Car</h2>
+    <p>
+      Independent travel information for travelers comparing
+      car rental options in New York.
+    </p>
 
-    <div class="search-grid">
-
-      <div class="field">
-        <label>Pick-up Location</label>
-        <input type="text" placeholder="e.g. JFK Airport">
-      </div>
-
-      <div class="field">
-        <label>Drop-off Location</label>
-        <input type="text" placeholder="e.g. Manhattan">
-      </div>
-
-      <div class="field">
-        <label>Pick-up Date</label>
-        <input type="date">
-      </div>
-
-      <div class="field">
-        <label>Drop-off Date</label>
-        <input type="date">
-      </div>
-
-      <div class="field">
-        <label>Driver Age</label>
-        <select>
-          <option>Select age</option>
-          <option>18–20</option>
-          <option>21–24</option>
-          <option>25–29</option>
-          <option>30+</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Vehicle Preference</label>
-        <select>
-          <option>Any vehicle</option>
-          <option>Economy</option>
-          <option>Compact</option>
-          <option>SUV</option>
-          <option>Luxury</option>
-          <option>Van</option>
-        </select>
-      </div>
-
-      <div class="search-button">
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener">
-          Compare Rental Cars
-        </a>
-
-      </div>
-
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="#">Car Rental Guides</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Affiliate Disclosure</a>
     </div>
 
-  </div>
+    <p style="margin-top:20px;">
+      © 2026 Car Rental New York Guide. All rights reserved.
+    </p>
+  </footer>
 
-
-  <!-- LOCATIONS -->
-  <section class="
+</body>
+  </html>
