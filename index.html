@@ -1,912 +1,1022 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Global Car Hire Guide | Compare Rental Cars Worldwide</title>
+<title>Global Car Hire Guide | Compare Car Rental Worldwide</title>
 
-  <meta name="description" content="Global Car Hire Guide helps travelers discover, compare and find rental cars worldwide. Explore car rental guides, travel tips, airport car rental information and more.">
+<meta name="description" content="Global Car Hire Guide helps travelers explore car rental options worldwide, compare rental cars and discover useful car hire tips for their next trip.">
 
-  <meta name="keywords" content="global car rental, car hire worldwide, rental cars, car rental guide, compare rental cars, airport car rental, cheap car rental, international car rental, car hire travel guide">
+<meta name="keywords" content="global car rental guide, car rental guide, car hire guide, car rental worldwide, rent a car, rental cars, car rental comparison, compare car rentals, airport car rental, international car rental, car rental travel guide, car rental tips, rental car booking, affordable car rental, car rental destinations, car rental near airport, car hire worldwide, travel car rental, rental car guide for travelers">
 
-  <meta name="author" content="Global Car Hire Guide">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Global Car Hire Guide">
+<link rel="canonical" href="https://globalcarsrental.github.io/carsrental/">
 
-  <meta property="og:title" content="Global Car Hire Guide | Find Your Perfect Rental Car">
-  <meta property="og:description" content="Discover rental car options around the world and explore practical car rental guides and travel tips.">
-  <meta property="og:type" content="website">
+<meta property="og:title" content="Global Car Hire Guide | Compare Car Rental Worldwide">
+<meta property="og:description" content="Explore car rental options, destination guides and useful rental car tips for travelers worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://globalcarsrental.github.io/carsrental/">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #168a45;
+}
+
+nav a {
+    color: #333333;
+    margin-left: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #168a45;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background:
+        linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    color: white;
+    max-width: 720px;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-green {
+    background: #168a45;
+    color: white;
+}
+
+.btn-green:hover {
+    background: #106c35;
+    transform: translateY(-2px);
+}
+
+.btn-white {
+    background: white;
+    color: #171717;
+}
+
+.btn-white:hover {
+    background: #eeeeee;
+}
+
+.disclosure {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: .9;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.section-title p {
+    color: #666666;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666666;
+}
+
+/* DESTINATIONS */
+
+.destinations {
+    background: #f7f8f7;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.destination {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.destination img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 20px;
+}
+
+.destination h3 {
+    margin-bottom: 8px;
+}
+
+.destination p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.small-btn {
+    display: inline-block;
+    background: #168a45;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* STEPS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.step {
+    text-align: center;
+    padding: 30px;
+}
+
+.number {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #168a45;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* TIPS */
+
+.tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* CTA */
+
+.cta {
+    color: white;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
+        url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+}
+
+/* ABOUT */
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about p {
+    color: #666666;
+}
+
+/* FAQ */
+
+.faq {
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    border-bottom: 1px solid #dddddd;
+    padding: 20px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+details p {
+    color: #666666;
+    margin-top: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111111;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #cccccc;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-note {
+    color: #999999;
+    font-size: 13px;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    html {
-      scroll-behavior: smooth;
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
+    .tips {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+@media (max-width: 650px) {
 
-    :root {
-      --black: #111111;
-      --charcoal: #1c1c1c;
-      --gold: #c9a227;
-      --light-gold: #e1c45a;
-      --cream: #f8f7f3;
-      --light: #f4f4f4;
-      --white: #ffffff;
-      --gray: #666;
-      --border: #e5e5e5;
-    }
-
-    /* HEADER */
-    header {
-      background: var(--black);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 15px rgba(0,0,0,.15);
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      min-height: 72px;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: .5px;
-    }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    nav {
-      display: flex;
-      gap: 26px;
-      align-items: center;
+    .nav {
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 12px;
     }
 
     nav a {
-      font-size: 14px;
-      color: #fff;
-      transition: .3s;
+        margin: 0 7px;
+        font-size: 12px;
     }
 
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    .menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    /* HERO */
     .hero {
-      min-height: 620px;
-      background:
-        linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.62)),
-        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
-      display: flex;
-      align-items: center;
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    .hero-content span {
-      color: var(--light-gold);
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 13px;
+        min-height: 600px;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 7vw, 68px);
-      line-height: 1.05;
-      max-width: 780px;
-      margin: 18px 0;
+        font-size: 43px;
     }
 
     .hero p {
-      max-width: 700px;
-      font-size: 18px;
-      color: #f2f2f2;
-      margin-bottom: 30px;
+        font-size: 17px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 15px 28px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: .3s;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #111;
-    }
-
-    .btn-gold:hover {
-      background: var(--light-gold);
-      transform: translateY(-2px);
-    }
-
-    .disclosure {
-      font-size: 11px;
-      color: #ddd;
-      max-width: 600px;
-      margin-top: 13px;
-    }
-
-    /* GENERAL */
     section {
-      padding: 80px 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title span {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+        padding: 60px 0;
     }
 
     .section-title h2 {
-      font-size: 38px;
-      margin: 10px 0;
-      color: var(--black);
+        font-size: 30px;
     }
 
-    .section-title p {
-      max-width: 700px;
-      margin: auto;
-      color: var(--gray);
-    }
-
-    /* SEARCH */
-    .search-section {
-      background: var(--cream);
-    }
-
-    .search-box {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 35px rgba(0,0,0,.08);
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 15px;
-    }
-
-    .field label {
-      display: block;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 7px;
-      color: #444;
-    }
-
-    .field input,
-    .field select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      font-size: 14px;
-      background: white;
-    }
-
-    .search-button {
-      display: flex;
-      align-items: end;
-    }
-
-    .search-button .btn {
-      width: 100%;
-      text-align: center;
-    }
-
-    .gateway-note {
-      text-align: center;
-      margin-top: 18px;
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .feature-card {
-      padding: 30px 24px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: white;
-      box-shadow: 0 5px 20px rgba(0,0,0,.04);
-      transition: .3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.1);
-    }
-
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--black);
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 21px;
-      margin-bottom: 20px;
-    }
-
-    .feature-card h3 {
-      margin-bottom: 10px;
-      font-size: 19px;
-    }
-
-    .feature-card p {
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    /* GUIDE */
-    .guide-section {
-      background: var(--light);
-    }
-
-    .guide-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .guide-card {
-      background: white;
-      padding: 28px;
-      border-radius: 13px;
-      border-left: 4px solid var(--gold);
-      box-shadow: 0 4px 15px rgba(0,0,0,.04);
-    }
-
-    .guide-card h3 {
-      margin-bottom: 10px;
-      color: var(--black);
-    }
-
-    .guide-card p {
-      color: var(--gray);
-      font-size: 15px;
-    }
-
-    /* TRAVEL TIPS */
+    .cards,
+    .destination-grid,
+    .steps,
     .tips {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+        grid-template-columns: 1fr;
     }
 
-    .tip {
-      background: var(--black);
-      color: white;
-      padding: 30px;
-      border-radius: 14px;
-    }
-
-    .tip h3 {
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .tip p {
-      color: #ddd;
-      font-size: 14px;
-    }
-
-    /* CTA */
-    .cta {
-      background:
-        linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
-        url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
-      color: white;
-      text-align: center;
+    .destination img {
+        height: 210px;
     }
 
     .cta h2 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      color: #ddd;
-      margin-bottom: 25px;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .about-image {
-      min-height: 360px;
-      border-radius: 15px;
-      background:
-        url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1000&q=80")
-        center/cover;
-    }
-
-    .about-text h2 {
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
-
-    .about-text p {
-      color: var(--gray);
-      margin-bottom: 15px;
-    }
-
-    /* CONTACT */
-    .contact-box {
-      max-width: 750px;
-      margin: auto;
-      background: var(--cream);
-      padding: 35px;
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    .contact-box p {
-      color: var(--gray);
-      margin-bottom: 15px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--black);
-      color: white;
-      padding: 55px 20px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1.5fr;
-      gap: 50px;
-    }
-
-    footer h3 {
-      color: var(--gold);
-      margin-bottom: 15px;
-    }
-
-    footer p {
-      color: #bbb;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: grid;
-      gap: 8px;
-    }
-
-    .footer-links a {
-      color: #ccc;
-      font-size: 14px;
-    }
-
-    .footer-links a:hover {
-      color: var(--gold);
-    }
-
-    .footer-disclosure {
-      font-size: 12px;
-      color: #aaa;
-    }
-
-    .copyright {
-      max-width: 1200px;
-      margin: 40px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #333;
-      text-align: center;
-      color: #888;
-      font-size: 12px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 900px) {
-      nav {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: var(--black);
-        padding: 20px;
-        flex-direction: column;
-        gap: 18px;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .search-box {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .features {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .tips {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        min-height: 600px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 60px 16px;
-      }
-
-      .section-title h2 {
-        font-size: 30px;
-      }
-
-      .search-box,
-      .features,
-      .guide-grid,
-      .about-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta h2 {
         font-size: 32px;
-      }
-
-      .about-image {
-        min-height: 280px;
-      }
-
-      .navbar {
-        padding: 0 16px;
-      }
     }
-  </style>
+
+}
+
+</style>
+
+<!-- STRUCTURED DATA -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Global Car Hire Guide",
+  "url": "https://globalcarsrental.github.io/carsrental/",
+  "description": "A global travel guide helping travelers explore car rental options and destinations."
+}
+</script>
+
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <header>
-  <div class="navbar">
-    <a href="#home" class="logo">Global <span>Car Hire</span> Guide</a>
+<div class="container nav">
 
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation menu">
-      ☰
-    </button>
+<div class="logo">
+GLOBAL <span>CAR HIRE GUIDE</span>
+</div>
 
-    <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#find">Find a Car</a>
-      <a href="#guide">Car Rental Guide</a>
-      <a href="#tips">Travel Tips</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#tips">Tips</a>
+<a href="#about">About</a>
+</nav>
+
+</div>
 </header>
 
+
 <!-- HERO -->
+
 <section class="hero" id="home">
-  <div class="hero-content">
-    <span>Worldwide Car Rental Guide</span>
 
-    <h1>Find Your Perfect Rental Car Anywhere in the World</h1>
+<div class="container">
 
-    <p>
-      Compare rental car options from trusted providers and find convenient
-      vehicles for your next trip. Explore useful rental tips and start
-      planning your journey with confidence.
-    </p>
+<div class="hero-content">
 
-    <a
-      class="btn btn-gold"
-      href="https://www.discovercars.com/?a_aid=zadocktravel"
-      target="_blank"
-      rel="nofollow sponsored noopener"
-    >
-      Search Rental Cars
-    </a>
+<h1>Find the Right Rental Car for Your Journey</h1>
 
-    <p class="disclosure">
-      Affiliate Disclosure: Global Car Hire Guide may earn a commission when
-      you book through selected links, at no additional cost to you.
-    </p>
-  </div>
+<p>
+Explore car rental options, discover popular destinations and plan your next road trip with Global Car Hire Guide.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-green"
+href="https://www.discovercars.com/?a_aid=zadocktravel"
+target="_blank"
+rel="nofollow sponsored noopener">
+COMPARE CAR RENTALS
+</a>
+
+<a class="btn btn-white" href="#destinations">
+EXPLORE DESTINATIONS
+</a>
+
+</div>
+
+<p class="disclosure">
+Affiliate Disclosure: Global Car Hire Guide may earn a commission when you book through selected links, at no additional cost to you.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- SEARCH -->
-<section class="search-section" id="find">
-  <div class="container">
 
-    <div class="section-title">
-      <span>Find Your Vehicle</span>
-      <h2>Search Rental Cars</h2>
-      <p>
-        Use our booking partner to search and compare available rental cars
-        for your journey.
-      </p>
-    </div>
+<!-- INTRO -->
 
-    <div class="search-box">
-
-      <div class="field">
-        <label for="pickup">Pick-up location</label>
-        <input id="pickup" type="text" placeholder="City, airport or location">
-      </div>
-
-      <div class="field">
-        <label for="pickup-date">Pick-up date</label>
-        <input id="pickup-date" type="date">
-      </div>
-
-      <div class="field">
-        <label for="return-date">Return date</label>
-        <input id="return-date" type="date">
-      </div>
-
-      <div class="field">
-        <label for="age">Driver's age</label>
-        <select id="age">
-          <option>18–20</option>
-          <option>21–24</option>
-          <option selected>25–69</option>
-          <option>70+</option>
-        </select>
-      </div>
-
-      <div class="search-button">
-        <a
-          class="btn btn-gold"
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-        >
-          Search Cars
-        </a>
-      </div>
-
-    </div>
-
-    <p class="gateway-note">
-      This is a search gateway. Availability, prices, rental terms and
-      booking are provided by our booking partner.
-    </p>
-
-  </div>
-</section>
-
-<!-- WHY US -->
 <section>
-  <div class="container">
 
-    <div class="section-title">
-      <span>Why Global Car Hire Guide</span>
-      <h2>Plan Your Rental With Confidence</h2>
-      <p>
-        Helpful resources and convenient access to rental car options for
-        travelers around the world.
-      </p>
-    </div>
+<div class="container">
 
-    <div class="features">
+<div class="section-title">
 
-      <div class="feature-card">
-        <div class="feature-icon">🌍</div>
-        <h3>Global Coverage</h3>
-        <p>
-          Explore rental car options in destinations around the world.
-        </p>
-      </div>
+<h2>Your Guide to Car Rental Around the World</h2>
 
-      <div class="feature-card">
-        <div class="feature-icon">⇄</div>
-        <h3>Compare Options</h3>
-        <p>
-          Discover different vehicle and rental options in one convenient place.
-        </p>
-      </div>
+<p>
+Whether you're planning a city break, business trip, family vacation or road adventure, finding the right rental car can make your journey easier.
+</p>
 
-      <div class="feature-card">
-        <div class="feature-icon">✓</div>
-        <h3>Travel-Friendly Guides</h3>
-        <p>
-          Get practical information to help make your car rental experience easier.
-        </p>
-      </div>
+</div>
 
-      <div class="feature-card">
-        <div class="feature-icon">★</div>
-        <h3>Trusted Booking Partner</h3>
-        <p>
-          Search available rental cars through our selected booking partner.
-        </p>
-      </div>
+<div style="text-align:center;">
 
-    </div>
-  </div>
+<a class="btn btn-green"
+href="https://www.discovercars.com/?a_aid=zadocktravel"
+target="_blank"
+rel="nofollow sponsored noopener">
+COMPARE RENTAL OPTIONS
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- GUIDE -->
-<section class="guide-section" id="guide">
-  <div class="container">
 
-    <div class="section-title">
-      <span>Car Rental Guide</span>
-      <h2>Everything You Should Know Before Renting</h2>
-      <p>
-        Understand the basics of renting a car so you can make better travel
-        decisions.
-      </p>
-    </div>
+<!-- WHY RENT -->
 
-    <div class="guide-grid">
+<section style="background:#f7f8f7;">
 
-      <article class="guide-card">
-        <h3>How to Rent a Car</h3>
-        <p>
-          Start by choosing your destination and travel dates. Compare
-          available vehicles, review the rental conditions and select the
-          option that best fits your journey.
-        </p>
-      </article>
+<div class="container">
 
-      <article class="guide-card">
-        <h3>How to Compare Rental Cars</h3>
-        <p>
-          Look beyond the headline price. Consider vehicle size, mileage,
-          fuel policy, deposit, insurance conditions, cancellation rules
-          and additional fees.
-        </p>
-      </article>
+<div class="section-title">
 
-      <article class="guide-card">
-        <h3>What to Check Before Booking</h3>
-        <p>
-          Review the driver's requirements, rental location, payment rules,
-          required documents, cancellation policy and pickup instructions.
-        </p>
-      </article>
+<h2>Why Rent a Car?</h2>
 
-      <article class="guide-card">
-        <h3>Understanding Rental Car Insurance</h3>
-        <p>
-          Rental insurance can vary between providers and countries.
-          Understand what is included, what is excluded and whether a
-          security deposit or excess applies.
-        </p>
-      </article>
+<p>
+A rental car can give travelers more flexibility and convenience while exploring a new destination.
+</p>
 
-      <article class="guide-card">
-        <h3>Fuel Policies Explained</h3>
-        <p>
-          Common policies include full-to-full and prepaid fuel. Check the
-          agreement carefully so you understand how fuel charges are handled.
-        </p>
-      </article>
+</div>
 
-      <article class="guide-card">
-        <h3>Deposit and Payment Information</h3>
-        <p>
-          Some rental companies require a security deposit or payment card
-          authorization. Check the accepted payment methods and deposit
-          requirements before traveling.
-        </p>
-      </article>
+<div class="cards">
 
-      <article class="guide-card">
-        <h3>Picking Up and Returning a Rental Car</h3>
-        <p>
-          Inspect the vehicle carefully, photograph its condition and confirm
-          the fuel level and mileage. Follow the return instructions provided
-          by the rental company.
-        </p>
-      </article>
+<div class="card">
+<h3>Freedom to Explore</h3>
+<p>Travel beyond the main tourist areas and explore destinations at your own pace.</p>
+</div>
 
-      <article class="guide-card">
-        <h3>Tips for Saving Money on Car Rentals</h3>
-        <p>
-          Compare different vehicles, check multiple pickup locations,
-          understand additional fees and book early when possible.
-        </p>
-      </article>
+<div class="card">
+<h3>Flexible Travel</h3>
+<p>Choose transportation that fits your schedule and travel plans.</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>Airport Convenience</h3>
+<p>Explore rental options close to major airports and travel hubs.</p>
+</div>
 
-    <div style="text-align:center; margin-top:35px;">
-      <a
-        class="btn btn-gold"
-        href="https://www.discovercars.com/?a_aid=zadocktravel"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-      >
-        Compare Rental Cars
-      </a>
-    </div>
+<div class="card">
+<h3>Compare Options</h3>
+<p>Compare available rental options before making your final decision.</p>
+</div>
 
-  </div>
+</div>
+
+</div>
+
 </section>
+
+
+<!-- DESTINATIONS -->
+
+<section class="destinations" id="destinations">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Popular Car Rental Destinations</h2>
+
+<p>
+Explore guides for some of the world's most popular travel destinations.
+</p>
+
+</div>
+
+<div class="destination-grid">
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80" alt="Car rental in Miami">
+<div class="destination-content">
+<h3>Miami</h3>
+<p>Explore car rental options for your Miami trip.</p>
+<a href="car-rental-in-miami.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1522083165195-3424ed129620?auto=format&fit=crop&w=900&q=80" alt="Car rental in New York">
+<div class="destination-content">
+<h3>New York</h3>
+<p>Plan your New York trip with useful car rental information.</p>
+<a href="car-rental-in-new-york.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=900&q=80" alt="Car rental in Orlando">
+<div class="destination-content">
+<h3>Orlando</h3>
+<p>Explore rental car options for your Orlando adventure.</p>
+<a href="car-rental-in-orlando.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?auto=format&fit=crop&w=900&q=80" alt="Car rental in Los Angeles">
+<div class="destination-content">
+<h3>Los Angeles</h3>
+<p>Discover car rental information for Los Angeles travelers.</p>
+<a href="car-rental-in-los-angeles.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80" alt="Car rental in London">
+<div class="destination-content">
+<h3>London</h3>
+<p>Explore useful car hire information for London.</p>
+<a href="car-rental-in-london.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80" alt="Car rental in Paris">
+<div class="destination-content">
+<h3>Paris</h3>
+<p>Plan your Paris journey with rental car information.</p>
+<a href="car-rental-in-paris.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80" alt="Car rental in Dubai">
+<div class="destination-content">
+<h3>Dubai</h3>
+<p>Explore rental options for your Dubai trip.</p>
+<a href="car-rental-in-dubai.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=900&q=80" alt="Car rental in Barcelona">
+<div class="destination-content">
+<h3>Barcelona</h3>
+<p>Discover car hire options for Barcelona travelers.</p>
+<a href="car-rental-in-barcelona.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=900&q=80" alt="Car rental in Rome">
+<div class="destination-content">
+<h3>Rome</h3>
+<p>Find useful car rental information for Rome.</p>
+<a href="car-rental-in-rome.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=900&q=80" alt="Car rental in Cape Town">
+<div class="destination-content">
+<h3>Cape Town</h3>
+<p>Explore car hire options for Cape Town.</p>
+<a href="car-rental-in-cape-town.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80" alt="Car rental in Nairobi">
+<div class="destination-content">
+<h3>Nairobi</h3>
+<p>Discover rental car information for Nairobi.</p>
+<a href="car-rental-in-nairobi.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+<div class="destination">
+<img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80" alt="Car rental in Tokyo">
+<div class="destination-content">
+<h3>Tokyo</h3>
+<p>Plan your Tokyo trip with useful rental information.</p>
+<a href="car-rental-in-tokyo.html" class="small-btn">VIEW GUIDE</a>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>How It Works</h2>
+
+<p>Compare rental options in three simple steps.</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">01</div>
+<h3>Choose Your Destination</h3>
+<p>Find a destination guide for your upcoming trip.</p>
+</div>
+
+<div class="step">
+<div class="number">02</div>
+<h3>Compare Rental Options</h3>
+<p>Explore available rental cars and compare your options.</p>
+</div>
+
+<div class="step">
+<div class="number">03</div>
+<h3>Book Your Car</h3>
+<p>Select the option that suits your travel plans.</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:35px;">
+
+<a class="btn btn-green"
+href="https://www.discovercars.com/?a_aid=zadocktravel"
+target="_blank"
+rel="nofollow sponsored noopener">
+START COMPARING CARS
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 
 <!-- TRAVEL TIPS -->
-<section id="tips">
-  <div class="container">
 
-    <div class="section-title">
-      <span>Travel Tips</span>
-      <h2>Make Your Road Trip Easier</h2>
-      <p>
-        A little preparation can make your rental car experience smoother.
-      </p>
-    </div>
+<section id="tips" style="background:#f7f8f7;">
 
-    <div class="tips">
+<div class="container">
 
-      <div class="tip">
-        <h3>Check the Pickup Location</h3>
-        <p>
-          Airport rental desks can be convenient, but other city locations
-          may sometimes offer different rates or conditions.
-        </p>
-      </div>
+<div class="section-title">
 
-      <div class="tip">
-        <h3>Inspect Before Driving</h3>
-        <p>
-          Walk around the vehicle before leaving and document any existing
-          scratches, dents or other visible damage.
-        </p>
-      </div>
+<h2>Smart Car Rental Tips for Travelers</h2>
 
-      <div class="tip">
-        <h3>Read the Rental Terms</h3>
-        <p>
-          Understanding the agreement can help you avoid surprises involving
-          fuel, mileage, deposits and additional drivers.
-        </p>
-      </div>
+<p>Useful things to consider before booking a rental car.</p>
 
-    </div>
+</div>
 
-  </div>
+<div class="tips">
+
+<div class="card">
+<h3>Pickup Location</h3>
+<p>Check whether your rental pickup location is at the airport or elsewhere.</p>
+</div>
+
+<div class="card">
+<h3>Vehicle Type</h3>
+<p>Choose a vehicle that matches your passengers, luggage and travel plans.</p>
+</div>
+
+<div class="card">
+<h3>Rental Policies</h3>
+<p>Review important rental conditions before confirming your booking.</p>
+</div>
+
+<div class="card">
+<h3>Fuel Policy</h3>
+<p>Check the fuel policy so you understand what is expected at return.</p>
+</div>
+
+<div class="card">
+<h3>Insurance</h3>
+<p>Review available coverage and understand what is included in your rental.</p>
+</div>
+
+<div class="card">
+<h3>Book Ahead</h3>
+<p>Consider comparing options before your trip, especially during busy travel periods.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-
-    <div class="about-grid">
-
-      <div class="about-image" role="img" aria-label="Rental car on a scenic road"></div>
-
-      <div class="about-text">
-        <span style="color:#c9a227;font-weight:bold;letter-spacing:2px;">
-          ABOUT US
-        </span>
-
-        <h2>Your Guide to Car Hire Worldwide</h2>
-
-        <p>
-          Global Car Hire Guide is an independent travel resource created to
-          help travelers understand the car rental process and discover
-          rental car options around the world.
-        </p>
-
-        <p>
-          We focus on useful information, practical travel guidance and
-          convenient ways to compare available rental vehicles.
-        </p>
-
-        <p>
-          Whether you are planning an airport car rental, a city break,
-          business trip or road adventure, our goal is to help you prepare
-          with confidence.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 <!-- CTA -->
+
 <section class="cta">
-  <div class="container">
 
-    <h2>Ready to Find Your Rental Car?</h2>
+<div class="container">
 
-    <p>
-      Explore available rental cars and compare options for your next journe
+<h2>Planning Your Next Trip?</h2>
+
+<p>
+Compare rental car options before you travel and make your journey easier from the moment you arrive.
+</p>
+
+<a class="btn btn-green"
+href="https://www.discovercars.com/?a_aid=zadocktravel"
+target="_blank"
+rel="nofollow sponsored noopener">
+COMPARE CAR RENTALS
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="about">
+
+<div class="section-title">
+
+<h2>About Global Car Hire Guide</h2>
+
+</div>
+
+<p>
+Global Car Hire Guide is an independent travel information website created to help travelers research car rental options and destinations around the world.
+</p>
+
+<br>
+
+<p>
+We provide destination-focused guides, travel tips and useful resources for people planning their next journey.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section style="background:#f7f8f7;">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>How can I compare rental cars?</summary>
+<p>You can use the comparison link on this website to explore available rental car options for your destination.</p>
+</details>
+
+<details>
+<summary>Where can I rent a car?</summary>
+<p>Rental car availability varies by destination. Use the destination guides and comparison service to explore available options.</p>
+</details>
+
+<details>
+<summary>Can I rent a car at an airport?</summary>
+<p>Many destinations offer rental car locations at or near major airports. Check the pickup location before booking.</p>
+</details>
+
+<details>
+<summary>Should I book a rental car before traveling?</summary>
+<p>Comparing options before your trip can help you understand availability, vehicle choices and pricing.</p>
+</details>
+
+<details>
+<summary>What should I check before booking?</summary>
+<p>Review the vehicle, pickup location, rental conditions, fuel policy, insurance information and other booking requirements.</p>
+</details>
+
+<details>
+<summary>Does Global Car Hire Guide provide the rental cars directly?</summary>
+<p>No. Global Car Hire Guide is an independent travel guide and directs visitors to external car rental comparison and booking services.</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section>
+
+<div class="container" style="text-align:center;">
+
+<div class="section-title">
+
+<h2>Ready to Start Your Journey?</h2>
+
+<p>
+Explore car rental options for your next destination.
+</p>
+
+</div>
+
+<a class="btn btn-green"
+href="https://www.discovercars.com/?a_aid=zadocktravel"
+target="_blank"
+rel="nofollow sponsored noopener">
+COMPARE CAR RENTALS
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-content">
+
+<h3>GLOBAL CAR HIRE GUIDE</h3>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#tips">Travel Tips</a>
+<a href="#about">About</a>
+
+</div>
+
+<p class="footer-note">
+Affiliate Disclosure: Some links on Global Car Hire Guide are affiliate links.
+If you make a booking through an affiliate link, we may receive a commission
+at no additional cost to you.
+</p>
+
+<br>
+
+<p class="footer-note">
+© 2026 Global Car Hire Guide. All rights reserved.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+  </html>
