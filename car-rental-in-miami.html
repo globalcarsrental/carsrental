@@ -1,630 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Miami Car Rental Guide | Compare Rental Cars in Miami</title>
-
-  <meta name="description" content="Miami Car Rental Guide helps travelers compare rental cars for Miami, Miami International Airport, Miami Beach and South Florida. Find the right rental car for your journey.">
-
-  <meta name="keywords" content="Miami car rental, Miami rental cars, Miami airport car rental, MIA car rental, rent a car Miami, Miami Florida car hire, Miami car rental guide">
-
-  <meta property="og:title" content="Miami Car Rental Guide">
-  <meta property="og:description" content="Find the right rental car for your Miami journey. Compare available rental options before booking.">
-  <meta property="og:type" content="website">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* HEADER */
-
-    header {
-      background: #080808;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #c7a64b;
-    }
-
-    .nav {
-      min-height: 75px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #d4af37;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      align-items: center;
-    }
-
-    nav a {
-      color: white;
-      font-size: 14px;
-      transition: .3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    .nav-btn {
-      background: #d4af37;
-      color: #080808 !important;
-      padding: 11px 18px;
-      border-radius: 5px;
-      font-weight: 700;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 680px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.58)),
-        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 760px;
-      padding: 80px 0;
-    }
-
-    .eyebrow {
-      color: #d4af37;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
-
-    .hero p {
-      font-size: 19px;
-      max-width: 650px;
-      color: #eee;
-      margin-bottom: 32px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 5px;
-      font-weight: 700;
-      transition: .3s;
-      cursor: pointer;
-    }
-
-    .btn-gold {
-      background: #d4af37;
-      color: #080808;
-    }
-
-    .btn-gold:hover {
-      background: #f0cf62;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid white;
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: #111;
-    }
-
-    .disclosure-small {
-      font-size: 12px;
-      color: #ccc;
-      margin-top: 15px;
-    }
-
-    /* GENERAL */
-
-    section {
-      padding: 85px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      max-width: 750px;
-      margin: 0 auto 50px;
-    }
-
-    .section-title span {
-      color: #b18b22;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .section-title h2 {
-      font-size: 38px;
-      margin: 10px 0 15px;
-      color: #111;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    /* INTRO */
-
-    .intro {
-      background: #fafafa;
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .intro-image {
-      min-height: 400px;
-      background:
-        url("https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1000&q=85")
-        center/cover;
-      border-radius: 8px;
-    }
-
-    .intro-text h2 {
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
-
-    .intro-text p {
-      color: #555;
-      margin-bottom: 18px;
-    }
-
-    /* AIRPORT */
-
-    .airport {
-      background: #0b0b0b;
-      color: white;
-    }
-
-    .airport-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .airport h2 {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    .airport p {
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    .airport-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin: 25px 0;
-    }
-
-    .airport-list div {
-      border: 1px solid #333;
-      padding: 13px;
-      border-radius: 5px;
-    }
-
-    .airport-image {
-      min-height: 400px;
-      background:
-        url("https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1000&q=85")
-        center/cover;
-      border-radius: 8px;
-    }
-
-    /* CAR TYPES */
-
-    .cars-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .car-card {
-      background: white;
-      border: 1px solid #eee;
-      padding: 28px;
-      border-radius: 8px;
-      box-shadow: 0 8px 25px rgba(0,0,0,.06);
-      transition: .3s;
-    }
-
-    .car-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,.1);
-    }
-
-    .car-icon {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .car-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .car-card p {
-      color: #666;
-      font-size: 15px;
-      margin-bottom: 20px;
-    }
-
-    .text-link {
-      color: #9a7613;
-      font-weight: 700;
-    }
-
-    /* WHY */
-
-    .why {
-      background: #f7f7f7;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .why-card {
-      background: white;
-      padding: 28px;
-      border-radius: 7px;
-      border-top: 3px solid #d4af37;
-    }
-
-    .why-card h3 {
-      margin: 12px 0;
-    }
-
-    .why-card p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* AREAS */
-
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .area {
-      padding: 25px;
-      background: #111;
-      color: white;
-      border-radius: 7px;
-    }
-
-    .area h3 {
-      color: #d4af37;
-      margin-bottom: 8px;
-    }
-
-    .area p {
-      color: #ccc;
-      font-size: 14px;
-    }
-
-    /* TIPS */
-
-    .tips {
-      background: #fafafa;
-    }
-
-    .tips-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .tips-image {
-      min-height: 450px;
-      background:
-        url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=85")
-        center/cover;
-      border-radius: 8px;
-    }
-
-    .tips-list {
-      list-style: none;
-    }
-
-    .tips-list li {
-      padding: 13px 0;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .tips-list li::before {
-      content: "✓";
-      color: #b18b22;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    /* TRAVEL GUIDE */
-
-    .guide {
-      background: #fff;
-    }
-
-    .guide-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .guide-card {
-      padding: 25px;
-      border: 1px solid #eee;
-      border-radius: 7px;
-    }
-
-    .guide-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .guide-card p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* CTA */
-
-    .final-cta {
-      background:
-        linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
-        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-      text-align: center;
-      color: white;
-    }
-
-    .final-cta h2 {
-      font-size: 46px;
-      margin-bottom: 15px;
-    }
-
-    .final-cta p {
-      color: #ddd;
-      margin-bottom: 30px;
-    }
-
-    /* FAQ */
-
-    .faq {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    details {
-      border-bottom: 1px solid #ddd;
-      padding: 20px 0;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 17px;
-    }
-
-    details p {
-      color: #666;
-      padding-top: 15px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #050505;
-      color: white;
-      padding: 55px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    footer h3 {
-      color: #d4af37;
-      margin-bottom: 15px;
-    }
-
-    footer p {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    footer ul {
-      list-style: none;
-    }
-
-    footer li {
-      margin: 8px 0;
-      color: #aaa;
-    }
-
-    footer li a:hover {
-      color: #d4af37;
-    }
-
-    .affiliate {
-      margin-top: 15px;
-      font-size: 12px;
-      color: #888;
-    }
-
-    .copyright {
-      text-align: center;
-      border-top: 1px solid #222;
-      padding-top: 25px;
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-
-      nav ul {
-        display: none;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Miami Car Rental Guide | Compare Rental Cars in Miami</title>
+
+<meta name="description" content="Compare Miami car rentals before your trip. Explore rental car options, pickup locations, vehicle types and useful Miami car rental tips.">
+<meta name="keywords" content="Miami car rental, car rental Miami, Miami rental cars, Miami car rental guide, rental cars in Miami, Miami airport car rental, Miami Beach car rental, cheap car rental Miami, best car rental Miami, compare Miami car rentals, Miami SUV rental, Miami luxury car rental, rent a car in Miami, car hire Miami, Miami rental car tips">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Global Car Hire Guide">
+
+<link rel="canonical" href="https://globalcarsrental.github.io/carsrental/car-rental-miami-guide.html">
+
+<meta property="og:title" content="Miami Car Rental Guide | Compare Rental Cars">
+<meta property="og:description" content="Compare rental cars in Miami and find the right vehicle for your trip.">
+<meta property="og:type" content="website">
+
+<meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miami Car Rental Guide">
+<meta name="twitter:description" content="Compare Miami rental cars before your trip.">
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #202020;
+  line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.logo span {
+  color: #159447;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #159447;
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  background: #159447;
+  color: #ffffff;
+  padding: 13px 24px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+  border: 2px solid #159447;
+}
+
+.btn:hover {
+  background: #107638;
+  border-color: #107638;
+  transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 600px;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.55)
+    ),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 70px 20px;
+
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 75px 7%;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #111111;
+}
+
+.section-title p {
+  max-width: 700px;
+  margin: auto;
+  color: #666666;
+}
+
+/* INTRO */
+
+.intro {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.intro h2 {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.intro p {
+  color: #555555;
+  font-size: 17px;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px 24px;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #111111;
+}
+
+.card p {
+  color: #666666;
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* AREAS */
+
+.areas {
+  background: #f7f8f7;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.area {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  border-left: 4px solid #159447;
+}
+
+.area h3 {
+  margin-bottom: 6px;
+}
+
+.area p {
+  color: #666666;
+  font-size: 14px;
+}
+
+/* TIPS */
+
+.tips-list {
+  max-width: 850px;
+  margin: auto;
+}
+
+.tip {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 18px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.tip-number {
+  min-width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #159447;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* VEHICLES */
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.vehicle {
+  padding: 28px;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.vehicle h3 {
+  margin-bottom: 8px;
+}
+
+.vehicle p {
+  color: #666666;
+  font-size: 14px;
+}
+
+/* CTA */
+
+.cta {
+  background:
+    linear-gradient(
+      rgba(0,0,0,.58),
+      rgba(0,0,0,.65)
+    ),
+    url("https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  max-width: 650px;
+  margin: 0 auto 28px;
+}
+
+/* FAQ */
+
+.faq {
+  max-width: 850px;
+  margin: auto;
+}
+
+details {
+  border-bottom: 1px solid #dddddd;
+  padding: 20px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+details p {
+  padding-top: 12px;
+  color: #666666;
+}
+
+/* FINAL */
+
+.final {
+  text-align: center;
+  background: #f7f8f7;
+}
+
+.final h2 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.final p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: #666666;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111111;
+  color: #cccccc;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #cccccc;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer a:hover {
+  color: #159447;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  nav a:not(.btn) {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 55px 5%;
+  }
+
+  .cards,
+  .area-grid,
+  .vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2,
+  .intro h2 {
+    font-size: 29px;
+  }
+
+  .cta h2 {
+    font-size: 32px;
+  }
+
+  .final h2 {
+    font-size: 30px;
+  }
+
+}
+
+</style>
+
+<!-- WEBPAGE STRUCTURED DATA -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Miami Car Rental Guide",
+  "description": "A professional guide to comparing rental cars in Miami.",
+  "url": "https://globalcarsrental.github.io/carsrental/car-rental-miami-guide.html"
+}
+</script>
+
+<!-- FAQ STRUCTURED DATA -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a car in Miami?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A rental car can be useful for travelers who want to explore Miami and surrounding areas at their own pace."
       }
-
-      .intro-grid,
-      .airport-grid,
-      .tips-grid {
-        grid-template-columns: 1fr;
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I pick up a rental car in Miami?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Popular pickup locations include Miami International Airport and rental locations throughout Miami."
       }
-
-      .cars-grid {
-        grid-template-columns: 1fr 1fr;
+    },
+    {
+      "@type": "Question",
+      "name": "What type of rental car is best for Miami?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best vehicle depends on your group size, luggage, budget and travel plans."
       }
-
-      .why-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .areas-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .guide-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
+    },
+    {
+      "@type": "Question",
+      "name": "Should I compare rental car prices before traveling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comparing available rental options before traveling can help you understand prices, vehicle choices and rental conditions."
       }
     }
+  ]
+}
+</script>
 
-    @media (max-width: 600px) {
-
-      section {
-        padding: 60px 0;
-      }
-
-      .hero {
-        min-height: 620px;
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .section-title h2,
-      .intro-text h2,
-      .airport h2 {
-        font-size: 30px;
-      }
-
-      .cars-grid,
-      .why-grid,
-      .areas-grid,
-      .guide-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        text-align: center;
-      }
-
-      .nav-btn {
-        display: none;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -632,33 +512,28 @@
 <!-- HEADER -->
 
 <header>
-  <div class="container nav">
 
-    <a href="#" class="logo">
-      Miami <span>Car Rental Guide</span>
+  <div class="logo">
+    Miami <span>Car Rental Guide</span>
+  </div>
+
+  <nav>
+
+    <a href="#why">Why Rent</a>
+    <a href="#areas">Areas</a>
+    <a href="#tips">Tips</a>
+    <a href="#faq">FAQ</a>
+
+    <a
+      class="btn"
+      href="https://www.discovercars.com/?a_aid=zadocktravel"
+      target="_blank"
+      rel="nofollow sponsored noopener">
+      Compare Cars
     </a>
 
-    <nav>
-      <ul>
-        <li><a href="#rentals">Car Rentals</a></li>
-        <li><a href="#airport">Miami Airport</a></li>
-        <li><a href="#cars">Car Types</a></li>
-        <li><a href="#guide">Travel Guide</a></li>
-        <li><a href="#faq">FAQ</a></li>
+  </nav>
 
-        <li>
-          <a
-            href="https://www.discovercars.com/?a_aid=zadocktravel"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            class="nav-btn">
-            Compare Cars
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-  </div>
 </header>
 
 
@@ -666,45 +541,22 @@
 
 <section class="hero">
 
-  <div class="container">
+  <div class="hero-content">
 
-    <div class="hero-content">
+    <h1>Miami Car Rental Guide</h1>
 
-      <div class="eyebrow">
-        Miami, Florida
-      </div>
+    <p>
+      Compare rental cars in Miami before you travel and find
+      a vehicle that fits your trip.
+    </p>
 
-      <h1>
-        Find the Right Rental Car for Your Miami Journey.
-      </h1>
-
-      <p>
-        Compare available rental cars and explore options for Miami,
-        Miami International Airport, Miami Beach and South Florida.
-      </p>
-
-      <div class="buttons">
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="btn btn-gold">
-          Compare Miami Rental Cars
-        </a>
-
-        <a href="#rentals" class="btn btn-outline">
-          Explore Rental Options
-        </a>
-
-      </div>
-
-      <p class="disclosure-small">
-        We may earn a commission when you book through links on this website,
-        at no additional cost to you.
-      </p>
-
-    </div>
+    <a
+      class="btn"
+      href="https://www.discovercars.com/?a_aid=zadocktravel"
+      target="_blank"
+      rel="nofollow sponsored noopener">
+      Compare Miami Rental Cars
+    </a>
 
   </div>
 
@@ -713,241 +565,22 @@
 
 <!-- INTRO -->
 
-<section class="intro" id="rentals">
+<section>
 
   <div class="container">
 
-    <div class="intro-grid">
+    <div class="intro">
 
-      <div class="intro-image"></div>
-
-      <div class="intro-text">
-
-        <div class="eyebrow">
-          Miami Car Rental
-        </div>
-
-        <h2>
-          Explore Miami on Your Own Terms
-        </h2>
-
-        <p>
-          From Miami International Airport to Miami Beach, Brickell and
-          South Florida, having a rental car can give travelers greater
-          flexibility during their trip.
-        </p>
-
-        <p>
-          Compare available vehicles and rental options before choosing
-          the car that best fits your travel plans.
-        </p>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="btn btn-gold">
-          Start Comparing
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- AIRPORT -->
-
-<section class="airport" id="airport">
-
-  <div class="container">
-
-    <div class="airport-grid">
-
-      <div>
-
-        <div class="eyebrow">
-          Miami International Airport
-        </div>
-
-        <h2>
-          Miami Airport Car Rental
-        </h2>
-
-        <p>
-          Flying into Miami International Airport (MIA)?
-          Compare rental-car options before your trip and review
-          the details that matter to you.
-        </p>
-
-        <div class="airport-list">
-
-          <div>Economy Cars</div>
-          <div>Compact Cars</div>
-          <div>SUVs</div>
-          <div>Full-Size Cars</div>
-          <div>Premium Vehicles</div>
-          <div>Family Vehicles</div>
-
-        </div>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="btn btn-gold">
-          Compare Airport Rental Cars
-        </a>
-
-        <p class="disclosure-small">
-          Pickup arrangements and rental conditions vary by supplier.
-          Always check the final rental details before booking.
-        </p>
-
-      </div>
-
-      <div class="airport-image"></div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CAR TYPES -->
-
-<section id="cars">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <span>Choose Your Vehicle</span>
-
-      <h2>
-        Rental Cars for Different Trips
-      </h2>
+      <h2>Planning to Rent a Car in Miami?</h2>
 
       <p>
-        Explore different vehicle categories and compare available options
-        for your Miami trip.
+        Renting a car can make it easier to explore Miami Beach,
+        Downtown Miami, Brickell, Little Havana, Coral Gables,
+        Coconut Grove and attractions outside the city.
+        Before booking, compare prices, vehicle types, pickup
+        locations, mileage policies, insurance options and
+        cancellation conditions.
       </p>
-
-    </div>
-
-
-    <div class="cars-grid">
-
-      <div class="car-card">
-        <div class="car-icon">🚗</div>
-        <h3>Economy Cars</h3>
-        <p>
-          A practical choice for travelers looking for an efficient
-          vehicle for city travel.
-        </p>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="text-link">
-          Compare Available Cars →
-        </a>
-      </div>
-
-
-      <div class="car-card">
-        <div class="car-icon">🚘</div>
-        <h3>Compact Cars</h3>
-        <p>
-          Convenient vehicles for exploring Miami while keeping
-          city driving and parking in mind.
-        </p>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="text-link">
-          Compare Available Cars →
-        </a>
-      </div>
-
-
-      <div class="car-card">
-        <div class="car-icon">🚙</div>
-        <h3>SUVs</h3>
-        <p>
-          Extra space for families, luggage and travelers planning
-          longer Florida road trips.
-        </p>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="text-link">
-          Compare Available SUVs →
-        </a>
-      </div>
-
-
-      <div class="car-card">
-        <div class="car-icon">🚘</div>
-        <h3>Full-Size Cars</h3>
-        <p>
-          More interior space and comfort for longer journeys
-          around South Florida.
-        </p>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="text-link">
-          Compare Full-Size Cars →
-        </a>
-      </div>
-
-
-      <div class="car-card">
-        <div class="car-icon">✨</div>
-        <h3>Premium Cars</h3>
-        <p>
-          Explore upscale vehicle options for travelers who prefer
-          an elevated driving experience.
-        </p>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="text-link">
-          Compare Premium Cars →
-        </a>
-      </div>
-
-
-      <div class="car-card">
-        <div class="car-icon">🌴</div>
-        <h3>Convertibles</h3>
-        <p>
-          A stylish option for enjoying Miami's coastal atmosphere
-          and sunny Florida drives.
-        </p>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="text-link">
-          Compare Convertibles →
-        </a>
-      </div>
 
     </div>
 
@@ -958,56 +591,91 @@
 
 <!-- WHY COMPARE -->
 
-<section class="why">
+<section id="why">
 
   <div class="container">
 
     <div class="section-title">
 
-      <span>Travel Smarter</span>
-
-      <h2>
-        Why Compare Before Booking?
-      </h2>
+      <h2>Why Compare Rental Cars?</h2>
 
       <p>
-        A little research before booking can help you choose an option
-        that matches your trip and budget.
+        Comparing options before your trip can make planning
+        your Miami journey easier.
       </p>
 
     </div>
 
 
-    <div class="why-grid">
+    <div class="cards">
 
-      <div class="why-card">
-        <h3>Compare Options</h3>
+      <div class="card">
+
+        <div class="icon">💰</div>
+
+        <h3>Compare Prices</h3>
+
         <p>
-          Review different rental options in one place.
+          Compare available rental options and find a vehicle
+          that fits your travel budget.
         </p>
+
       </div>
 
-      <div class="why-card">
+
+      <div class="card">
+
+        <div class="icon">🚗</div>
+
         <h3>Choose Your Vehicle</h3>
+
         <p>
-          Explore different vehicle categories based on your needs.
+          Explore economy cars, SUVs, family vehicles and
+          luxury options.
         </p>
+
       </div>
 
-      <div class="why-card">
-        <h3>Review Details</h3>
+
+      <div class="card">
+
+        <div class="icon">📋</div>
+
+        <h3>Check Conditions</h3>
+
         <p>
-          Check mileage, deposits, cancellation policies and pickup
-          instructions before booking.
+          Review mileage, fuel policies, deposits, insurance
+          and cancellation conditions.
         </p>
+
       </div>
 
-      <div class="why-card">
-        <h3>Plan With Confidence</h3>
+
+      <div class="card">
+
+        <div class="icon">⏱️</div>
+
+        <h3>Save Time</h3>
+
         <p>
-          Review your options before making your final booking decision.
+          Compare rental options online before arriving in
+          Miami.
         </p>
+
       </div>
+
+    </div>
+
+
+    <div style="text-align:center;margin-top:35px;">
+
+      <a
+        class="btn"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener">
+        Compare Cars in Miami
+      </a>
 
     </div>
 
@@ -1018,47 +686,445 @@
 
 <!-- AREAS -->
 
+<section id="areas" class="areas">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Popular Miami Rental Areas</h2>
+
+      <p>
+        Rental availability and pricing can vary depending
+        on your pickup location.
+      </p>
+
+    </div>
+
+
+    <div class="area-grid">
+
+      <div class="area">
+        <h3>Miami International Airport</h3>
+        <p>
+          A convenient option for travelers arriving by air.
+        </p>
+      </div>
+
+
+      <div class="area">
+        <h3>Miami Beach</h3>
+        <p>
+          Useful for visitors staying near the famous beaches.
+        </p>
+      </div>
+
+
+      <div class="area">
+        <h3>Downtown Miami</h3>
+        <p>
+          Convenient for travelers staying in the city center.
+        </p>
+      </div>
+
+
+      <div class="area">
+        <h3>Brickell</h3>
+        <p>
+          A popular business and luxury district in Miami.
+        </p>
+      </div>
+
+
+      <div class="area">
+        <h3>Coral Gables</h3>
+        <p>
+          An attractive option for visitors exploring the
+          southern Miami area.
+        </p>
+      </div>
+
+
+      <div class="area">
+        <h3>Coconut Grove</h3>
+        <p>
+          A relaxed Miami neighborhood with restaurants,
+          parks and waterfront attractions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TIPS -->
+
+<section id="tips">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Miami Car Rental Tips</h2>
+
+      <p>
+        Things to consider before booking your rental car.
+      </p>
+
+    </div>
+
+
+    <div class="tips-list">
+
+      <div class="tip">
+        <div class="tip-number">1</div>
+        <div>Compare several rental options before booking.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">2</div>
+        <div>Check the pickup and return location carefully.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">3</div>
+        <div>Review the fuel policy before confirming your booking.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">4</div>
+        <div>Check whether mileage restrictions apply.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">5</div>
+        <div>Understand deposit requirements.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">6</div>
+        <div>Review available insurance and protection options.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">7</div>
+        <div>Check the cancellation policy.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">8</div>
+        <div>Inspect the vehicle before driving away.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">9</div>
+        <div>Allow enough time when returning the vehicle.</div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-number">10</div>
+        <div>Keep your rental documents accessible.</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VEHICLES -->
+
 <section>
 
   <div class="container">
 
     <div class="section-title">
 
-      <span>Explore Miami</span>
-
-      <h2>
-        Popular Miami Areas
-      </h2>
+      <h2>Popular Rental Vehicle Types</h2>
 
       <p>
-        Discover some of the most popular areas travelers may explore
-        during a Miami visit.
+        Choose a vehicle based on your group size, luggage,
+        budget and travel plans.
       </p>
 
     </div>
 
 
-    <div class="areas-grid">
+    <div class="vehicle-grid">
 
-      <div class="area">
-        <h3>Miami International Airport</h3>
+      <div class="vehicle">
+        <h3>Economy Cars</h3>
         <p>
-          A major arrival point for visitors flying into Miami.
+          A practical choice for travelers looking for
+          an efficient and compact vehicle.
         </p>
       </div>
 
-      <div class="area">
-        <h3>Miami Beach</h3>
+
+      <div class="vehicle">
+        <h3>Compact Cars</h3>
         <p>
-          Famous for beaches, restaurants, nightlife and Art Deco architecture.
+          A balance between convenience, comfort and
+          everyday usability.
         </p>
       </div>
 
-      <div class="area">
-        <h3>South Beach</h3>
+
+      <div class="vehicle">
+        <h3>SUVs</h3>
         <p>
-          A vibrant destination known for its coastal atmosphere and nightlife.
+          Useful for families, groups and travelers
+          carrying more luggage.
         </p>
       </div>
 
-      <div cla
+
+      <div class="vehicle">
+        <h3>Full-Size Cars</h3>
+        <p>
+          More interior space for longer trips and
+          comfortable city travel.
+        </p>
+      </div>
+
+
+      <div class="vehicle">
+        <h3>Luxury Cars</h3>
+        <p>
+          An option for travelers looking for a more
+          premium driving experience.
+        </p>
+      </div>
+
+
+      <div class="vehicle">
+        <h3>Family Cars</h3>
+        <p>
+          Designed for travelers who need extra space
+          for passengers and luggage.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <h2>Ready to Compare Miami Rental Cars?</h2>
+
+    <p>
+      Compare available rental cars and choose an option
+      that fits your Miami trip.
+    </p>
+
+    <a
+      class="btn"
+      href="https://www.discovercars.com/?a_aid=zadocktravel"
+      target="_blank"
+      rel="nofollow sponsored noopener">
+      Compare Rental Cars
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Miami Car Rental FAQ</h2>
+
+      <p>
+        Answers to common questions travelers ask before
+        renting a car in Miami.
+      </p>
+
+    </div>
+
+
+    <div class="faq">
+
+      <details>
+
+        <summary>
+          Do I need a car in Miami?
+        </summary>
+
+        <p>
+          A rental car can be useful for travelers who want
+          to explore Miami and surrounding areas at their
+          own pace.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Where can I pick up a rental car in Miami?
+        </summary>
+
+        <p>
+          Popular pickup locations include Miami International
+          Airport and rental locations throughout Miami.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Is Miami International Airport a good pickup location?
+        </summary>
+
+        <p>
+          It can be convenient for travelers arriving by air.
+          Compare available pickup options before making your
+          reservation.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          What type of rental car is best for Miami?
+        </summary>
+
+        <p>
+          The best vehicle depends on your group size, luggage,
+          budget and travel plans.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Should I compare rental car prices before traveling?
+        </summary>
+
+        <p>
+          Yes. Comparing available options before traveling can
+          help you understand prices, vehicle choices and rental
+          conditions.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          What should I check before booking a rental car?
+        </summary>
+
+        <p>
+          Check the total price, pickup location, fuel policy,
+          mileage, deposit, insurance and cancellation conditions.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Can rental car prices vary by pickup location?
+        </summary>
+
+        <p>
+          Yes. Prices and availability can vary between different
+          pickup locations, so comparing locations may be useful.
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final">
+
+  <div class="container">
+
+    <h2>Plan Your Miami Trip With Confidence</h2>
+
+    <p>
+      Compare rental cars before you travel and make your
+      Miami journey easier to plan.
+    </p>
+
+    <a
+      class="btn"
+      href="https://www.discovercars.com/?a_aid=zadocktravel"
+      target="_blank"
+      rel="nofollow sponsored noopener">
+      Compare Miami Rental Cars
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>Miami Car Rental Guide</strong>
+  </p>
+
+  <p style="margin:10px 0;">
+
+    <a href="#why">Why Rent</a>
+
+    <a href="#areas">Areas</a>
+
+    <a href="#tips">Tips</a>
+
+    <a href="#faq">FAQ</a>
+
+  </p>
+
+  <p>
+    Affiliate Disclosure: We may earn a commission from
+    qualifying bookings made through partner links.
+  </p>
+
+  <p style="margin-top:12px;">
+    © 2026 Miami Car Rental Guide. All rights reserved.
+  </p>
+
+</footer>
+
+</body>
+  </html>
