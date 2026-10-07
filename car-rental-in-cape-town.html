@@ -1,876 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cape Town Car Rental | Compare Rental Cars & Explore South Africa</title>
+<title>Car Rental Cape Town | Compare Rental Cars & Prices</title>
 
-  <meta name="description" content="Compare rental cars in Cape Town and find convenient options for airport pickup, city travel and Western Cape road trips.">
-  <meta name="keywords" content="Cape Town car rental, car rental Cape Town, Cape Town airport car rental, rent a car in Cape Town, South Africa car rental">
+<meta name="description" content="Planning a trip to Cape Town? Compare car rental options, prices and vehicles before you travel with this professional Cape Town car rental guide.">
 
-  <meta property="og:title" content="Cape Town Car Rental Guide">
-  <meta property="og:description" content="Compare rental cars and explore Cape Town and the Western Cape with confidence.">
-  <meta property="og:type" content="website">
+<meta name="keywords" content="car rental Cape Town, Cape Town car rental, car hire Cape Town, Cape Town car hire, Cape Town rental cars, rent a car in Cape Town, Cape Town airport car rental, Cape Town airport car hire, cheap car rental Cape Town, best car rental Cape Town, Cape Town car rental prices, Cape Town rental car comparison, compare car rental Cape Town, car rental Cape Town South Africa, Cape Town travel car rental, Cape Town road trip car rental, SUV rental Cape Town, automatic car rental Cape Town, rental cars near Cape Town Airport, Cape Town car hire guide">
 
-  <style>
-    :root {
-      --black: #080808;
-      --dark: #111111;
-      --gold: #d4af37;
-      --light-gold: #f1d675;
-      --white: #ffffff;
-      --gray: #bdbdbd;
-      --light: #f5f5f5;
-      --card: #181818;
-    }
+<meta name="robots" content="index, follow">
+<meta name="author" content="Global Cars Hire Guide">
+<link rel="canonical" href="https://globalcarsrental.github.io/carsrental/car-rental-cape-town-guide.html">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta property="og:title" content="Car Rental Cape Town | Compare Rental Cars">
+<meta property="og:description" content="Compare Cape Town rental cars and explore your options before your trip.">
+<meta property="og:type" content="website">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    background: #ffffff;
+    line-height: 1.7;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* HEADER */
-    header {
-      background: rgba(8, 8, 8, 0.96);
-      border-bottom: 1px solid rgba(212,175,55,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav {
-      min-height: 75px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--gold);
-      letter-spacing: 1px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
-    nav a {
-      font-size: 14px;
-      color: #eee;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    .nav-btn {
-      background: var(--gold);
-      color: #000;
-      padding: 11px 18px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 680px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.78)),
+.hero {
+    min-height: 620px;
+    background:
+        linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.55)),
         url("https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1800&q=85")
         center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #198754;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 6px;
+}
+
+.btn:hover {
+    background: #126b42;
+    transform: translateY(-2px);
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 65px 0;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+section p {
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.intro {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #198754;
+}
+
+.gray-section {
+    background: #f7f8f7;
+}
+
+.places {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.place {
+    padding: 17px;
+    background: white;
+    border-left: 4px solid #198754;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.cta {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.cta h2 {
+    color: white;
+}
+
+.cta p {
+    color: #ddd;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.faq {
+    margin-top: 30px;
+}
+
+details {
+    border-bottom: 1px solid #ddd;
+    padding: 18px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.disclosure {
+    background: #f5f5f5;
+    padding: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 560px;
     }
 
-    .hero-content {
-      max-width: 760px;
-      padding: 90px 0;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 25px;
+    .hero h1 {
+        font-size: 36px;
     }
 
     .hero p {
-      color: #e6e6e6;
-      font-size: 19px;
-      max-width: 680px;
-      margin-bottom: 32px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #000;
-    }
-
-    .btn-gold:hover {
-      background: var(--light-gold);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid var(--gold);
-      color: var(--gold);
-    }
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: #000;
-    }
-
-    /* SEARCH */
-    .search-wrap {
-      margin-top: -65px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .search-box {
-      background: #151515;
-      border: 1px solid rgba(212,175,55,0.45);
-      border-radius: 10px;
-      padding: 28px;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.5);
-    }
-
-    .search-box h2 {
-      font-family: Georgia, serif;
-      margin-bottom: 20px;
-    }
-
-    .search-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .field label {
-      font-size: 12px;
-      color: var(--gray);
-    }
-
-    .field input,
-    .field select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #444;
-      border-radius: 5px;
-      background: #222;
-      color: white;
-      outline: none;
-    }
-
-    .search-button {
-      margin-top: 18px;
-      display: inline-block;
-      background: var(--gold);
-      color: #000;
-      padding: 14px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    /* GENERAL SECTIONS */
-    section {
-      padding: 90px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title span {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .section-title h2 {
-      font-family: Georgia, serif;
-      font-size: clamp(30px, 5vw, 45px);
-      margin-top: 8px;
-    }
-
-    .section-title p {
-      color: var(--gray);
-      max-width: 700px;
-      margin: 15px auto 0;
-    }
-
-    /* AIRPORT */
-    .airport {
-      background: #101010;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .image-card {
-      min-height: 390px;
-      border-radius: 10px;
-      background:
-        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.4)),
-        url("https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?auto=format&fit=crop&w=1200&q=80")
-        center/cover;
-    }
-
-    .content h2 {
-      font-family: Georgia, serif;
-      font-size: 40px;
-      margin-bottom: 18px;
-    }
-
-    .content p {
-      color: var(--gray);
-      margin-bottom: 20px;
-    }
-
-    /* CARS */
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .car-card {
-      background: var(--card);
-      border: 1px solid #292929;
-      border-radius: 8px;
-      padding: 25px;
-      transition: 0.3s;
-    }
-
-    .car-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold);
-    }
-
-    .car-icon {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .car-card h3 {
-      font-family: Georgia, serif;
-      margin-bottom: 8px;
-    }
-
-    .car-card p {
-      color: var(--gray);
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .small-link {
-      color: var(--gold);
-      font-weight: bold;
-      font-size: 13px;
-    }
-
-    /* DESTINATIONS */
-    .destinations {
-      background: #101010;
-    }
-
-    .destination-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .destination {
-      min-height: 240px;
-      border-radius: 8px;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .destination::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,.9));
-    }
-
-    .destination-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .destination h3 {
-      font-family: Georgia, serif;
-      font-size: 25px;
-    }
-
-    .destination p {
-      color: #ddd;
-      font-size: 13px;
-    }
-
-    .peninsula {
-      background-image: url("https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .winelands {
-      background-image: url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .hermanus {
-      background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .stellenbosch {
-      background-image: url("https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .franschhoek {
-      background-image: url("https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .garden-route {
-      background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80");
-    }
-
-    /* TIPS */
-    .tips-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .tip {
-      background: #171717;
-      border-left: 3px solid var(--gold);
-      padding: 20px;
-      border-radius: 5px;
-    }
-
-    .tip strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .tip span {
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    /* FAQ */
-    .faq {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    details {
-      background: #171717;
-      margin-bottom: 10px;
-      border: 1px solid #292929;
-      border-radius: 5px;
-      padding: 18px 20px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    details p {
-      color: var(--gray);
-      margin-top: 12px;
-      font-size: 14px;
-    }
-
-    /* CTA */
-    .final-cta {
-      text-align: center;
-      background:
-        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.82)),
-        url("https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
-    }
-
-    .final-cta h2 {
-      font-family: Georgia, serif;
-      font-size: clamp(35px, 5vw, 55px);
-      margin-bottom: 15px;
-    }
-
-    .final-cta p {
-      color: #ddd;
-      max-width: 650px;
-      margin: 0 auto 28px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #050505;
-      border-top: 1px solid #222;
-      padding: 45px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 35px;
-    }
-
-    footer h3 {
-      color: var(--gold);
-      font-family: Georgia, serif;
-      margin-bottom: 12px;
-    }
-
-    footer p,
-    footer a {
-      color: #999;
-      font-size: 14px;
-    }
-
-    footer a {
-      display: block;
-      margin-bottom: 7px;
-    }
-
-    footer a:hover {
-      color: var(--gold);
-    }
-
-    .disclosure {
-      background: #101010;
-      border: 1px solid #222;
-      padding: 15px;
-      border-radius: 5px;
-      margin-bottom: 25px;
-      color: #888;
-      font-size: 12px;
-    }
-
-    .copyright {
-      text-align: center;
-      border-top: 1px solid #222;
-      padding-top: 20px;
-      color: #777;
-      font-size: 12px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 900px) {
-      nav {
-        display: none;
-      }
-
-      .search-grid,
-      .car-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .destination-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .two-column {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        min-height: 620px;
-      }
-
-      .hero-content {
-        padding: 70px 0;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-
-      .search-grid,
-      .car-grid,
-      .destination-grid,
-      .tips-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .search-wrap {
-        margin-top: -40px;
-      }
-
-      .search-box {
-        padding: 20px;
-      }
-
-      .content h2 {
-        font-size: 32px;
-      }
-
-      .image-card {
-        min-height: 280px;
-      }
-
-      .nav {
-        min-height: 65px;
-      }
-
-      .logo {
         font-size: 18px;
+    }
+
+    .cards,
+    .places {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 0;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+}
+</style>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to rent a car in Cape Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cape Town car rental prices vary depending on the vehicle, rental company, travel dates, pickup location and rental duration. Comparing available options before booking can help you find a suitable price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it worth renting a car in Cape Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A rental car can be useful for travelers who want to explore Cape Town, the Cape Peninsula, Cape Point, the Cape Winelands and other destinations at their own pace."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I rent a car in Cape Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travelers can compare rental cars from different providers online and choose a suitable pickup location, including options around Cape Town International Airport."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What type of car is best for Cape Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best vehicle depends on your trip. Economy and compact cars can suit city travel, while SUVs and larger vehicles may be useful for families or longer road trips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pick up a rental car at Cape Town Airport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many rental providers offer vehicles at or around Cape Town International Airport. Check available pickup locations when comparing rental cars."
       }
     }
-  </style>
+  ]
+}
+</script>
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
-      <a href="#" class="logo">CAPE TOWN CAR RENTAL GUIDE</a>
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#rental">Car Rental</a>
-        <a href="#airport">Airport</a>
-        <a href="#destinations">Travel Guide</a>
-        <a href="#tips">Tips</a>
-        <a href="#contact">Contact</a>
+        <h1>Car Rental in Cape Town</h1>
+
+        <p>
+            Compare rental cars, prices and vehicle options
+            before your Cape Town trip.
+        </p>
 
         <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="nav-btn">
-          Compare Cars
-        </a>
-      </nav>
-    </div>
-  </header>
-
-
-  <!-- HERO -->
-  <main id="home">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-
-          <div class="eyebrow">Cape Town • South Africa</div>
-
-          <h1>Rent a Car in Cape Town with Confidence</h1>
-
-          <p>
-            Compare rental cars and find convenient options for exploring
-            Cape Town, the Cape Peninsula and the beautiful Western Cape.
-          </p>
-
-          <div class="buttons">
-
-            <a
-              href="https://www.discovercars.com/?a_aid=zadocktravel"
-              target="_blank"
-              rel="nofollow sponsored noopener"
-              class="btn btn-gold">
-              Compare Rental Cars
-            </a>
-
-            <a href="#destinations" class="btn btn-outline">
-              Explore Cape Town
-            </a>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- SEARCH -->
-    <div class="container search-wrap">
-      <div class="search-box">
-
-        <h2>Find Your Car in Cape Town</h2>
-
-        <div class="search-grid">
-
-          <div class="field">
-            <label>Pick-up Location</label>
-            <input type="text" value="Cape Town">
-          </div>
-
-          <div class="field">
-            <label>Drop-off Location</label>
-            <input type="text" value="Cape Town">
-          </div>
-
-          <div class="field">
-            <label>Pick-up Date</label>
-            <input type="date">
-          </div>
-
-          <div class="field">
-            <label>Drop-off Date</label>
-            <input type="date">
-          </div>
-
-        </div>
-
-        <a
-          href="https://www.discovercars.com/?a_aid=zadocktravel"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="search-button">
-          Search & Compare Cars
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- AIRPORT -->
-    <section class="airport" id="airport">
-      <div class="container two-column">
-
-        <div class="image-card"></div>
-
-        <div class="content">
-
-          <div class="eyebrow">Airport Car Rental</div>
-
-          <h2>Cape Town Airport Car Rental</h2>
-
-          <p>
-            Arriving in Cape Town? A rental car can give you greater
-            flexibility from the moment you arrive. Compare available
-            rental options and choose a vehicle suited to your journey.
-          </p>
-
-          <p>
-            Whether you're visiting for business, a holiday or a road trip,
-            start your search before travelling so you can compare your
-            options.
-          </p>
-
-          <a
+            class="btn"
             href="https://www.discovercars.com/?a_aid=zadocktravel"
             target="_blank"
             rel="nofollow sponsored noopener"
-            class="btn btn-gold">
-            Compare Airport Rental Cars
-          </a>
+        >
+            Compare Cape Town Rental Cars
+        </a>
 
+    </div>
+</header>
+
+
+<!-- INTRO -->
+<section>
+<div class="container">
+
+    <div class="intro">
+
+        <h2>Cape Town Car Rental Guide</h2>
+
+        <p>
+            Planning a trip to Cape Town? Renting a car can give you
+            greater flexibility to explore the city, beaches, scenic
+            drives and surrounding destinations.
+        </p>
+
+        <p>
+            Compare available rental cars, vehicle types and prices
+            before making your travel plans.
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.discovercars.com/?a_aid=zadocktravel"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+        >
+            Compare Cars
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- WHY RENT -->
+<section class="gray-section">
+<div class="container">
+
+    <h2>Why Rent a Car in Cape Town?</h2>
+
+    <p>
+        Cape Town is surrounded by scenic destinations and attractions.
+        Having a rental car can make it easier to plan flexible day trips
+        and explore beyond the city center.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Explore More</h3>
+            <p>
+                Visit beaches, mountains, vineyards and scenic coastal
+                destinations on your own schedule.
+            </p>
         </div>
 
-      </div>
-    </section>
-
-
-    <!-- VEHICLES -->
-    <section id="rental">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Choose Your Vehicle</span>
-          <h2>Rental Cars for Every Journey</h2>
-          <p>
-            Compare different vehicle categories and find an option that
-            matches your Cape Town adventure.
-          </p>
+        <div class="card">
+            <h3>Flexible Travel</h3>
+            <p>
+                Choose your departure times and create your own itinerary
+                instead of depending entirely on public transportation.
+            </p>
         </div>
 
-        <div class="car-grid">
+        <div class="card">
+            <h3>Compare Options</h3>
+            <p>
+                Compare available rental vehicles and prices before
+                choosing an option that suits your trip.
+            </p>
+        </div>
 
-          <div class="car-card">
-            <div class="car-icon">🚗</div>
+    </div>
+
+</div>
+</section>
+
+
+<!-- PLACES -->
+<section>
+<div class="container">
+
+    <h2>Popular Places to Explore by Car</h2>
+
+    <p>
+        A rental car can be useful when exploring Cape Town and
+        destinations around the Western Cape.
+    </p>
+
+    <div class="places">
+
+        <div class="place">Cape Town City Centre</div>
+        <div class="place">V&A Waterfront</div>
+        <div class="place">Camps Bay</div>
+        <div class="place">Table Mountain</div>
+        <div class="place">Cape Peninsula</div>
+        <div class="place">Cape Point</div>
+        <div class="place">Stellenbosch</div>
+        <div class="place">Franschhoek</div>
+        <div class="place">Hermanus</div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- VEHICLES -->
+<section class="gray-section">
+<div class="container">
+
+    <h2>Choosing the Right Rental Car</h2>
+
+    <p>
+        The right rental vehicle depends on your itinerary, group size,
+        luggage and the type of driving you plan to do.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
             <h3>Economy Cars</h3>
-            <p>Practical options for city driving and shorter journeys.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
+            <p>
+                A practical option for travelers looking for a compact
+                vehicle for city driving.
+            </p>
+        </div>
 
-          <div class="car-card">
-            <div class="car-icon">🚘</div>
-            <h3>Compact Cars</h3>
-            <p>A convenient balance of comfort, space and easy driving.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
-
-          <div class="car-card">
-            <div class="car-icon">🚙</div>
+        <div class="card">
             <h3>SUVs</h3>
-            <p>Extra space and comfort for longer journeys and families.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
+            <p>
+                A larger option that can be suitable for families,
+                luggage and longer road trips.
+            </p>
+        </div>
 
-          <div class="car-card">
-            <div class="car-icon">✨</div>
-            <h3>Luxury Cars</h3>
-            <p>Premium vehicles for travellers seeking an elevated experience.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
-
-          <div class="car-card">
-            <div class="car-icon">👨‍👩‍👧‍👦</div>
-            <h3>Family Cars</h3>
-            <p>Comfortable choices for families travelling with luggage.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
-
-          <div class="car-card">
-            <div class="car-icon">⚙️</div>
+        <div class="card">
             <h3>Automatic Cars</h3>
-            <p>Convenient vehicles for drivers who prefer automatic transmission.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
-
-          <div class="car-card">
-            <div class="car-icon">🏔️</div>
-            <h3>4x4 Vehicles</h3>
-            <p>Explore more with vehicles suited to longer road adventures.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
-
-          <div class="car-card">
-            <div class="car-icon">🧳</div>
-            <h3>Spacious Cars</h3>
-            <p>More room for passengers and luggage on extended trips.</p>
-            <a href="https://www.discovercars.com/?a_aid=zadocktravel"
-               target="_blank" rel="nofollow sponsored noopener"
-               class="small-link">Compare Cars →</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- DESTINATIONS -->
-    <section class="destinations" id="destinations">
-
-      <div class="container">
-
-        <div class="section-title">
-          <span>Western Cape</span>
-          <h2>Explore Beyond Cape Town</h2>
-          <p>
-            Pick up your rental car and discover some of the incredible
-            destinations surrounding Cape Town.
-          </p>
+            <p>
+                A convenient choice for travelers who prefer automatic
+                transmission when driving in Cape Town.
+            </p>
         </div>
 
-        <div class="destination-grid">
+    </div>
 
-          <div class="destination peninsula">
-            <div class="destination-content">
-              <h3>Cape Peninsula</h3>
-              <p>Discover dramatic coastal scenery and iconic viewpoints.</p>
-            </div>
-          </div>
+</div>
+</section>
 
-          <div class="destination winelands">
-            <div class="destination-content">
-              <h3>Cape Winelands</h3>
-              <p>Explore beautiful landscapes and historic wine regions.</p>
-            </div>
-          </div>
+
+<!-- TIPS -->
+<section>
+<div class="container">
+
+    <h2>Cape Town Car Rental Tips</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Compare Prices</h3>
+            <p>
+                Check multiple available rental options before booking.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Check Insurance</h3>
+            <p>
+                Read the insurance coverage and excess terms carefully.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Check Fuel Policy</h3>
+            <p>
+                Understand the fuel policy before collecting the vehicle.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Check Mileage</h3>
+            <p>
+                Review the mileage allowance and additional mileage terms.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Inspect the Car</h3>
+            <p>
+                Check the vehicle for existing damage before driving away.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Confirm Pickup</h3>
+            <p>
+                Double-check your pickup location, opening hours and
+                return instructions.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Ready to Compare Cape Town Rental Cars?</h2>
+
+    <p>
+        Compare available rental cars and find an option that fits
+        your Cape Town travel plans.
+    </p>
+
+    <a
+        class="btn"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+    >
+        Compare Cars in Cape Town
+    </a>
+
+</section>
+
+
+<!-- FAQ -->
+<section>
+<div class="container">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+
+        <details>
+            <summary>How much does it cost to rent a car in Cape Town?</summary>
+            <p>
+                Prices vary depending on the vehicle, rental company,
+                travel dates, pickup location and rental duration.
+                Comparing options before booking can help you find a
+                suitable price.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is it worth renting a car in Cape Town?</summary>
+            <p>
+                A rental car can be useful for exploring Cape Town,
+                Cape Point, the Cape Peninsula, the Cape Winelands
+                and surrounding destinations.
+            </p>
+        </details>
+
+        <details>
+            <summary>Where can I rent a car in Cape Town?</summary>
+            <p>
+                You can compare rental cars online and select a suitable
+                pickup location, including options around Cape Town
+                International Airport.
+            </p>
+        </details>
+
+        <details>
+            <summary>What type of car is best for Cape Town?</summary>
+            <p>
+                Economy and compact cars can work well for city travel,
+                while SUVs and larger vehicles may be useful for families
+                and longer road trips.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can I pick up a rental car at Cape Town Airport?</summary>
+            <p>
+                Many rental providers offer vehicles at or around
+                Cape Town International Airport. Check available
+                pickup locations when comparing cars.
+            </p>
+        </details>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- DISCLOSURE -->
+<div class="disclosure">
+<div class="container">
+
+    <strong>Affiliate Disclosure:</strong>
+    This page may contain affiliate links. If you make a booking
+    through one of these links, we may earn a commission at no
+    additional cost to you.
+
+</div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p><strong>Global Cars Hire Guide</strong></p>
+
+    <p>
+        Independent car rental guides for travelers around the world.
+    </p>
+
+    <p>
+        <a href="index.html">Home</a>
+        <a href="car-rental-in-miami.html">Miami</a>
+        <a href="car-rental-in-new-york.html">New York</a>
+        <a href="car-rental-in-london.html">London</a>
+        <a href="car-rental-in-dubai.html">Dubai</a>
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 Global Cars Hire Guide. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+  </html>
 
  
