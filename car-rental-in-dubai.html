@@ -4,20 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Dubai Car Rental Guide | Compare Rental Cars in Dubai</title>
+  <title>Car Rental in Dubai – Compare Rental Cars | Dubai Car Rental Guide</title>
 
-  <meta name="description" content="Compare car rental options in Dubai. Explore economy cars, SUVs, luxury vehicles, airport rentals and more for your Dubai trip.">
-  <meta name="keywords" content="Dubai car rental, car rental Dubai, rent a car in Dubai, Dubai airport car rental, cheap car rental Dubai, SUV rental Dubai, luxury car rental Dubai">
+  <meta name="description" content="Compare car rental options in Dubai before your trip. Explore rental car types, airport pickup, driving tips and useful Dubai car rental information.">
+  <meta name="keywords" content="car rental Dubai, Dubai car rental, car rental in Dubai, rent a car in Dubai, Dubai rental cars, cheap car rental Dubai, best car rental Dubai, Dubai airport car rental, car hire Dubai, Dubai car hire, rental cars Dubai airport, luxury car rental Dubai, SUV rental Dubai, Dubai travel car rental, car rental near Dubai airport, compare car rental Dubai, Dubai car rental guide, renting a car in Dubai, affordable car rental Dubai, Dubai car rental comparison">
 
-  <meta property="og:title" content="Dubai Car Rental Guide">
-  <meta property="og:description" content="Compare rental car options for your Dubai journey.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://globalcarsrental.github.io/carsrental/car-rental-dubai-guide.html">
+
+  <meta property="og:title" content="Car Rental in Dubai – Compare Rental Cars">
+  <meta property="og:description" content="Explore Dubai car rental options, useful driving tips and rental car information before your trip.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://globalcarsrental.github.io/carsrental/car-rental-dubai-guide.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Car Rental in Dubai">
+  <meta name="twitter:description" content="Compare rental cars and explore useful Dubai car rental information.">
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -26,527 +34,230 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f7;
-      color: #171717;
-      line-height: 1.6;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.7;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    /* HEADER */
-    header {
-      background: #090909;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #b99345;
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: 800;
-      color: #d4af62;
-      letter-spacing: .5px;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
-
-    nav a {
-      color: #fff;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #d4af62;
-    }
-
-    .nav-btn {
-      background: #c6a15b;
-      color: #111 !important;
-      padding: 10px 16px;
-      border-radius: 5px;
-      font-weight: 700;
-    }
-
-    /* HERO */
     .hero {
-      min-height: 650px;
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
       display: flex;
       align-items: center;
-      position: relative;
-      background:
-        linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.68)),
-        url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
     }
 
     .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
-      padding: 80px 20px;
-      color: white;
-    }
-
-    .hero-content span {
-      color: #d4af62;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
+      max-width: 900px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      max-width: 850px;
-      margin: 18px 0;
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.1;
+      margin-bottom: 22px;
+      font-weight: 700;
     }
 
     .hero p {
-      max-width: 680px;
-      font-size: 19px;
-      color: #e8e8e8;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 24px;
-      border-radius: 5px;
+      background: #168a45;
+      color: white;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 7px;
       font-weight: 700;
-      transition: .2s;
+      margin: 7px;
+      transition: 0.3s ease;
     }
 
-    .btn-gold {
-      background: #d4af62;
-      color: #111;
-    }
-
-    .btn-gold:hover {
-      background: #f0d38c;
+    .btn:hover {
+      background: #106c36;
       transform: translateY(-2px);
     }
 
-    .btn-outline {
-      border: 1px solid #fff;
-      color: #fff;
+    .hero-link {
+      display: block;
+      margin-top: 12px;
+      color: white;
+      text-decoration: underline;
     }
 
-    .btn-outline:hover {
-      background: #fff;
-      color: #111;
-    }
-
-    /* GENERAL */
-    .section {
-      max-width: 1200px;
+    .container {
+      width: 92%;
+      max-width: 1150px;
       margin: auto;
-      padding: 75px 20px;
+    }
+
+    section {
+      padding: 75px 0;
     }
 
     .section-title {
       text-align: center;
-      max-width: 750px;
-      margin: 0 auto 45px;
-    }
-
-    .section-title span {
-      color: #a27b36;
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      margin-bottom: 45px;
     }
 
     .section-title h2 {
-      font-size: 38px;
-      margin: 10px 0;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    /* BENEFITS */
-    .benefits {
-      background: white;
-    }
-
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .benefit {
-      padding: 28px;
-      border: 1px solid #e5e5e5;
-      background: #fff;
-      border-radius: 8px;
-    }
-
-    .benefit-icon {
-      font-size: 30px;
+      font-size: 36px;
       margin-bottom: 12px;
-    }
-
-    .benefit h3 {
-      margin-bottom: 8px;
-    }
-
-    .benefit p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* CARS */
-    .cars {
-      background: #f5f5f5;
-    }
-
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .car-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid #e5e5e5;
-      transition: .25s;
-    }
-
-    .car-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.09);
-    }
-
-    .car-card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .car-body {
-      padding: 22px;
-    }
-
-    .car-body h3 {
-      margin-bottom: 8px;
-    }
-
-    .car-body p {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .small-btn {
-      display: inline-block;
-      background: #111;
-      color: #d4af62;
-      padding: 10px 16px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 13px;
-    }
-
-    .small-btn:hover {
-      background: #d4af62;
       color: #111;
     }
 
-    /* PICKUP */
-    .pickup {
-      background: #111;
-      color: white;
-    }
-
-    .pickup .section-title p {
-      color: #ccc;
-    }
-
-    .pickup-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .location {
-      padding: 25px;
-      border: 1px solid #333;
-      border-radius: 8px;
-    }
-
-    .location h3 {
-      color: #d4af62;
-      margin-bottom: 8px;
-    }
-
-    .location p {
-      color: #bbb;
-      font-size: 14px;
-    }
-
-    /* INFO */
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .info-image img {
-      width: 100%;
-      border-radius: 10px;
-      display: block;
-    }
-
-    .info-text h2 {
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
-
-    .info-text p {
-      color: #555;
-      margin-bottom: 16px;
-    }
-
-    /* TIPS */
-    .tips {
-      background: white;
-    }
-
-    .tips-list {
-      max-width: 850px;
+    .section-title p {
+      max-width: 720px;
       margin: auto;
+      color: #666;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .content h2 {
+      font-size: 32px;
+      margin-bottom: 18px;
+      color: #111;
+    }
+
+    .content h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .content p {
+      margin-bottom: 18px;
+      color: #555;
+    }
+
+    .cards {
       display: grid;
-      gap: 13px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
     }
 
-    .tip {
-      background: #f7f7f7;
-      border-left: 4px solid #c6a15b;
-      padding: 17px 20px;
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     }
 
-    /* DESTINATIONS */
-    .destination-grid {
+    .card h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .locations {
+      background: #f7f8f7;
+    }
+
+    .checklist {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 25px;
     }
 
-    .destination {
-      min-height: 170px;
-      padding: 25px;
+    .check {
+      background: white;
+      padding: 18px;
       border-radius: 8px;
-      background: #111;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      border-left: 4px solid #168a45;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     }
 
-    .destination h3 {
-      color: #d4af62;
-    }
-
-    /* CTA */
     .cta {
-      background:
-        linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
-        url("https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
+      background: #f5f7f5;
       text-align: center;
-      color: white;
-      padding: 90px 20px;
+      padding: 80px 20px;
     }
 
     .cta h2 {
-      font-size: 42px;
+      font-size: 38px;
       margin-bottom: 15px;
     }
 
     .cta p {
-      color: #ddd;
-      max-width: 650px;
-      margin: 0 auto 28px;
-    }
-
-    /* DISCLOSURE */
-    .disclosure {
-      background: #eee;
-      font-size: 12px;
       color: #666;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    .disclosure {
+      font-size: 13px;
+      color: #777;
+      max-width: 850px;
+      margin: 25px auto 0;
       text-align: center;
-      padding: 25px 20px;
     }
 
-    /* FOOTER */
     footer {
-      background: #080808;
-      color: white;
-      padding: 50px 20px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
+      background: #111;
+      color: #ddd;
+      padding: 45px 20px;
+      text-align: center;
     }
 
     footer h3 {
-      color: #d4af62;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer p {
       margin-bottom: 15px;
-    }
-
-    footer p,
-    footer a {
-      color: #aaa;
-      font-size: 14px;
+      color: #bbb;
     }
 
     footer a {
-      display: block;
-      margin-bottom: 8px;
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 8px;
     }
 
     footer a:hover {
-      color: #d4af62;
-    }
-
-    .copyright {
-      max-width: 1200px;
-      margin: 35px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #292929;
-      color: #777;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    /* MOBILE STICKY CTA */
-    .mobile-cta {
-      display: none;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      nav {
-        display: none;
-      }
-
-      .benefit-grid,
-      .pickup-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .car-grid,
-      .destination-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      color: #43b86d;
     }
 
     @media (max-width: 600px) {
       .hero {
-        min-height: 620px;
-      }
-
-      .hero h1 {
-        font-size: 44px;
+        min-height: 560px;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 17px;
       }
 
-      .section {
-        padding: 55px 18px;
+      section {
+        padding: 55px 0;
       }
 
       .section-title h2,
-      .info-text h2 {
-        font-size: 30px;
-      }
-
-      .benefit-grid,
-      .car-grid,
-      .pickup-grid,
-      .destination-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .buttons {
-        flex-direction: column;
+      .content h2,
+      .cta h2 {
+        font-size: 28px;
       }
 
       .btn {
-        text-align: center;
-      }
-
-      .mobile-cta {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 2000;
-        background: #090909;
-        padding: 10px;
-        border-top: 1px solid #c6a15b;
-      }
-
-      .mobile-cta a {
-        display: block;
-        text-align: center;
-        background: #d4af62;
-        color: #111;
-        padding: 12px;
-        border-radius: 5px;
-        font-weight: 800;
-      }
-
-      body {
-        padding-bottom: 60px;
+        width: 90%;
+        max-width: 330px;
       }
     }
   </style>
@@ -554,397 +265,370 @@
 
 <body>
 
-<header>
-  <div class="navbar">
-    <div class="logo">Dubai Car Rental Guide</div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#cars">Car Types</a>
-      <a href="#tips">Rental Tips</a>
-      <a href="#dubai">Dubai Guide</a>
-      <a href="#contact">Contact</a>
+      <h1>Car Rental in Dubai</h1>
+
+      <p>
+        Compare rental cars in Dubai and find a vehicle that fits your
+        travel plans before you arrive.
+      </p>
 
       <a
-        class="nav-btn"
+        class="btn"
         href="https://www.discovercars.com/?a_aid=zadocktravel"
         target="_blank"
-        rel="noopener noreferrer">
-        Compare Cars
+        rel="nofollow sponsored noopener"
+      >
+        Compare Dubai Car Rentals
       </a>
-    </nav>
-  </div>
-</header>
-
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-
-    <span>Dubai • United Arab Emirates</span>
-
-    <h1>Rent a Car in Dubai with Confidence</h1>
-
-    <p>
-      Compare rental car options and find a vehicle that fits your Dubai
-      journey, from practical city cars to spacious SUVs and premium vehicles.
-    </p>
-
-    <div class="buttons">
 
       <a
-        class="btn btn-gold"
+        class="hero-link"
         href="https://www.discovercars.com/?a_aid=zadocktravel"
         target="_blank"
-        rel="noopener noreferrer">
-        Search Rental Cars
-      </a>
-
-      <a class="btn btn-outline" href="#cars">
-        Explore Rental Options
+        rel="nofollow sponsored noopener"
+      >
+        Search rental cars in Dubai →
       </a>
 
     </div>
+  </header>
 
-  </div>
-</section>
+  <!-- INTRODUCTION -->
+  <section>
+    <div class="container">
+      <div class="content">
 
-
-<!-- BENEFITS -->
-<section class="benefits">
-  <div class="section">
-
-    <div class="section-title">
-      <span>Why Use Our Guide</span>
-      <h2>Make Your Dubai Car Rental Search Easier</h2>
-      <p>
-        Useful information to help you make a more informed rental decision.
-      </p>
-    </div>
-
-    <div class="benefit-grid">
-
-      <div class="benefit">
-        <div class="benefit-icon">🔎</div>
-        <h3>Compare Options</h3>
-        <p>
-          Explore available rental vehicles and compare options in one place.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <div class="benefit-icon">🚗</div>
-        <h3>Choose Your Vehicle</h3>
-        <p>
-          Explore different vehicle categories for different travel needs.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <div class="benefit-icon">📍</div>
-        <h3>Convenient Locations</h3>
-        <p>
-          Look for rental options suitable for airports and other Dubai locations.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <div class="benefit-icon">🗺️</div>
-        <h3>Plan Your Journey</h3>
-        <p>
-          Use our Dubai travel information to help plan your road trip.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- CAR TYPES -->
-<section class="cars" id="cars">
-  <div class="section">
-
-    <div class="section-title">
-      <span>Vehicle Categories</span>
-      <h2>Find the Right Car for Your Trip</h2>
-      <p>
-        Explore different rental categories and compare available options.
-      </p>
-    </div>
-
-    <div class="car-grid">
-
-      <div class="car-card">
-        <img
-          src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=900&q=80"
-          alt="Economy rental car">
-        <div class="car-body">
-          <h3>Economy Cars</h3>
-          <p>Practical vehicles for everyday city travel.</p>
-          <a class="small-btn"
-             href="https://www.discovercars.com/?a_aid=zadocktravel"
-             target="_blank"
-             rel="noopener noreferrer">
-             Compare Cars
-          </a>
-        </div>
-      </div>
-
-
-      <div class="car-card">
-        <img
-          src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80"
-          alt="Compact rental car">
-        <div class="car-body">
-          <h3>Compact Cars</h3>
-          <p>Convenient vehicles for navigating the city.</p>
-          <a class="small-btn"
-             href="https://www.discovercars.com/?a_aid=zadocktravel"
-             target="_blank"
-             rel="noopener noreferrer">
-             Compare Cars
-          </a>
-        </div>
-      </div>
-
-
-      <div class="car-card">
-        <img
-          src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80"
-          alt="SUV rental car">
-        <div class="car-body">
-          <h3>SUVs</h3>
-          <p>Spacious vehicles suitable for families and longer journeys.</p>
-          <a class="small-btn"
-             href="https://www.discovercars.com/?a_aid=zadocktravel"
-             target="_blank"
-             rel="noopener noreferrer">
-             Compare SUVs
-          </a>
-        </div>
-      </div>
-
-
-      <div class="car-card">
-        <img
-          src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=900&q=80"
-          alt="Luxury rental car">
-        <div class="car-body">
-          <h3>Luxury Cars</h3>
-          <p>Premium vehicles for travelers seeking a refined experience.</p>
-          <a class="small-btn"
-             href="https://www.discovercars.com/?a_aid=zadocktravel"
-             target="_blank"
-             rel="noopener noreferrer">
-             Explore Cars
-          </a>
-        </div>
-      </div>
-
-
-      <div class="car-card">
-        <img
-          src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80"
-          alt="Family rental car">
-        <div class="car-body">
-          <h3>Family Cars</h3>
-          <p>Spacious options designed for families and groups.</p>
-          <a class="small-btn"
-             href="https://www.discovercars.com/?a_aid=zadocktravel"
-             target="_blank"
-             rel="noopener noreferrer">
-             Compare Cars
-          </a>
-        </div>
-      </div>
-
-
-      <div class="car-card">
-        <img
-          src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80"
-          alt="Automatic rental car">
-        <div class="car-body">
-          <h3>Automatic Cars</h3>
-          <p>Explore vehicles with automatic transmission options.</p>
-          <a class="small-btn"
-             href="https://www.discovercars.com/?a_aid=zadocktravel"
-             target="_blank"
-             rel="noopener noreferrer">
-             Compare Cars
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- PICKUP LOCATIONS -->
-<section class="pickup">
-  <div class="section">
-
-    <div class="section-title">
-      <span>Pickup Guide</span>
-      <h2>Popular Dubai Rental Locations</h2>
-      <p>
-        Available rental locations can vary by provider and date.
-        Check current options when searching.
-      </p>
-    </div>
-
-    <div class="pickup-grid">
-
-      <div class="location">
-        <h3>Dubai International Airport</h3>
-        <p>Convenient for travelers arriving through DXB.</p>
-      </div>
-
-      <div class="location">
-        <h3>Downtown Dubai</h3>
-        <p>A convenient choice for visitors staying around central Dubai.</p>
-      </div>
-
-      <div class="location">
-        <h3>Dubai Marina</h3>
-        <p>Useful for travelers staying around the Marina area.</p>
-      </div>
-
-      <div class="location">
-        <h3>Jumeirah</h3>
-        <p>Explore rental options around the popular Jumeirah area.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- WHY RENT -->
-<section id="dubai">
-  <div class="section">
-
-    <div class="info-grid">
-
-      <div class="info-image">
-        <img
-          src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=85"
-          alt="Dubai skyline">
-      </div>
-
-      <div class="info-text">
-
-        <span style="color:#a27b36;font-weight:800;">
-          EXPLORE DUBAI
-        </span>
-
-        <h2>Freedom to Explore More</h2>
+        <h2>Car Rental in Dubai</h2>
 
         <p>
-          A rental car can give travelers greater flexibility when exploring
-          Dubai and destinations beyond the city center.
+          Dubai is a major destination for business trips, holidays,
+          shopping, entertainment and luxury travel. Renting a car can
+          give travelers greater flexibility when exploring the city and
+          surrounding areas.
         </p>
 
         <p>
-          Depending on your itinerary, you can explore Downtown Dubai,
-          Palm Jumeirah, Dubai Marina, Jumeirah and other destinations
-          across the UAE.
+          Whether you are looking for an economy vehicle, family car,
+          SUV or premium vehicle, comparing available rental options
+          before your journey can help you make a more informed choice.
         </p>
 
         <a
-          class="btn btn-gold"
+          class="btn"
           href="https://www.discovercars.com/?a_aid=zadocktravel"
           target="_blank"
-          rel="noopener noreferrer">
-          Find a Rental Car
+          rel="nofollow sponsored noopener"
+        >
+          Compare Cars in Dubai
         </a>
 
       </div>
+    </div>
+  </section>
+
+  <!-- WHY COMPARE -->
+  <section class="locations">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Compare Rental Cars?</h2>
+        <p>
+          Comparing different rental options can help you review vehicles,
+          prices and rental conditions before making a booking.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Compare Vehicles</h3>
+          <p>
+            Explore different vehicle categories and choose one that suits
+            your trip.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Review Prices</h3>
+          <p>
+            Compare available rental options before deciding which vehicle
+            works for your travel plans.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Check Rental Terms</h3>
+          <p>
+            Review important rental conditions before completing your
+            reservation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Plan Ahead</h3>
+          <p>
+            Searching before your trip gives you more time to compare
+            available options.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAR TYPES -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Popular Rental Car Types in Dubai</h2>
+        <p>
+          Choose a vehicle category based on your travel needs and budget.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Economy Cars</h3>
+          <p>
+            A practical option for travelers who want a smaller vehicle
+            for everyday city driving.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Compact Cars</h3>
+          <p>
+            Compact vehicles can be suitable for couples and travelers
+            looking for convenient city transportation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>SUVs</h3>
+          <p>
+            SUVs provide additional space and can be useful for families
+            and longer journeys.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Luxury Cars</h3>
+          <p>
+            Premium vehicles can complement business trips, special
+            occasions and luxury travel experiences.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Family Cars</h3>
+          <p>
+            Spacious vehicles can provide additional comfort for families
+            traveling with luggage.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Premium Cars</h3>
+          <p>
+            Travelers seeking a more refined driving experience can explore
+            premium vehicle categories.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="locations">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Where to Rent a Car in Dubai</h2>
+        <p>
+          Popular areas travelers may consider when arranging a rental car
+          include major airport and city locations.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Dubai International Airport</h3>
+          <p>
+            A convenient starting point for visitors arriving in Dubai.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Downtown Dubai</h3>
+          <p>
+            A central area close to major attractions and business locations.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Dubai Marina</h3>
+          <p>
+            A popular area for visitors staying near the waterfront.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Business Bay</h3>
+          <p>
+            A major business and accommodation district in central Dubai.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Jumeirah</h3>
+          <p>
+            A well-known Dubai area with hotels, beaches and restaurants.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Deira</h3>
+          <p>
+            A historic commercial area with convenient access to other
+            parts of Dubai.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DRIVING TIPS -->
+  <section>
+    <div class="container">
+
+      <div class="content">
+
+        <h2>Dubai Driving Tips</h2>
+
+        <p>
+          Before driving a rental car in Dubai, familiarize yourself with
+          local road signs, traffic rules and your rental company's policies.
+        </p>
+
+        <div class="checklist">
+
+          <div class="check">✓ Check local road signs</div>
+
+          <div class="check">✓ Follow posted speed limits</div>
+
+          <div class="check">✓ Understand parking rules</div>
+
+          <div class="check">✓ Plan for busy traffic periods</div>
+
+          <div class="check">✓ Understand Salik toll roads</div>
+
+          <div class="check">✓ Check fuel policies</div>
+
+          <div class="check">✓ Review rental insurance terms</div>
+
+          <div class="check">✓ Keep your rental documents available</div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE BOOKING -->
+  <section class="locations">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Before You Book a Dubai Rental Car</h2>
+        <p>
+          Take a moment to review the important details of your rental.
+        </p>
+      </div>
+
+      <div class="checklist">
+
+        <div class="check">✓ Compare rental prices</div>
+
+        <div class="check">✓ Check the vehicle type</div>
+
+        <div class="check">✓ Review mileage policy</div>
+
+        <div class="check">✓ Check deposit requirements</div>
+
+        <div class="check">✓ Review insurance terms</div>
+
+        <div class="check">✓ Check pickup location</div>
+
+        <div class="check">✓ Confirm driver requirements</div>
+
+        <div class="check">✓ Read cancellation conditions</div>
+
+      </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- CTA -->
+  <section class="cta">
 
+    <div class="container">
 
-<!-- DESTINATIONS -->
-<section class="cars">
-  <div class="section">
+      <h2>Ready to Compare Car Rentals in Dubai?</h2>
 
-    <div class="section-title">
-      <span>Travel Ideas</span>
-      <h2>Places to Explore by Car</h2>
       <p>
-        Plan your itinerary and discover more of the UAE at your own pace.
+        Search available rental cars and compare options before your
+        Dubai trip.
       </p>
-    </div>
 
-    <div class="destination-grid">
+      <a
+        class="btn"
+        href="https://www.discovercars.com/?a_aid=zadocktravel"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+      >
+        Compare Rental Cars
+      </a>
 
-      <div class="destination">
-        <h3>Downtown Dubai</h3>
-        <p>Skyscrapers, shopping and iconic attractions.</p>
-      </div>
-
-      <div class="destination">
-        <h3>Palm Jumeirah</h3>
-        <p>Discover Dubai's famous man-made island.</p>
-      </div>
-
-      <div class="destination">
-        <h3>Dubai Marina</h3>
-        <p>A vibrant waterfront destination.</p>
-      </div>
-
-      <div class="destination">
-        <h3>Jumeirah</h3>
-        <p>Beaches, hotels and popular attractions.</p>
-      </div>
-
-      <div class="destination">
-        <h3>Abu Dhabi</h3>
-        <p>Consider a road trip to the UAE capital.</p>
-      </div>
-
-      <div class="destination">
-        <h3>Ras Al Khaimah</h3>
-        <p>Explore mountain and coastal scenery.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- RENTAL TIPS -->
-<section class="tips" id="tips">
-  <div class="section">
-
-    <div class="section-title">
-      <span>Before You Book</span>
-      <h2>Dubai Car Rental Tips</h2>
-      <p>
-        A few things to check before confirming your rental.
+      <p class="disclosure">
+        Affiliate Disclosure: This website may earn a commission when you
+        book through selected links. This does not affect the price you pay.
       </p>
+
     </div>
 
-    <div class="tips-list">
+  </section>
 
-      <div class="tip">
-        <strong>Driver requirements:</strong>
-        Check the license and age requirements before booking.
-      </div>
+  <!-- FOOTER -->
+  <footer>
 
-      <div class="tip">
-        <strong>Deposit:</strong>
-        Review the rental company's security deposit requirements.
-      </div>
+    <h3>Global Car Hire Guide</h3>
 
-      <div class="tip">
-        <strong>Protection:</strong>
-        Carefully review available insurance and
+    <p>
+      Compare rental cars for your next trip.
+    </p>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="car-rental-dubai-guide.html">Dubai Car Rental</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Affiliate Disclosure</a>
+    </div>
+
+    <p style="margin-top:20px;">
+      © 2026 Global Car Hire Guide. All rights reserved.
+    </p>
+
+  </footer>
+
+</body>
+    </html>
