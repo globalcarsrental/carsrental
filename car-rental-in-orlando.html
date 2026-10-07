@@ -4,494 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Car Rental in Orlando | Compare Orlando Rental Cars</title>
+  <title>Orlando Car Rental Guide | Compare Rental Cars & Prices</title>
 
-  <meta name="description" content="Compare car rental options in Orlando, Florida. Find rental cars for airport arrivals, family vacations, business trips, and exploring Orlando.">
+  <meta name="description" content="Compare Orlando car rental options, airport rentals, vehicle types and prices. Explore our professional Orlando car rental guide before your Florida trip.">
 
-  <meta name="keywords" content="car rental Orlando, Orlando car rental, car rental in Orlando, Orlando airport car rental, rental cars Orlando Florida, cheap car rental Orlando">
+  <meta name="keywords" content="Orlando car rental, Orlando car rental guide, car rental Orlando Florida, Orlando rental cars, best car rental Orlando, cheap car rental Orlando, Orlando airport car rental, MCO car rental, rent a car in Orlando, Orlando car rental prices, compare Orlando car rentals, Orlando SUV rental, Orlando vacation car rental, Florida car rental guide">
 
-  <meta property="og:title" content="Car Rental in Orlando | Orlando Car Rental Guide">
-  <meta property="og:description" content="Compare rental car options for your next trip to Orlando, Florida.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Orlando Car Rental Guide">
+  <meta property="og:description" content="Compare Orlando rental cars, prices and pickup locations before your Florida trip.">
   <meta property="og:type" content="website">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      background: #f7f8fa;
-      color: #1b2430;
+      line-height: 1.7;
+      color: #222;
+      background: #ffffff;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    /* HEADER */
     header {
-      background: #071525;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-    }
-
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: bold;
-      color: #d7b45a;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: white;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #d7b45a;
-    }
-
-    .nav-button {
-      background: #d7b45a;
-      color: #071525 !important;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 580px;
+      min-height: 620px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 20px;
-      background:
-        linear-gradient(rgba(3,16,30,0.72), rgba(3,16,30,0.72)),
-        url("https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1800&q=80")
-        center/cover no-repeat;
+      padding: 40px 20px;
       color: white;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
     }
 
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero-label {
-      color: #e3c875;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 15px;
+    .hero {
+      max-width: 900px;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 7vw, 70px);
-      line-height: 1.05;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.1;
       margin-bottom: 22px;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 19px;
-      color: #f1f1f1;
-    }
-
-    .hero-buttons {
-      margin-top: 32px;
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+      font-size: 20px;
+      max-width: 720px;
+      margin: 0 auto 32px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 24px;
+      background: #168a45;
+      color: white;
+      padding: 15px 28px;
       border-radius: 7px;
+      text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      margin: 7px;
+      transition: .3s;
     }
 
-    .btn-primary {
-      background: #d7b45a;
-      color: #071525;
-    }
-
-    .btn-primary:hover {
-      background: #f0d27e;
+    .btn:hover {
+      background: #0d6833;
       transform: translateY(-2px);
     }
 
-    .btn-outline {
-      border: 1px solid white;
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: #071525;
-    }
-
-    /* GENERAL */
-    section {
-      padding: 75px 20px;
-    }
-
     .container {
+      width: 92%;
       max-width: 1150px;
       margin: auto;
     }
 
-    .section-heading {
+    section {
+      padding: 70px 0;
+    }
+
+    section:nth-child(even) {
+      background: #f7f9f8;
+    }
+
+    h2 {
+      font-size: 34px;
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 18px;
+      color: #111;
     }
 
-    .section-heading span {
-      color: #b08a25;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: bold;
-    }
-
-    .section-heading h2 {
-      font-size: 36px;
-      color: #071525;
-      margin: 8px 0 12px;
-    }
-
-    .section-heading p {
-      max-width: 700px;
-      margin: auto;
-      color: #657080;
-    }
-
-    /* INTRO */
     .intro {
-      background: white;
+      max-width: 800px;
+      text-align: center;
+      margin: 0 auto 40px;
+      color: #555;
     }
 
-    .intro-grid {
+    .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .intro h2 {
-      font-size: 36px;
-      color: #071525;
-      margin-bottom: 18px;
-    }
-
-    .intro p {
-      color: #5e6875;
-      margin-bottom: 18px;
-    }
-
-    .intro-image img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    }
-
-    /* CAR CATEGORIES */
-    .categories {
-      background: #f7f8fa;
-    }
-
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 22px;
     }
 
-    .car-card {
+    .card {
       background: white;
       padding: 28px;
-      border-radius: 10px;
-      border: 1px solid #e5e8ec;
-      transition: 0.3s;
-    }
-
-    .car-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    }
-
-    .car-icon {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .car-card h3 {
-      color: #071525;
-      margin-bottom: 10px;
-    }
-
-    .car-card p {
-      color: #697482;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .text-link {
-      color: #a77d18;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    /* AIRPORT */
-    .airport {
-      background: #071525;
-      color: white;
-    }
-
-    .airport-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .airport h2 {
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
-
-    .airport p {
-      color: #d7dce2;
-      margin-bottom: 20px;
-    }
-
-    .airport-list {
-      list-style: none;
-      margin: 25px 0;
-    }
-
-    .airport-list li {
-      margin: 12px 0;
-    }
-
-    .airport-list li::before {
-      content: "✓";
-      color: #d7b45a;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    .airport-image img {
-      width: 100%;
       border-radius: 12px;
+      box-shadow: 0 5px 22px rgba(0,0,0,.07);
+      border: 1px solid #eee;
     }
 
-    /* BENEFITS */
-    .benefits {
-      background: white;
-    }
-
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .benefit {
-      padding: 25px;
-      border-left: 3px solid #d7b45a;
-      background: #fafafa;
-    }
-
-    .benefit h3 {
-      margin-bottom: 8px;
-      color: #071525;
-    }
-
-    .benefit p {
-      color: #66717d;
-      font-size: 14px;
-    }
-
-    /* DESTINATIONS */
-    .destinations {
-      background: #f7f8fa;
-    }
-
-    .destination-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .destination {
-      background: white;
-      padding: 22px;
-      text-align: center;
-      border-radius: 8px;
-      font-weight: bold;
-      color: #071525;
-      border: 1px solid #e4e7eb;
-    }
-
-    /* HOW IT WORKS */
-    .steps {
-      background: white;
-    }
-
-    .step-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 30px;
-    }
-
-    .number {
-      width: 55px;
-      height: 55px;
-      margin: auto auto 18px;
-      border-radius: 50%;
-      background: #071525;
-      color: #d7b45a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .step h3 {
+    .card h3 {
       margin-bottom: 10px;
+      color: #168a45;
+      font-size: 21px;
     }
 
-    .step p {
-      color: #687381;
-      font-size: 14px;
+    .card p {
+      color: #555;
     }
 
-    /* TIPS */
-    .tips {
-      background: #f7f8fa;
-    }
-
-    .tips-box {
-      background: white;
-      padding: 35px;
-      border-radius: 12px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .tips-box ul {
-      padding-left: 20px;
-      color: #5f6975;
-    }
-
-    .tips-box li {
-      margin: 10px 0;
-    }
-
-    /* FAQ */
-    .faq {
-      background: white;
-    }
-
-    .faq-container {
+    ul {
       max-width: 850px;
-      margin: auto;
+      margin: 25px auto;
+      padding-left: 22px;
     }
 
-    details {
-      border-bottom: 1px solid #ddd;
-      padding: 20px 0;
+    li {
+      margin-bottom: 10px;
     }
 
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-      color: #071525;
-    }
-
-    details p {
-      padding-top: 12px;
-      color: #66717d;
-    }
-
-    /* CTA */
-    .final-cta {
-      background:
-        linear-gradient(rgba(3,16,30,0.9), rgba(3,16,30,0.9)),
-        url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
+    .cta {
       text-align: center;
-      color: white;
+      background: #f3f7f4;
+      padding: 70px 20px;
     }
 
-    .final-cta h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .cta p {
+      max-width: 700px;
+      margin: 15px auto 25px;
+      color: #555;
     }
 
-    .final-cta p {
-      color: #dce0e5;
-      max-width: 650px;
-      margin: 0 auto 28px;
+    .disclosure {
+      font-size: 13px;
+      color: #777;
+      max-width: 800px;
+      margin: 30px auto 0;
+      text-align: center;
     }
 
-    /* FOOTER */
     footer {
-      background: #030c16;
-      color: #bfc6ce;
-      padding: 50px 20px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
+      background: #111;
+      color: #ddd;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     footer h3 {
@@ -499,491 +170,369 @@
       margin-bottom: 15px;
     }
 
-    footer p {
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
     footer a {
-      color: #bfc6ce;
-      display: block;
-      margin: 8px 0;
-      font-size: 14px;
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 8px;
     }
 
     footer a:hover {
-      color: #d7b45a;
+      color: #4bc477;
     }
 
-    .copyright {
-      max-width: 1150px;
-      margin: 35px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #26313c;
-      text-align: center;
-      font-size: 13px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-
-      .nav {
-        flex-direction: column;
+    @media (max-width: 600px) {
+      header {
+        min-height: 560px;
       }
 
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+      section {
+        padding: 50px 0;
       }
 
-      nav a {
-        font-size: 12px;
-      }
-
-      .hero {
-        min-height: 530px;
-      }
-
-      .intro-grid,
-      .airport-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .car-grid,
-      .benefit-grid,
-      .step-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .destination-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .section-heading h2 {
+      h2 {
         font-size: 29px;
       }
 
-      .final-cta h2 {
-        font-size: 32px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
+      .hero p {
+        font-size: 17px;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where can I rent a car in Orlando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Popular Orlando car rental locations include Orlando International Airport, downtown Orlando, International Drive, Lake Buena Vista and Kissimmee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it worth renting a car in Orlando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A rental car can provide convenient transportation between Orlando attractions, hotels, shopping areas and nearby destinations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I compare Orlando rental car prices online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Travelers can compare available rental cars and prices online before their trip."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="nav">
+  <div class="hero">
+    <h1>Orlando Car Rental Guide</h1>
 
-    <div class="logo">
-      Orlando <span>Car Rental Guide</span>
-    </div>
+    <p>
+      Compare rental cars, prices and pickup locations before your Orlando,
+      Florida trip.
+    </p>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#rental">Car Rental</a>
-      <a href="#airport">Airport</a>
-      <a href="#cars">Car Types</a>
-      <a href="#tips">Driving Tips</a>
-      <a href="#faq">FAQ</a>
+    <a class="btn"
+       href="https://www.discovercars.com/?a_aid=zadocktravel"
+       target="_blank"
+       rel="nofollow sponsored noopener">
+       Compare Orlando Rental Cars
+    </a>
 
-      <a
-        class="nav-button"
-        href="https://www.discovercars.com/?a_aid=zadocktravel"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-      >
-        Search Cars
-      </a>
-    </nav>
-
+    <p style="font-size:14px; margin-top:15px;">
+      Compare cars and prices with DiscoverCars
+    </p>
   </div>
 </header>
 
+<section>
+  <div class="container">
+    <h2>Orlando Car Rental Guide</h2>
 
-<!-- HERO -->
-<section class="hero" id="home">
-
-  <div class="hero-content">
-
-    <div class="hero-label">
-      Orlando • Florida
-    </div>
-
-    <h1>Car Rental in Orlando Made Easy</h1>
-
-    <p>
-      Compare rental car options for your Orlando vacation,
-      business trip, airport arrival, or Florida adventure.
+    <p class="intro">
+      Planning a trip to Orlando? Renting a car can make it easier to explore
+      theme parks, hotels, shopping districts and attractions around Central
+      Florida. Compare available vehicles and prices before you travel.
     </p>
 
-    <div class="hero-buttons">
-
-      <a
-        class="btn btn-primary"
-        href="https://www.discovercars.com/?a_aid=zadocktravel"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-      >
-        Search Rental Cars
+    <div style="text-align:center;">
+      <a class="btn"
+         href="https://www.discovercars.com/?a_aid=zadocktravel"
+         target="_blank"
+         rel="nofollow sponsored noopener">
+         Compare Cars & Prices
       </a>
-
-      <a class="btn btn-outline" href="#rental">
-        Explore Options
-      </a>
-
     </div>
-
   </div>
-
 </section>
 
-
-<!-- INTRO -->
-<section class="intro" id="rental">
-
-  <div class="container intro-grid">
-
-    <div>
-
-      <h2>Find the Right Rental Car for Orlando</h2>
-
-      <p>
-        Planning a trip to Orlando? Having a rental car can give
-        you greater flexibility when exploring the city and
-        surrounding attractions.
-      </p>
-
-      <p>
-        Compare available rental car options and choose a vehicle
-        that fits your travel plans, group size, luggage, and budget.
-      </p>
-
-      <a
-        class="btn btn-primary"
-        href="https://www.discovercars.com/?a_aid=zadocktravel"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-      >
-        Compare Orlando Cars
-      </a>
-
-    </div>
-
-    <div class="intro-image">
-      <img
-        src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80"
-        alt="Car driving on a Florida road"
-      >
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CAR TYPES -->
-<section class="categories" id="cars">
-
+<section>
   <div class="container">
+    <h2>Where to Rent a Car in Orlando</h2>
 
-    <div class="section-heading">
-      <span>Vehicle Options</span>
-      <h2>Choose Your Rental Car Type</h2>
-      <p>
-        Explore different vehicle categories for different
-        Orlando travel needs.
-      </p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Orlando International Airport</h3>
+        <p>
+          MCO is a convenient option for travelers arriving in Orlando who
+          want to collect a rental car after their flight.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Downtown Orlando</h3>
+        <p>
+          Downtown rental locations can be useful for travelers staying in
+          the city center.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>International Drive</h3>
+        <p>
+          International Drive is close to many hotels, restaurants and
+          popular Orlando attractions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Lake Buena Vista</h3>
+        <p>
+          A convenient area for visitors staying near Walt Disney World and
+          surrounding resorts.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Kissimmee</h3>
+        <p>
+          Kissimmee provides another useful rental option for travelers
+          visiting Orlando's major attractions.
+        </p>
+      </div>
+
     </div>
+  </div>
+</section>
 
-    <div class="car-grid">
+<section>
+  <div class="container">
+    <h2>Best Car Types for Orlando</h2>
 
-      <div class="car-card">
-        <div class="car-icon">🚗</div>
+    <div class="grid">
+
+      <div class="card">
         <h3>Economy Cars</h3>
-        <p>
-          A practical option for travelers looking for a compact
-          vehicle for city driving.
-        </p>
-        <a class="text-link"
-           href="https://www.discovercars.com/?a_aid=zadocktravel"
-           target="_blank"
-           rel="nofollow sponsored noopener">
-          Compare Cars →
-        </a>
+        <p>Suitable for travelers looking for a compact and practical vehicle.</p>
       </div>
 
-      <div class="car-card">
-        <div class="car-icon">🚘</div>
+      <div class="card">
         <h3>Compact Cars</h3>
-        <p>
-          Convenient for couples and travelers who want an
-          easy-to-drive vehicle.
-        </p>
-        <a class="text-link"
-           href="https://www.discovercars.com/?a_aid=zadocktravel"
-           target="_blank"
-           rel="nofollow sponsored noopener">
-          Compare Cars →
-        </a>
+        <p>A balanced option for city driving, parking and longer trips.</p>
       </div>
 
-      <div class="car-card">
-        <div class="car-icon">🚙</div>
+      <div class="card">
         <h3>SUVs</h3>
-        <p>
-          Consider an SUV when you need additional passenger
-          space or luggage capacity.
-        </p>
-        <a class="text-link"
-           href="https://www.discovercars.com/?a_aid=zadocktravel"
-           target="_blank"
-           rel="nofollow sponsored noopener">
-          Compare SUVs →
-        </a>
+        <p>Useful for families and travelers who want additional passenger and luggage space.</p>
       </div>
 
-      <div class="car-card">
-        <div class="car-icon">🚐</div>
-        <h3>7-Seater Vehicles</h3>
-        <p>
-          A useful choice for larger families and groups traveling
-          together.
-        </p>
-        <a class="text-link"
-           href="https://www.discovercars.com/?a_aid=zadocktravel"
-           target="_blank"
-           rel="nofollow sponsored noopener">
-          Compare Vehicles →
-        </a>
-      </div>
-
-      <div class="car-card">
-        <div class="car-icon">✨</div>
+      <div class="card">
         <h3>Luxury Cars</h3>
-        <p>
-          Explore premium vehicle options for travelers seeking
-          an elevated driving experience.
-        </p>
-        <a class="text-link"
-           href="https://www.discovercars.com/?a_aid=zadocktravel"
-           target="_blank"
-           rel="nofollow sponsored noopener">
-          Explore Luxury →
-        </a>
+        <p>A premium choice for travelers who prefer additional comfort and style.</p>
       </div>
 
-      <div class="car-card">
-        <div class="car-icon">👨‍👩‍👧‍👦</div>
-        <h3>Family Cars</h3>
-        <p>
-          Look for spacious vehicles suitable for families,
-          passengers, and luggage.
-        </p>
-        <a class="text-link"
-           href="https://www.discovercars.com/?a_aid=zadocktravel"
-           target="_blank"
-           rel="nofollow sponsored noopener">
-          Find Family Cars →
-        </a>
+      <div class="card">
+        <h3>Minivans</h3>
+        <p>Practical for larger families or groups traveling with more luggage.</p>
+      </div>
+
+      <div class="card">
+        <h3>Convertibles</h3>
+        <p>An attractive option for travelers who want an open-air Florida driving experience.</p>
       </div>
 
     </div>
-
   </div>
-
 </section>
 
+<section>
+  <div class="container">
+    <h2>Orlando Airport Car Rental</h2>
 
-<!-- AIRPORT -->
-<section class="airport" id="airport">
+    <p class="intro">
+      If you are flying into Orlando International Airport (MCO), comparing
+      rental cars before your arrival can help you understand your available
+      vehicle choices and prices.
+    </p>
 
-  <div class="container airport-grid">
-
-    <div>
-
-      <div class="section-heading" style="text-align:left;">
-        <span>Airport Travel</span>
-        <h2 style="color:white;">
-          Orlando International Airport Car Rental
-        </h2>
-      </div>
-
-      <p>
-        Flying into Orlando? Compare rental car options for your
-        trip and review available pickup choices before making
-        your reservation.
-      </p>
-
-      <ul class="airport-list">
-        <li>Compare different vehicle categories</li>
-        <li>Review rental conditions</li>
-        <li>Check pickup information</li>
-        <li>Choose a vehicle for your travel needs</li>
-      </ul>
-
-      <a
-        class="btn btn-primary"
-        href="https://www.discovercars.com/?a_aid=zadocktravel"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-      >
-        Compare Airport Rental Cars
+    <div style="text-align:center;">
+      <a class="btn"
+         href="https://www.discovercars.com/?a_aid=zadocktravel"
+         target="_blank"
+         rel="nofollow sponsored noopener">
+         Compare Airport Rental Cars
       </a>
-
     </div>
-
-    <div class="airport-image">
-      <img
-        src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80"
-        alt="Airplane arriving at an airport"
-      >
-    </div>
-
   </div>
-
 </section>
 
-
-<!-- BENEFITS -->
-<section class="benefits">
-
+<section>
   <div class="container">
+    <h2>Driving in Orlando</h2>
 
-    <div class="section-heading">
-      <span>Travel With Confidence</span>
-      <h2>Why Rent a Car in Orlando?</h2>
-    </div>
+    <div class="grid">
 
-    <div class="benefit-grid">
-
-      <div class="benefit">
-        <h3>Greater Flexibility</h3>
+      <div class="card">
+        <h3>Florida Roads</h3>
         <p>
-          Travel according to your own schedule instead of relying
-          entirely on public transportation.
+          Plan your route before leaving your rental location and allow extra
+          time during busy periods.
         </p>
       </div>
 
-      <div class="benefit">
-        <h3>Airport Convenience</h3>
+      <div class="card">
+        <h3>Toll Roads</h3>
         <p>
-          A rental car can make it easier to continue your journey
-          after arriving in Orlando.
+          Orlando and Central Florida have toll roads, so check the rental
+          company's toll-payment policy before driving.
         </p>
       </div>
 
-      <div class="benefit">
-        <h3>Family Travel</h3>
+      <div class="card">
+        <h3>Parking</h3>
         <p>
-          Choose a vehicle that provides enough space for your
-          passengers and luggage.
+          Check parking arrangements and fees at your hotel and destinations
+          before starting your journey.
         </p>
       </div>
 
-      <div class="benefit">
-        <h3>Business Travel</h3>
+      <div class="card">
+        <h3>Navigation</h3>
         <p>
-          A rental vehicle can provide convenient transportation
-          during business trips.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <h3>Explore More</h3>
-        <p>
-          A car gives you the flexibility to explore destinations
-          beyond central Orlando.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <h3>More Vehicle Choice</h3>
-        <p>
-          Compare different vehicle categories before selecting
-          the option that fits your trip.
+          Use a reliable navigation app to plan routes between attractions
+          and avoid unnecessary delays.
         </p>
       </div>
 
     </div>
-
   </div>
-
 </section>
 
-
-<!-- DESTINATIONS -->
-<section class="destinations">
-
+<section>
   <div class="container">
+    <h2>Popular Orlando Destinations by Car</h2>
 
-    <div class="section-heading">
-      <span>Explore Orlando</span>
-      <h2>Popular Places to Visit</h2>
-      <p>
-        A rental car can make it easier to explore Orlando and
-        surrounding attractions.
-      </p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Walt Disney World</h3>
+        <p>Explore the resort area and surrounding attractions by car.</p>
+      </div>
+
+      <div class="card">
+        <h3>Universal Orlando Resort</h3>
+        <p>Conveniently explore Universal and nearby entertainment areas.</p>
+      </div>
+
+      <div class="card">
+        <h3>SeaWorld Orlando</h3>
+        <p>Include SeaWorld and nearby attractions in your Orlando itinerary.</p>
+      </div>
+
+      <div class="card">
+        <h3>International Drive</h3>
+        <p>Discover restaurants, shopping, entertainment and attractions.</p>
+      </div>
+
+      <div class="card">
+        <h3>Lake Buena Vista</h3>
+        <p>A popular area for hotels, resorts and attractions.</p>
+      </div>
+
+      <div class="card">
+        <h3>Downtown Orlando</h3>
+        <p>Explore Orlando's city center, restaurants and entertainment.</p>
+      </div>
+
     </div>
-
-    <div class="destination-grid">
-
-      <div class="destination">Walt Disney World</div>
-      <div class="destination">Universal Orlando</div>
-      <div class="destination">SeaWorld Orlando</div>
-      <div class="destination">International Drive</div>
-      <div class="destination">Downtown Orlando</div>
-      <div class="destination">Lake Buena Vista</div>
-      <div class="destination">Winter Park</div>
-      <div class="destination">Central Florida</div>
-
-    </div>
-
   </div>
-
 </section>
 
+<section>
+  <div class="container">
+    <h2>Tips Before Renting a Car</h2>
 
-<!-- HOW IT WORKS -->
-<section class="steps">
+    <ul>
+      <li>Compare rental car prices before booking.</li>
+      <li>Check the rental company's fuel policy.</li>
+      <li>Review mileage restrictions and rental conditions.</li>
+      <li>Check available insurance options.</li>
+      <li>Inspect the vehicle before leaving the pickup location.</li>
+      <li>Confirm your pickup and return times.</li>
+      <li>Review deposit and payment requirements.</li>
+      <li>Check the company's toll-road policy.</li>
+    </ul>
+  </div>
+</section>
 
+<section class="cta">
   <div class="container">
 
-    <div class="section-heading">
-      <span>Simple Process</span>
-      <h2>How It Works</h2>
-    </div>
+    <h2>Ready to Compare Orlando Rental Cars?</h2>
 
-    <div class="step-grid">
+    <p>
+      Compare available rental cars, prices and pickup options before your
+      Orlando trip.
+    </p>
 
-      <div class="step">
-        <div class="number">1</div>
-        <h3>Search</h3>
-        <p>
-          Enter your Orlando travel dates and compare available
-          rental car options.
-        </p>
-      </div>
+    <a class="btn"
+       href="https://www.discovercars.com/?a_aid=zadocktravel"
+       target="_blank"
+       rel="nofollow sponsored noopener">
+       Compare Orlando Car Rentals
+    </a>
 
-      <div class="step">
-        <div class="number">2</div>
-        <h3>Compare</h3>
-        <p>
-          Review vehicle options, prices, rental conditions,
-          and pickup information.
-        </p>
-      </div>
+    <p class="disclosure">
+      Affiliate Disclosure: This website may earn a commission when you book
+      through links on this page. This does not affect the price you pay.
+    </p>
 
-      <div class="step">
-        <div class="number">3</div>
-        <h3>Book</h3>
-        <p>
-          Select the vehicle that suits your trip and complete
-          your reservation through the booking provider.
-        </
+  </div>
+</section>
+
+<footer>
+  <h3>Global Cars Hire Guide</h3>
+
+  <p>Orlando Car Rental Guide</p>
+
+  <div style="margin-top:18px;">
+    <a href="index.html">Home</a>
+    <a href="car-rental-in-miami.html">Miami</a>
+    <a href="car-rental-in-new-york.html">New York</a>
+    <a href="car-rental-orlando-guide.html">Orlando</a>
+    <a href="car-rental-in-los-angeles.html">Los Angeles</a>
+    <a href="car-rental-in-london.html">London</a>
+    <a href="car-rental-in-paris.html">Paris</a>
+    <a href="car-rental-in-dubai.html">Dubai</a>
+  </div>
+
+  <p style="margin-top:25px; font-size:13px;">
+    © 2026 Global Cars Hire Guide. All rights reserved.
+  </p>
+</footer>
+
+</body>
+  </html>
